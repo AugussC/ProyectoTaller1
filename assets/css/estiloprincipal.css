@@ -1,0 +1,13 @@
+
+body {
+    background-color: gray ;
+}
+.bgcustom {
+    background-color: #bb9f2d; /* ejemplo de amarillo tipo Tailwind yellow-400 */
+  }
+
+.carousel-inner {
+    max-height: 700px; /* o el alto que te guste */
+}
+
+
