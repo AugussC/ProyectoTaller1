@@ -227,6 +227,108 @@
 </div>
 </div>
 
+<div class="container-fluid bgcustom py-4 text-center">
+  <h1 style="color: white;">Ofertas del Dia</h1>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+    <div class="row justify-content-center text-center">
+        <div class="col-2 ">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <div class="row justify-content-center text-center">
+        <div class="col-2 ">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</div>
 
 
     
