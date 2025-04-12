@@ -52,11 +52,11 @@
 </div>
 </div>
 
-<div class="container-fluid bgcustom py-5 text-center">
+<div class="container-fluid bgcustom my-5 text-center">
   <h1 style="color: white;">Mas vendidos</h1>
     <div class="row">
         <!-- Producto 1 -->
-    <div class="col-md-12 col-lg-3 me-5 mb-5">
+    <div class="col-md-12 col-lg-3 me-5 mb-3">
       <div class="card h-100">
         <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
         <div class="card-body">
@@ -69,7 +69,7 @@
       </div>
     </div>
         <!-- Producto 1 -->
-    <div class="col-sm-6 col-md-3 col-lg-2 mb-5">
+    <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
       <div class="card h-100">
         <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
         <div class="card-body">
@@ -82,7 +82,7 @@
       </div>
     </div>
     <!-- Producto 1 -->
-    <div class="col-sm-6 col-md-3 col-lg-2 mb-5">
+    <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
       <div class="card h-100">
         <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
         <div class="card-body">
@@ -95,7 +95,7 @@
       </div>
     </div>
     <!-- Producto 1 -->
-    <div class="col-sm-6 col-md-3 col-lg-2 mb-5">
+    <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
       <div class="card h-100">
         <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
         <div class="card-body">
@@ -108,7 +108,7 @@
       </div>
     </div>
     <!-- Producto 1 -->
-    <div class="col-sm-6 col-md-3 col-lg-2 mb-5">
+    <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
       <div class="card h-100">
         <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
         <div class="card-body">
@@ -120,15 +120,117 @@
         </div>
       </div>
     </div>
+</div>
 </div>
 
-<div class="conteiner">
-  <div class="row">
-    <div class="col">1</div>
-    
+
+<div class="container-fluid bgcustom py-4 text-center">
+  <h1 style="color: white;">Ofertas del Dia</h1>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+    <div class="row justify-content-center text-center">
+        <div class="col-2 ">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <div class="row justify-content-center text-center">
+        <div class="col-2 ">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </div>
+</div>
+
+
+
     
 <script src="assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
