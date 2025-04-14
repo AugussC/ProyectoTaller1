@@ -1,13 +1,31 @@
-
 body {
-    background-color: gray ;
+  background-color: rgb(244, 227, 193);
 }
+
 .bgcustom {
-    background-color: #bb9f2d; /* ejemplo de amarillo tipo Tailwind yellow-400 */
+    background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
   }
 
 .carousel-inner {
     max-height: 700px; /* o el alto que te guste */
 }
 
-
+.card.no-border {
+    background-color: #bb9f2d;
+    border: none;
+    box-shadow: none; /* Opcional: también le quita la sombra si hay */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: 60% 60%;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+  

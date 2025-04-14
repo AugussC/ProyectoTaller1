@@ -33,6 +33,10 @@
             </input> 
         </form>
         <button class="btn btn-outline-light ms-2" type="button">
-  <i class="bi bi-person-circle"></i>
-</button>
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <button class="btn btn-outline-light ms-2" type="button">
+          <i class="bi bi-cart"></i>
+        </button>
+
 </nav>
