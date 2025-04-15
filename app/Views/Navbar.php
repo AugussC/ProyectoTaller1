@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-5">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top mb-5">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="assets/img/LogoRetromaniacos.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">
       RetroManiacos</a>

@@ -239,7 +239,7 @@
                 </div>
               </div>
               <!-- Slide 1 -->
-              <div class="carousel-item active">
+              <div class="carousel-item">
                 <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
@@ -334,12 +334,12 @@
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi1.jpg" class="card-img-top img-fluid" alt="Producto 1">
+                  <img src="assets/img/Messi1.jpg" class="card-img-top  img-producto" alt="Producto 1">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Argentina 2006 Local</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$24.000 </h5>
+                    <p class="text-success small">6 Cuotas sin interés de $4.000</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -347,12 +347,12 @@
               <!-- Producto 2 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi2.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <img src="assets/img/Messi2.jpg" class="card-img-top img-producto" alt="Producto 2">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Argentina 2008 Visitante</h6>
+                    <p class="text-muted text-decoration-line-through">$31.000</p>
+                    <h5 class="text-success">$27.900 <span class="small">10% OFF</span></h5>
+                    <p class="text-success small">Pagando de Contado</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -360,12 +360,12 @@
               <!-- Producto 3 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi3.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <img src="assets/img/Messi3.jpg" class="card-img-top img-producto" alt="Producto 2">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Barcelona 2008-09 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$34.800</p>
+                    <h5 class="text-success">$27.840 <span class="small">20% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $9.280</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -373,12 +373,12 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi4.jpg" class="card-img-top img-fluid" alt="Producto 3">
+                  <img src="assets/img/Messi4.jpg" class="card-img-top img-producto" alt="Producto 3">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Barcelona 2011-12 Local</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$33.000</h5>
+                    <p class="text-success small">Pagando de Contado</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -392,25 +392,25 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi5.jpg" class="card-img-top img-fluid" alt="Producto 4">
+                  <img src="assets/img/Messi5.jpg" class="card-img-top img-producto" alt="Producto 4">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <h6 class="card-title">Argentina 2014 World Cup Final</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$35.000 </h5>
+                    <p class="text-success small">6 Cuotas sin interés de $5.833,33</p>
+                    <p class="text-success small">Envío gratis</p>
                   </div>
                 </div>
               </div>
               <!-- Producto 6 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi6.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <img src="assets/img/Messi6.jpg" class="card-img-top img-producto" alt="Producto 5">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Barcelona 2015-16 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$28.000</p>
+                    <h5 class="text-success">$25.200 <span class="small">10% OFF</span></h5>
+                    <p class="text-success small">6 Cuotas sin interés de $4.200</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -418,12 +418,12 @@
               <!-- Producto 7 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi7.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <img src="assets/img/Messi7.jpg" class="card-img-top img-producto" alt="Producto 5">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Paris Saint-Germain 2021-22 Local</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$29.000</h5>
+                    <p class="text-success small">Pagando de Contado</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -431,12 +431,12 @@
               <!-- Producto 8 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi8.jpg" class="card-img-top img-fluid" alt="Producto 6">
+                  <img src="assets/img/Messi8.jpg" class="card-img-top img-producto" alt="Producto 6">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Inter Miami 2024 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$26.000</p>
+                    <h5 class="text-success">$22.100 <span class="small">15% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $7.366</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -486,38 +486,38 @@
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona1.jpg" class="card-img-top img-fluid" alt="Producto 1">
+                  <img src="assets/img/Maradona1.jpg" class="card-img-top img-producto" alt="Producto 1">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <h6 class="card-title">Boca Juniors 1981-82 Camiseta Local</h6>
+                    <p class="text-muted text-decoration-line-through">$37.000</p>
+                    <h5 class="text-success">$27.750 <span class="small">25% OFF</span></h5>
+                    <p class="text-success small">Pagando de Contado</p>
+                    <p class="text-success small">Envío gratis</p>
                   </div>
                 </div>
               </div>
               <!-- Producto 2 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona2.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <img src="assets/img/Maradona2.jpg" class="card-img-top img-producto" alt="Producto 2">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <h6 class="card-title">Barcelona 1982-83 Local</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$35.000</h5>
+                    <p class="text-success small">3 Cuotas sin interés de $11.666</p>
+                    <p class="text-success small">Envío gratis</p>
                   </div>
                 </div>
               </div>
               <!-- Producto 3 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona3.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <img src="assets/img/Maradona3.jpg" class="card-img-top img-producto" alt="Producto 2">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Napoli 1984-85 Visitante</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$27.000 </h5>
+                    <p class="text-success small">Pagando de Contado</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -525,13 +525,13 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona4.jpg" class="card-img-top img-fluid" alt="Producto 3">
+                  <img src="assets/img/Maradona4.jpg" class="card-img-top img-producto" alt="Producto 3">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <h6 class="card-title">Napoli 1987-88 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$36.500</p>
+                    <h5 class="text-success">$32.850 <span class="small">10% OFF</span></h5>
+                    <p class="text-success small">6 Cuotas sin interés de $5.475</p>
+                    <p class="text-success small">Envío gratis</p>
                   </div>
                 </div>
               </div>
@@ -544,12 +544,12 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona5.jpg" class="card-img-top img-fluid" alt="Producto 4">
+                  <img src="assets/img/Maradona5.jpg" class="card-img-top img-producto" alt="Producto 4">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Boca Juniors 1995-96 Local</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$23.000 </h5>
+                    <p class="text-success small">6 Cuotas sin interés de $3.833</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -557,25 +557,25 @@
               <!-- Producto 6 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona6.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <img src="assets/img/Maradona6.jpg" class="card-img-top img-producto" alt="Producto 5">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <h6 class="card-title">Argentina 1986 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$37.000</p>
+                    <h5 class="text-success">$31.450 <span class="small">10% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $10.483</p>
+                    <p class="text-success small">Envío gratis</p>
                   </div>
                 </div>
               </div>
               <!-- Producto 7 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona7.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <img src="assets/img/Maradona7.jpg" class="card-img-top img-producto" alt="Producto 5">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Argentina 1993 Visitante</h6>
+                    <p class="text-muted text-decoration-line-through"></p>
+                    <h5 class="text-success">$30.000</h5>
+                    <p class="text-success small">Pagando de Contado</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
@@ -583,12 +583,12 @@
               <!-- Producto 8 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona8.jpg" class="card-img-top img-fluid" alt="Producto 6">
+                  <img src="assets/img/Maradona8.jpg" class="card-img-top img-producto" alt="Producto 6">
                   <div class="card-body">
-                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38000</p>
-                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <h6 class="card-title">Argentina 1994 Visitante</h6>
+                    <p class="text-muted text-decoration-line-through">$32.000</p>
+                    <h5 class="text-success">$28.800 <span class="small">10% OFF</span></h5>
+                    <p class="text-success small">6 cuotas sin interés de $4.800</p>
                     <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
