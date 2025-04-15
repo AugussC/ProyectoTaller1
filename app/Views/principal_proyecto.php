@@ -11,7 +11,7 @@
   <body>
     <?php include 'navbar.php'; ?>
 
-      <div class="container mt-5">
+      <div class="container mt-5 pt-4">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -54,70 +54,70 @@
 
 
       <div class="container-fluid bgcustom my-5 text-center">
-        <h1 style="color: white;">Mas vendidos</h1>
+        <h1>Mas vendidos</h1>
           <div class="row">
               <!-- Producto 1 -->
             <div class="col-md-12 col-lg-3 ms-0 ms-lg-5 me-0 me-lg-3 mb-3">
             <div class="card h-100">
-              <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
+              <img src="assets/img/ImagenMasVendida1.jpg" class="card-img-top" alt="Producto Mas Vendido 1">
               <div class="card-body">
-                <h6 class="card-title">Pc Gamer Armada Amd Ryzen...</h6>
-                <p class="text-muted text-decoration-line-through">$899.999</p>
-                <h5 class="text-success">$710.999 <span class="text-success small">21% OFF</span></h5>
-                <p class="text-success small">Mismo precio en 18 cuotas</p>
+                <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                <p class="text-muted text-decoration-line-through">$38000</p>
+                <h5 class="text-success">$19000 <span class="text-success small">50% OFF</span></h5>
+                <p class="text-success small">3 Cuotas sin interes de $6.333,33</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
+              </div>
+            </div>
+          </div>
+              <!-- Producto 2 -->
+          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
+            <div class="card h-100">
+              <img src="assets/img/ImagenMasVendida2.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 2">
+              <div class="card-body">
+                <h6 class="card-title">Schalke 04 1998-99 Local</h6>
+                <p class="text-muted text-decoration-line-through">$40.000</p>
+                <h5 class="text-success">$26.000 <span class="text-success small">35% OFF</span></h5>
+                <p class="text-success small">3 Cuotas sin interes de $8.666,67</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
+              </div>
+            </div>
+          </div>
+          <!-- Producto 3 -->
+          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
+            <div class="card h-100">
+              <img src="assets/img/ImagenMasVendida3.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 3">
+              <div class="card-body">
+                <h6 class="card-title">Camiseta Visitante Argentina 2006</h6>
+                <p class="text-muted text-decoration-line-through"></p>
+                <h5 class="text-success">$25.810</h5>
+                <p class="text-success small">3 Cuotas sin interes de $8.603,33</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
+              </div>
+            </div>
+          </div>
+          <!-- Producto 4 -->
+          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
+            <div class="card h-100">
+              <img src="assets/img/ImagenMasVendida4.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 4">
+              <div class="card-body">
+                <h6 class="card-title">Alemania 1990 Local</h6>
+                <p class="text-muted text-decoration-line-through"></p>
+                <h5 class="text-success">$39.000</h5>
+                <p class="text-success small">3 Cuotas sin interes de $13.300</p>
                 <p class="text-success small">Envío gratis</p>
               </div>
             </div>
           </div>
-              <!-- Producto 1 -->
+          <!-- Producto 5 -->
           <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
             <div class="card h-100">
-              <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
+              <img src="assets/img/ImagenMasVendida5.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 5">
               <div class="card-body">
-                <h6 class="card-title">Pc Gamer Armada Amd Ryzen...</h6>
-                <p class="text-muted text-decoration-line-through">$899.999</p>
-                <h5 class="text-success">$710.999 <span class="text-success small">21% OFF</span></h5>
-                <p class="text-success small">Mismo precio en 18 cuotas</p>
-                <p class="text-success small">Envío gratis</p>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 1 -->
-          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-            <div class="card h-100">
-              <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h6 class="card-title">Pc Gamer Armada Amd Ryzen...</h6>
-                <p class="text-muted text-decoration-line-through">$899.999</p>
-                <h5 class="text-success">$710.999 <span class="text-success small">21% OFF</span></h5>
-                <p class="text-success small">Mismo precio en 18 cuotas</p>
-                <p class="text-success small">Envío gratis</p>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 1 -->
-          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-            <div class="card h-100">
-              <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h6 class="card-title">Pc Gamer Armada Amd Ryzen...</h6>
-                <p class="text-muted text-decoration-line-through">$899.999</p>
-                <h5 class="text-success">$710.999 <span class="text-success small">21% OFF</span></h5>
-                <p class="text-success small">Mismo precio en 18 cuotas</p>
-                <p class="text-success small">Envío gratis</p>
-              </div>
-            </div>
-          </div>
-          <!-- Producto 1 -->
-          <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-            <div class="card h-100">
-              <img src="assets/img/producto1.jpg" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h6 class="card-title">Pc Gamer Armada Amd Ryzen...</h6>
-                <p class="text-muted text-decoration-line-through">$899.999</p>
-                <h5 class="text-success">$710.999 <span class="text-success small">21% OFF</span></h5>
-                <p class="text-success small">Mismo precio en 18 cuotas</p>
-                <p class="text-success small">Envío gratis</p>
+                <h6 class="card-title">Camiseta Local Inter Milan 2001-02</h6>
+                <p class="text-muted text-decoration-line-through">$32.000</p>
+                <h5 class="text-success">$23.000 <span class="text-success small">28% OFF</span></h5>
+                <p class="text-success small">6 Cuotas sin interes de $3.833,33</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
               </div>
             </div>
           </div>
@@ -126,223 +126,340 @@
 
         <!-- Sección: Ofertas del Día -->
         <div class="container-fluid bgcustom py-4 text-center">
-          <h1 style="color: white;">Ofertas del Día</h1>
+          <h1>Ofertas del Día</h1>
 
-          <div id="carouselOfertas" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselOfertas" class="carousel slide">
             <div class="carousel-inner">
 
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <div class="row justify-content-center text-center">
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="assets/img/camiseta3.jpg" class="card-img-top">
+                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                    <img src="assets/img/camiseta1.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
+                      <p class="text-muted text-decoration-line-through">$28.000</p>
+                      <h5 class="text-success">$25.200 <span class="text-success small">10% OFF</span></h5>
+                      <p class="text-success small">Pagando de Contado</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta2.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
                       <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
+                        <h6 class="card-title">River Plate 2017-18 Local</h6>
+                        <p class="text-muted text-decoration-line-through">$22.000</p>
+                        <h5 class="text-success">$20.900 <span class="text-success small">5% OFF</span></h5>
+                        <p class="text-success small">3 Cuotas sin interés de $6.967</p>
+                        <p class="text-success small">Envío gratis superando los $35.000</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="assets/img/camiseta3.jpg" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 2</h5>
-                      </div>
+                  <div class="d-none d-md-block col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta3.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Barcelona 2024-25 Local</h6>
+                      <p class="text-muted text-decoration-line-through">$21.000</p>
+                      <h5 class="text-success">$19.000 <span class="text-success small">10% OFF</span></h5>
+                      <p class="text-success small">6 Cuotas sin interés de $5.200</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
                     </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="assets/img/camiseta3.jpg" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 3</h5>
-                      </div>
-                    </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="assets/img/camiseta3.jpg" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 5</h5>
-                      </div>
-                    </div>
+                  <div class="d-none d-lg-block col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta4.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Liverpool FC 17-18 Local</h6>
+                      <p class="text-muted text-decoration-line-through">$24.500</p>
+                      <h5 class="text-success">$22.540 <span class="text-success small">8% OFF</span></h5>
+                      <p class="text-success small">Pagando de Contado</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                        </div>
+                </div>
                   </div>
                 </div>
               </div>
 
               <!-- Slide 2 -->
               <div class="carousel-item">
-                <div class="row justify-content-center text-center">
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 6</h5>
-                      </div>
-                    </div>
+                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta5.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+              <div class="card-body">
+                <h6 class="card-title">Stade Brestois 21-22 Aniversario</h6>
+                <p class="text-muted text-decoration-line-through">$42.500</p>
+                <h5 class="text-success">$36.125 <span class="text-success small">15% OFF</span></h5>
+                <p class="text-success small">6 Cuotas sin interes de $6.021</p>
+                <p class="text-success small">Envío gratis</p>
+              </div>
+            </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 7</h5>
-                      </div>
-                    </div>
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta6.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+              <div class="card-body">
+                <h6 class="card-title">UD Las Palmas 96-97 Local</h6>
+                <p class="text-muted text-decoration-line-through">$39.000</p>
+                <h5 class="text-success">$31.200 <span class="text-success small">20% OFF</span></h5>
+                <p class="text-success small">6 cuotas sin interés de $5.200</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
+              </div>
+            </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 8</h5>
-                      </div>
-                    </div>
+                  <div class="d-none d-md-block col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta7.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+              <div class="card-body">
+                <h6 class="card-title">Strasbourg 78-79 Local</h6>
+                <p class="text-muted text-decoration-line-through">$40.000</p>
+                <h5 class="text-success">$36.000<span class="text-success small">10% OFF</span></h5>
+                <p class="text-success small">3 Cuotas sin interes de $12.000</p>
+                <p class="text-success small">Envío gratis</p>
+              </div>
+            </div>
                   </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 9</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-10 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="card">
-                      <img src="https://via.placeholder.com/150" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title">Producto 10</h5>
-                      </div>
-                    </div>
+                  <div class="d-none d-lg-block col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta8.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+              <div class="card-body">
+                <h6 class="card-title">Red Star Belgrade 98-99 Local</h6>
+                <p class="text-muted text-decoration-line-through">$31.800</p>
+                <h5 class="text-success">$26.076 <span class="text-success small"> 18% OFF</span></h5>
+                <p class="text-success small">6 Cuotas sin interés de $4.346</p>
+                <p class="text-success small">Envío gratis superando los $35.000</p>
+              </div>
+            </div>
                   </div>
                 </div>
               </div>
-
-            </div>
-
-            <!-- Botones del carrusel -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-        </div>
-
-
-
-      <!-- SecciÃ³n: Card Messi + Carrusel en la misma fila -->
-      <div class="container-fluid bgcustom my-5 py-4">
-        <div class="row align-items-center">
-          <!-- Card a la izquierda -->
-          <div class="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
-            <div class="card.no-border" style="width: 18rem; ">
-              <img src="assets/img/lionelmessi.jpg" class="card-img-top rounded-circle" alt="...">
-              <div class="card-body text-center">
-                <p class="card-text">Lionel Messi</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carrusel a la derecha -->
-          <div class="col-md-9">
-            <div id="carouselMessi" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto A</h5>
-                        </div>
-                      </div>
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta9.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Uruguay 2010 Local</h6>
+                      <p class="text-muted text-decoration-line-through">$33.500</p>
+                      <h5 class="text-success">$28.475 <span class="text-success small">15% OFF</span></h5>
+                      <p class="text-success small">6 Cuotas sin interés de $4.746</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
                     </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto B</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto C</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto D</h5>
-                        </div>
+                  </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta10.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                      <div class="card-body">
+                        <h6 class="card-title">EE.UU. 2018 Local</h6>
+                        <p class="text-muted text-decoration-line-through">$38.000</p>
+                        <h5 class="text-success">$19.000 <span class="text-success small">50% OFF</span></h5>
+                        <p class="text-success small">3 Cuotas sin interes de $6.333,33</p>
+                        <p class="text-success small">Envío gratis superando los $35.000</p>
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto E</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto F</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto G</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto H</h5>
-                        </div>
-                      </div>
+                  <div class="d-none d-md-block col-md-3 col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta11.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Real Betis 96-97 Local</h6>
+                      <p class="text-muted text-decoration-line-through">$25.000</p>
+                      <h5 class="text-success">$22.540 <span class="text-success small">10% OFF</span></h5>
+                      <p class="text-success small">Pagando de Contado</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
                     </div>
                   </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-2">
+                  <div class="card h-100">
+                  <img src="assets/img/camiseta12.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <div class="card-body">
+                      <h6 class="card-title">Stade Rennais 18-19 European Third</h6>
+                      <p class="text-muted text-decoration-line-through">$20.000</p>
+                      <h5 class="text-success">$18.000 <span class="text-success small">10% OFF</span></h5>
+                      <p class="text-success small">3 cuotas sin interés de $6.000</p>
+                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                        </div>
                 </div>
-
+                  </div>
+                </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselMessi" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselMessi" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
             </div>
-          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </div>
+
+        
+
+
+
+      <!-- Seccion: Card Messi + Carrusel en la misma fila -->
+      <div class="container-fluid bgcustom my-5 py-4">
+  <div class="row align-items-center g-4">
+    
+    <!-- Card a la izquierda -->
+    <div class="col-md-3 d-flex justify-content-center">
+      <div class="card border-0" style="width: 18rem;">
+        <img src="assets/img/lionelmessi.jpg" class="card-img-top rounded-circle img-fluid" alt="Lionel Messi">
+        <div class="card-body text-center">
+          <h2>Lionel Messi</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrusel a la derecha -->
+    <div class="col-md-9">
+      <div id="carouselMessi" class="carousel slide">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+              <!-- Producto 1 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi1.jpg" class="card-img-top img-fluid" alt="Producto 1">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 2 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi2.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 3 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi3.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 4 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi4.jpg" class="card-img-top img-fluid" alt="Producto 3">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+              <!-- Producto 4 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi5.jpg" class="card-img-top img-fluid" alt="Producto 4">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 6 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi6.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 7 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi7.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 8 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Messi8.jpg" class="card-img-top img-fluid" alt="Producto 6">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMessi" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMessi" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
       <!-- SecciÃ³n: Card Maradona + Carrusel en la misma fila -->
@@ -353,90 +470,132 @@
             <div class="card.no-border" style="width: 18rem; ">
               <img src="assets/img/diegomaradona.jpg" class="card-img-top rounded-circle" alt="...">
               <div class="card-body text-center">
-                <p class="card-text">Diego Armando Maradona</p>
+                <h2 class="card-text">Diego Armando Maradona</h2>
               </div>
             </div>
           </div>
 
           <!-- Carrusel a la derecha -->
           <div class="col-md-9">
-            <div id="carouselMaradona" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto A</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto B</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto C</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto D</h5>
-                        </div>
-                      </div>
-                    </div>
+      <div id="carouselMaradona" class="carousel slide">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+              <!-- Producto 1 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona1.jpg" class="card-img-top img-fluid" alt="Producto 1">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
                   </div>
                 </div>
-
-                <div class="carousel-item">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto E</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto F</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto G</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top">
-                        <div class="card-body">
-                          <h5 class="card-title">Producto H</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+              <!-- Producto 2 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona2.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 3 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona3.jpg" class="card-img-top img-fluid" alt="Producto 2">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 4 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona4.jpg" class="card-img-top img-fluid" alt="Producto 3">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+              <!-- Producto 4 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona5.jpg" class="card-img-top img-fluid" alt="Producto 4">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 6 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona6.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 7 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona7.jpg" class="card-img-top img-fluid" alt="Producto 5">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Producto 8 -->
+              <div class="col-6 col-md-3 col-lg-2">
+                <div class="card h-100">
+                  <img src="assets/img/Maradona8.jpg" class="card-img-top img-fluid" alt="Producto 6">
+                  <div class="card-body">
+                    <h6 class="card-title">AC Milan 2006-07 Local</h6>
+                    <p class="text-muted text-decoration-line-through">$38000</p>
+                    <h5 class="text-success">$19000 <span class="small">50% OFF</span></h5>
+                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselMaradona" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
