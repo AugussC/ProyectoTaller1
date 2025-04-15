@@ -11,7 +11,7 @@ body {
 }
 
 .card.no-border {
-    background-color: #bb9f2d;
+    background-color: rgb(244, 227, 193);
     border: none;
     box-shadow: none; /* Opcional: también le quita la sombra si hay */
   }
@@ -28,4 +28,23 @@ body {
   .carousel-control-next {
     width: 5%;
   }
+
+  @media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-item img {
+      max-height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    #carouselExampleCaptions{
+      margin-top: 70px;
+    }
+  }
   
+ 
+  @media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-caption h5 {
+      font-size: 1.2rem; /* más chico en celular */
+      text-align: center;
+    }
+  }
+
