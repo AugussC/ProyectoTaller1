@@ -60,6 +60,7 @@ body {
       background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
     }
   
+    
   .carousel-inner {
       max-height: 700px; /* o el alto que te guste */
   }
@@ -110,4 +111,92 @@ body {
         display: block;
         margin: 0 auto;
       }
+
+   .footer {
+        background: white;
+        color: #22c55e;
+        padding: 40px 20px;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid #eee;
+      }
+      
+ .footer-section {
+        flex: 1 1 200px;
+      }
+      
+      .footer-section h4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+.footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+.footer-section ul li {
+        margin-bottom: 5px;
+      }
+      
+.footer-section a {
+        color: #22c55e;
+        text-decoration: none;
+      }
+      
+ .footer-section a:hover {
+        text-decoration: underline;
+      }
+      
+.icon-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+ .icon-grid img,
+      .social-icons img {
+        width: 40px;
+        height: auto;
+      }
+      
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      
+.newsletter {
+        display: flex;
+        border: 1px solid #22c55e;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      
+.newsletter input {
+        flex: 1;
+        padding: 5px;
+        border: none;
+        outline: none;
+      }
+      
+.newsletter button {
+        background-color: #22c55e;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      
+ .footer-bottom {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 30px;
+        color: #555;
+      }
+      
       

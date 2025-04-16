@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RetroManiacos</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/Estilonuevo.css" rel="stylesheet">
+    <link href="assets/css/estiloprincipal.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
@@ -20,21 +20,21 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="assets/img/pruebaimagcarrusel1.jpg" class="d-block w-100" alt="ejemplo 1">
+              <img src="assets/img/Carrusel1.jpeg" class="d-block w-100" alt="ejemplo 1">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>▼RetroManiacos▼</h5>
+                <p>La camiseta de tu sueño la encontrás acá</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="assets/img/pruebaimagcarrusel2.jpg" class="d-block w-100" alt="ejemplo 2">
+              <img src="assets/img/Carrusel2.jpeg" class="d-block w-100" alt="ejemplo 2">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="assets/img/pruebaimagcarrusel3.jpg" class="d-block w-100" alt="ejemplo 3">
+              <img src="assets/img/Carrusel3.jpg" class="d-block w-100" alt="ejemplo 3">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>Some representative placeholder content for the third slide.</p>
@@ -148,7 +148,7 @@
                   </div>
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="assets/img/camiseta2.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <img src="assets/img/camiseta2.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
                       <div class="card-body">
                         <h6 class="card-title">River Plate 2017-18 Local</h6>
                         <p class="text-muted text-decoration-line-through">$22.000</p>
@@ -202,7 +202,7 @@
                   </div>
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="assets/img/camiseta6.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <img src="assets/img/camiseta6.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
               <div class="card-body">
                 <h6 class="card-title">UD Las Palmas 96-97 Local</h6>
                 <p class="text-muted text-decoration-line-through">$39.000</p>
@@ -279,7 +279,7 @@
                   </div>
                   <div class="d-none d-lg-block col-lg-2">
                   <div class="card h-100">
-                  <img src="assets/img/camiseta12.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <img src="assets/img/camiseta12.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
                     <div class="card-body">
                       <h6 class="card-title">Stade Rennais 18-19 European Third</h6>
                       <p class="text-muted text-decoration-line-through">$20.000</p>
@@ -392,7 +392,7 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Messi5.jpg" class="card-img-top img-producto" alt="Producto 4">
+                  <img src="assets/img/Messi5.png" class="card-img-top img-producto" alt="Producto 4">
                   <div class="card-body">
                     <h6 class="card-title">Argentina 2014 World Cup Final</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -486,7 +486,7 @@
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="assets/img/Maradona1.jpg" class="card-img-top img-producto" alt="Producto 1">
+                  <img src="assets/img/Maradona.jpg" class="card-img-top img-producto" alt="Producto 1">
                   <div class="card-body">
                     <h6 class="card-title">Boca Juniors 1981-82 Camiseta Local</h6>
                     <p class="text-muted text-decoration-line-through">$37.000</p>
@@ -624,7 +624,7 @@
     </div>
     <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
     <div class="card" style="width: 40rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="<i class="bi bi-box-seam-fill"></i>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -647,6 +647,9 @@
     </div>
   </div>
 </div>
+</div>
+<!-- Pie de pagina -->
+<?php include 'footer.php'; ?>
 
       
         
