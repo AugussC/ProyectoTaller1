@@ -613,22 +613,22 @@
   <!-- Fila superior con dos cards -->
   <div class="row justify-content-center mb-4">
     <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
-    <div class="card" style="width: 40rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+    <i class="bi bi-people-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+    <div class="card-body">
+    <h5 class="card-title">¿Quienes Somos?</h5>
+    <p class="card-text"> ¿Te interesa conocer más sobre nuestro negocio? ¡Este es el momento! </p>
+    <a href="#" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
     </div>
     <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
-    <div class="card" style="width: 40rem;">
-  <img src="<i class="bi bi-box-seam-fill"></i>" class="card-img-top" alt="...">
+    <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+    <i class="bi bi-box-seam-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Comercializacion</h5>
+    <p class="card-text">¡Información de envío, métodos de pago y más!.</p>
+    <a href="#" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
   </div>
@@ -636,12 +636,12 @@
   <!-- Fila inferior con una card centrada -->
   <div class="row justify-content-center mt-4">
     <div class="col-md-6 d-flex justify-content-center">
-    <div class="card" style="width: 40rem;">
-  <img src="..." class="card-img-top" alt="...">
+    <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+    <i class="bi bi-chat-left-text-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Contactos</h5>
+    <p class="card-text">¿Tienes alguna duda sobre el producto, la página o los talles? ¡No dudes en contactarnos!</p>
+    <a href="#" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
     </div>
