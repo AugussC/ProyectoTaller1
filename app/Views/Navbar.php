@@ -26,7 +26,7 @@
           <a class="nav-link" href="#">Terminos</a>
         </li>
       </ul>
-      <form class="d-flex ms-2 align-items-center" role="search">
+      <form class="d-flex ms-2 mb-2 align-items-center" role="search">
       <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
       
       <button class="btn btn-outline-light btn-icon me-2" type="button">
