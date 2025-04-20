@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <div class="contenedor-principal px-4">
+    <div class="contenedor-principal  mt-4 px-4">
       <h1 style="text-align: center">Lavado Recomendado</h1>
 
       <p><strong>Aclaración:</strong> ¡Estas recomendaciones son para cualquier tipo de calidad, tanto camisetas originales como réplicas! ¡Los estampados suelen ser delicados!</p>

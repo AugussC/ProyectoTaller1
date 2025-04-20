@@ -15,7 +15,7 @@ h1, h2{
 
   
 .carousel-inner {
-    max-height: 700px; /* o el alto que te guste */
+    max-height: 660px; /* o el alto que te guste */
 }
 
 .card.no-border {
@@ -57,14 +57,14 @@ h1, h2{
   }
     
   .img-producto {
-    width: 100%;              /* Se adapta al ancho del contenedor */
-    height: auto;             /* Mantiene la proporción (no se deforma) */
-    max-height: 250px;        /* Altura máxima para uniformar sin deformar */
-    object-fit: contain;      /* Se ajusta sin recortar ni deformar */
+    width: 100%;
+    height: 250px;         /* altura fija */
+    object-fit: contain;   /* mostrar toda la camiseta sin recortar */
+    background-color: white; /* opcional: relleno blanco si sobra espacio */
     display: block;
     margin: 0 auto;
   }
-
+  
   
   
 
