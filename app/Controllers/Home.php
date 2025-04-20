@@ -37,11 +37,19 @@ class Home extends BaseController
          . view('footer', $data);
     }
 
-    public function Comercializacion()
+    public function comercializacion()
     {
-        $data['titulo'] = 'Lavado Recomendado';
+        $data['titulo'] = 'Comercializacion';
     return view('navbar', $data)
-         . view('lavado_recomendado')
+         . view('comercializacion')
+         . view('footer', $data);
+    }
+
+    public function preguntas_frecuentes()
+    {
+        $data['titulo'] = 'Preguntas Frecuentes';
+    return view('navbar', $data)
+         . view('preguntas_frecuentes')
          . view('footer', $data);
     }
 }

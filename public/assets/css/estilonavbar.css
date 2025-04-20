@@ -41,16 +41,6 @@
     box-shadow: 0 0 0 0.2rem rgba(109, 174, 219, 0.25);
   }
   
-  .btn-outline-light {
-    border-color: rgb(244, 227, 193);
-    color: rgb(244, 227, 193);
-  }
-  
-  .btn-outline-light:hover {
-    background-color: rgb(109, 174, 219);
-    color: 	rgb(28, 28, 28);
-    border-color: rgb(109, 174, 219);
-  }
   .btn-icon {
     width: 60px;
     height: 40px;
@@ -58,6 +48,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    background-color: transparent;
+    border: 1px solid rgb(244, 227, 193);  /* borde beige */
+    color: rgb(244, 227, 193);             /* ícono beige */
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
   }
+  
+  .btn-icon:hover {
+    background-color: rgb(109, 174, 219);  /* azulcito */
+    color: rgb(28, 28, 28);                /* ícono oscuro */
+    border: 1px solid rgb(109, 174, 219);  /* borde azul al pasar el mouse */
+  }
+  
   

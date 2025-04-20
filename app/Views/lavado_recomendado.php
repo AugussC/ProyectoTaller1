@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <div class="contenedor-principal  mt-4 px-4">
+    <div class="contenedor-principal  mt-3 px-3">
       <h1 style="text-align: center">Lavado Recomendado</h1>
 
       <p><strong>Aclaración:</strong> ¡Estas recomendaciones son para cualquier tipo de calidad, tanto camisetas originales como réplicas! ¡Los estampados suelen ser delicados!</p>
@@ -24,9 +24,9 @@
       <p>¡Estas recomendaciones funcionan también para todas nuestras prendas!</p>
 
       <p><strong>Si pediste una prenda con escudo bordado, es muy probable que te haya llegado así:</strong></p>
-      <div class="contenedor-imagenes">
-        <img src="public/assets/img/bordado.jpg"  class="imagen-uniforme" alt="Prenda con escudo bordado" style="max-width: 20%; height: auto;">
-        <img src="public/assets/img/escudo.jpg" class="imagen-uniforme" alt="Prenda con escudo bordado" style="max-width: 110%; height: 202px;">
+      <div class="contenedor-imagenes pb-3 px-3">
+        <img src="public/assets/img/bordadocamiseta.jpg"  class="imagen-uniforme" alt="Prenda con escudo bordado">
+        <img src="public/assets/img/escudocamiseta.jpg" class="imagen-uniforme" alt="Prenda con escudo bordado">
       </div>
       <p>Lo enviamos así para que no se doble el bordado en el envío. Vos lo podés recortar fácilmente para que quede más estético.</p>
 

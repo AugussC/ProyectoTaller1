@@ -1,8 +1,8 @@
 <link href="public/assets/css/estilonavbar.css" rel="stylesheet">
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="public/assets/img/LogoRetromaniacos.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">
+    <a class="navbar-brand" href="<?= base_url('inicio')?>"><img src="public/assets/img/LogoRetromaniacos.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">
     RetroManiacos</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,30 +14,30 @@
           <a class="nav-link" aria-current="page" href="#">Catalogo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
+          <a class="nav-link" href="<?= base_url('quienes_somos')?>">¿Quienes Somos?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Envios</a>
+          <a class="nav-link" href="<?= base_url('comercializacion')?>">Comercializacion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contactos</a>
+          <a class="nav-link" href="<?= base_url('contactos')?>">Contactos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Terminos</a>
+          <a class="nav-link" href="<?= base_url('terminos_condiciones')?>">Terminos</a>
         </li>
       </ul>
       <form class="d-flex ms-2 mb-2 align-items-center" role="search">
       <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
       
-      <button class="btn btn-outline-light btn-icon me-2" type="button">
+      <button class="btn-icon me-2" type="button">
         <i class="bi bi-search"></i>
       </button>
       
-      <button class="btn btn-outline-light btn-icon me-2" type="button">
+      <button class="btn-icon me-2" type="button">
         <i class="bi bi-person-circle"></i>
       </button>
       
-      <button class="btn btn-outline-light btn-icon" type="button">
+      <button class="btn-icon" type="button">
         <i class="bi bi-cart"></i>
       </button>
     </form> 

@@ -1,0 +1,47 @@
+body {
+    text-align: justify;
+    background-color: rgb(244, 227, 193);
+    color:rgb(28, 28, 28);
+    font-family: 'Rubik', sans-serif;
+    padding-top: 80px;
+    
+  }
+
+  h1{
+    color:rgb(28, 28, 28);
+    font-family: 'Oswald', sans-serif;
+  }
+  
+.payment-icons img {
+    width: 60px;
+    margin: 8px;
+    object-fit: contain;
+}
+
+.accordion-container {
+    margin-bottom: 40px; /* Separación con el resto del contenido */
+  }
+  
+  .accordion-section {
+    background-color: #f6e1b5;
+    border-radius: 8px;
+    
+  }
+  
+  .accordion-header {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  
+  
+  
+  
+
+  

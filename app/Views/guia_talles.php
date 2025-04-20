@@ -10,7 +10,7 @@
   </head>
   <body>
 
-<div class="contenedor">
+<div class="contenedor mt-3 px-3">
   <h1 style="text-align: center;">Camisetas</h1>
   <p class="text_especial">Las medidas incluidas son de referencia, pueden variar 1cm +/-.</p>
 

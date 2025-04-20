@@ -3,14 +3,15 @@
   <div class="footer-section">
     <h4>Indice</h4>
     <ul>
-      <li><a href="#">- Inicio</a></li>
-      <li><a href="#">- Catalogo</a></li>
-      <li><a href="#">- ¿Quienes somos?</a></li>
-      <li><a href="#">- Envios y Metodos de pago</a></li>
-      <li><a href="#">- Lavado Recomendado</a></li>
-      <li><a href="#">- Guia de Talles</a></li>
-      <li><a href="#">- Preguntas Frecuentes</a></li>
-      <li><a href="#">- Terminos y Condiciones</a></li>
+      <li><a href="<?= base_url('inicio')?>">- Inicio</a></li>
+      <li><a href="<?= base_url('catalogo')?>">- Catalogo</a></li>
+      <li><a href="<?= base_url('quienes_somos')?>">- ¿Quienes somos?</a></li>
+      <li><a href="<?= base_url('comercializacion')?>">- Comercializacion</a></li>
+      <li><a href="<?= base_url('contactos')?>">- Contactos</a></li>
+      <li><a href="<?= base_url('lavado_recomendado')?>">- Lavado Recomendado</a></li>
+      <li><a href="<?= base_url('guia_talles')?>">- Guia de Talles</a></li>
+      <li><a href="<?= base_url('preguntas_frecuentes')?>">- Preguntas Frecuentes</a></li>
+      <li><a href="<?= base_url('terminos_condiciones')?>">- Terminos y Condiciones</a></li>
     </ul>
   </div>
 
@@ -21,7 +22,10 @@
       <img src="public/assets/img/visa.png" alt="Visa">
       <img src="public/assets/img/mastercard.png" alt="MasterCard">
       <img src="public/assets/img/naranja.png" alt="Tarjeta Naranja">
-      <!-- etc. -->
+      <img src="public/assets/img/logoMercadoPago.png" alt="MercadoPago">
+      <img src="public/assets/img/logoBanelco.png" alt="Banelco">
+      <img src="public/assets/img/logoLink.png" alt="Red Link">
+      <img src="public/assets/img/logoTransferenciaBancaria.png" alt="Transferencia Bancaria">
     </div>
   </div>
 
@@ -30,7 +34,6 @@
     <div class="icon-grid">
       <img src="public/assets/img/correoargentino.png" alt="Correo Argentino">
       <img src="public/assets/img/andreani.png" alt="Andreani">
-      <!-- etc. -->
     </div>
   </div>
 
@@ -51,7 +54,7 @@
 
     
     <h4>¿Necesitas ayuda? </h4>
-    <button class="consulta-btn">Consultanos</button>
+    <a href="<?= base_url('contactos')?>"><button class="consulta-btn">Consultanos</button></a>
     </div>
 
 </footer>

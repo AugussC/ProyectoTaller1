@@ -18,6 +18,7 @@ h1, h2{
     max-height: 660px; /* o el alto que te guste */
 }
 
+
 .card.no-border {
     background-color: rgb(244, 227, 193);
     border: none;

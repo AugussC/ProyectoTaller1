@@ -65,7 +65,7 @@
                 <p class="text-muted text-decoration-line-through">$38.000</p>
                 <h5 class="text-success">$19.000 <span class="text-success small">50% OFF</span></h5>
                 <p class="text-success small">3 Cuotas sin interes de $6.333,33</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@
                 <p class="text-muted text-decoration-line-through">$40.000</p>
                 <h5 class="text-success">$26.000 <span class="text-success small">35% OFF</span></h5>
                 <p class="text-success small">3 Cuotas sin interes de $8.666,67</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@
                 <p class="text-muted text-decoration-line-through"></p>
                 <h5 class="text-success">$25.810</h5>
                 <p class="text-success small">3 Cuotas sin interes de $8.603,33</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
                 <p class="text-muted text-decoration-line-through">$32.000</p>
                 <h5 class="text-success">$23.000 <span class="text-success small">28% OFF</span></h5>
                 <p class="text-success small">6 Cuotas sin interes de $3.833,33</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
                       <p class="text-muted text-decoration-line-through">$28.000</p>
                       <h5 class="text-success">$25.200 <span class="text-success small">10% OFF</span></h5>
                       <p class="text-success small">Pagando de Contado</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                     </div>
                   </div>
                   </div>
@@ -154,7 +154,7 @@
                         <p class="text-muted text-decoration-line-through">$22.000</p>
                         <h5 class="text-success">$20.900 <span class="text-success small">5% OFF</span></h5>
                         <p class="text-success small">3 Cuotas sin interés de $6.967</p>
-                        <p class="text-success small">Envío gratis superando los $35.000</p>
+                        <p class="text-success small"> </p>
                       </div>
                     </div>
                   </div>
@@ -166,7 +166,7 @@
                       <p class="text-muted text-decoration-line-through">$21.000</p>
                       <h5 class="text-success">$19.000 <span class="text-success small">10% OFF</span></h5>
                       <p class="text-success small">6 Cuotas sin interés de $5.200</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                     </div>
                   </div>
                   </div>
@@ -178,7 +178,7 @@
                       <p class="text-muted text-decoration-line-through">$24.500</p>
                       <h5 class="text-success">$22.540 <span class="text-success small">8% OFF</span></h5>
                       <p class="text-success small">Pagando de Contado</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                         </div>
                 </div>
                   </div>
@@ -208,7 +208,7 @@
                 <p class="text-muted text-decoration-line-through">$39.000</p>
                 <h5 class="text-success">$31.200 <span class="text-success small">20% OFF</span></h5>
                 <p class="text-success small">6 cuotas sin interés de $5.200</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
                   </div>
@@ -232,7 +232,7 @@
                 <p class="text-muted text-decoration-line-through">$31.800</p>
                 <h5 class="text-success">$26.076 <span class="text-success small"> 18% OFF</span></h5>
                 <p class="text-success small">6 Cuotas sin interés de $4.346</p>
-                <p class="text-success small">Envío gratis superando los $35.000</p>
+                <p class="text-success small"> </p>
               </div>
             </div>
                   </div>
@@ -249,7 +249,7 @@
                       <p class="text-muted text-decoration-line-through">$33.500</p>
                       <h5 class="text-success">$28.475 <span class="text-success small">15% OFF</span></h5>
                       <p class="text-success small">6 Cuotas sin interés de $4.746</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                     </div>
                   </div>
                   </div>
@@ -261,7 +261,7 @@
                         <p class="text-muted text-decoration-line-through">$38.000</p>
                         <h5 class="text-success">$19.000 <span class="text-success small">50% OFF</span></h5>
                         <p class="text-success small">3 Cuotas sin interes de $6.333,33</p>
-                        <p class="text-success small">Envío gratis superando los $35.000</p>
+                        <p class="text-success small"> </p>
                       </div>
                     </div>
                   </div>
@@ -273,7 +273,7 @@
                       <p class="text-muted text-decoration-line-through">$25.000</p>
                       <h5 class="text-success">$22.540 <span class="text-success small">10% OFF</span></h5>
                       <p class="text-success small">Pagando de Contado</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                     </div>
                   </div>
                   </div>
@@ -285,7 +285,7 @@
                       <p class="text-muted text-decoration-line-through">$20.000</p>
                       <h5 class="text-success">$18.000 <span class="text-success small">10% OFF</span></h5>
                       <p class="text-success small">3 cuotas sin interés de $6.000</p>
-                      <p class="text-success small">Envío gratis superando los $35.000</p>
+                      <p class="text-success small"> </p>
                         </div>
                 </div>
                   </div>
@@ -340,7 +340,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$24.000 </h5>
                     <p class="text-success small">6 Cuotas sin interés de $4.000</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -353,7 +353,7 @@
                     <p class="text-muted text-decoration-line-through">$31.000</p>
                     <h5 class="text-success">$27.900 <span class="small">10% OFF</span></h5>
                     <p class="text-success small">Pagando de Contado</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -366,7 +366,7 @@
                     <p class="text-muted text-decoration-line-through">$34.800</p>
                     <h5 class="text-success">$27.840 <span class="small">20% OFF</span></h5>
                     <p class="text-success small">3 Cuotas sin interés de $9.280</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -379,7 +379,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$33.000</h5>
                     <p class="text-success small">Pagando de Contado</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -411,7 +411,7 @@
                     <p class="text-muted text-decoration-line-through">$28.000</p>
                     <h5 class="text-success">$25.200 <span class="small">10% OFF</span></h5>
                     <p class="text-success small">6 Cuotas sin interés de $4.200</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -424,7 +424,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$29.000</h5>
                     <p class="text-success small">Pagando de Contado</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -437,7 +437,7 @@
                     <p class="text-muted text-decoration-line-through">$26.000</p>
                     <h5 class="text-success">$22.100 <span class="small">15% OFF</span></h5>
                     <p class="text-success small">3 Cuotas sin interés de $7.366</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -518,7 +518,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$27.000 </h5>
                     <p class="text-success small">Pagando de Contado</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -550,7 +550,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$23.000 </h5>
                     <p class="text-success small">6 Cuotas sin interés de $3.833</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -576,7 +576,7 @@
                     <p class="text-muted text-decoration-line-through"></p>
                     <h5 class="text-success">$30.000</h5>
                     <p class="text-success small">Pagando de Contado</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
@@ -589,7 +589,7 @@
                     <p class="text-muted text-decoration-line-through">$32.000</p>
                     <h5 class="text-success">$28.800 <span class="small">10% OFF</span></h5>
                     <p class="text-success small">6 cuotas sin interés de $4.800</p>
-                    <p class="text-success small">Envío gratis superando los $35.000</p>
+                    <p class="text-success small"> </p>
                   </div>
                 </div>
               </div>
