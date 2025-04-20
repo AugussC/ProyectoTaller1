@@ -20,7 +20,7 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="public/assets/img/Carrusel1.jpeg" class="d-block w-100" alt="ejemplo 1">
+              <img src="public/assets/img/SomosRetroManiacos.png" class="d-block w-100" alt="ejemplo 1">
               <div class="carousel-caption d-none d-md-block">
                 <h5>▼RetroManiacos▼</h5>
                 <p>La camiseta de tu sueño la encontrás acá</p>
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="public/assets/img/Carrusel3.jpg" class="d-block w-100" alt="ejemplo 3">
+              <img src="public/assets/img/OfertasOtoño.png" class="d-block w-100" alt="ejemplo 3">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>Some representative placeholder content for the third slide.</p>
