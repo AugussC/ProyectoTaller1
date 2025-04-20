@@ -1,4 +1,5 @@
 <link href="public/assets/css/estilonavbar.css" rel="stylesheet">
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="public/assets/img/LogoRetromaniacos.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">

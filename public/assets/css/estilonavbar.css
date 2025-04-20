@@ -4,6 +4,11 @@
     color: cadetblue;
   }
 
+  .navbar-dark .navbar-brand {
+    color: rgb(244, 227, 193) !important;
+  }
+  
+
   .navbar-brand {
     padding: 0px;
     color: rgb(244, 227, 193); 
