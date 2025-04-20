@@ -1,0 +1,48 @@
+
+body {
+    background-color: rgb(244, 227, 193);
+    color:rgb(28, 28, 28);
+    font-family: 'Rubik', sans-serif;
+    padding-top: 80px;
+  }
+
+  h1, h2{
+    color:rgb(28, 28, 28);
+    font-family: 'Oswald', sans-serif;
+  }
+  /*Contactos */
+  .bgcustom {
+      background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
+    }
+  
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    #mensaje{
+      resize: none;         /* Quita la esquina de agrandar */
+      height: 160px;        /* Aproximadamente 7 filas de texto */
+      padding: 10px;        /* Espaciado interno para mejor visual */
+      line-height: 1.4;     /* Mejora la legibilidad */
+    }
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+/*Mapa */
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%; /* relación 16:9 */
+      position: relative;
+      height: 0;
+    }
+    
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+

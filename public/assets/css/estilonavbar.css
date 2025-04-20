@@ -1,0 +1,58 @@
+.navbar {
+    background-color: rgb(42, 76, 106);
+    font-family: "Trebuchet MS" , sans-serif;
+    color: cadetblue;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    color: rgb(244, 227, 193); 
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand:hover {
+    color: rgb(109, 174, 219);
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(244, 227, 193);
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: rgb(109, 174, 219);
+  }
+  
+  .form-control {
+    height: 40px;
+    background-color: white;
+    color: 	rgb(28, 28, 28);
+  }
+  
+  .form-control:focus {
+    border-color: rgb(109, 174, 219);
+    box-shadow: 0 0 0 0.2rem rgba(109, 174, 219, 0.25);
+  }
+  
+  .btn-outline-light {
+    border-color: rgb(244, 227, 193);
+    color: rgb(244, 227, 193);
+  }
+  
+  .btn-outline-light:hover {
+    background-color: rgb(109, 174, 219);
+    color: 	rgb(28, 28, 28);
+    border-color: rgb(109, 174, 219);
+  }
+  .btn-icon {
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  

@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(244, 227, 193);
+  color:rgb(28, 28, 28);
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2{
+  color:rgb(28, 28, 28);
+  font-family: 'Oswald', sans-serif;
+}
+
+.bgcustom {
+    background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
+  }
+
+  
+.carousel-inner {
+    max-height: 700px; /* o el alto que te guste */
+}
+
+.card.no-border {
+    background-color: rgb(244, 227, 193);
+    border: none;
+    box-shadow: none; /* Opcional: también le quita la sombra si hay */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: 60% 60%;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
+  @media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-item img {
+      max-height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    #carouselExampleCaptions{
+      margin-top: 70px;
+    }
+  }
+  
+ 
+  @media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-caption h5 {
+      font-size: 1.2rem; /* más chico en celular */
+      text-align: center;
+    }
+  }
+    
+  .img-producto {
+    width: 100%;              /* Se adapta al ancho del contenedor */
+    height: auto;             /* Mantiene la proporción (no se deforma) */
+    max-height: 250px;        /* Altura máxima para uniformar sin deformar */
+    object-fit: contain;      /* Se ajusta sin recortar ni deformar */
+    display: block;
+    margin: 0 auto;
+  }
+
+  
+  
+
+ 

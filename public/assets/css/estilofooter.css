@@ -1,0 +1,69 @@
+.footer{
+    background: rgb(42, 76, 106);
+    color: rgb(244, 227, 193);
+      padding: 40px 20px;
+      font-family: 'Trebuchet MS', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid #eee
+  }
+  .footer-section {
+    flex: 1 1 200px;
+  }
+  .footer-section h4 {
+   font-weight: bold;
+ }
+ /* Mostrar a joa como le gusta mas si con o sin este*/
+ .footer-section ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .footer-section ul li {
+   margin-bottom: 5px;
+ }
+ 
+ .footer-section a {
+   color: rgb(244, 227, 193);
+   text-decoration: none;
+ }
+ 
+ .footer-section a:hover {
+   color: rgb(109, 174, 219);
+   text-decoration: underline;
+ }
+ 
+ .icon-grid {
+   display: flex;          /* Organiza los íconos en fila usando Flexbox */
+   flex-wrap: wrap;        /* Permite que los íconos pasen a otra línea si no entran */
+   gap: 10px;              /* Espacio de 10px entre los íconos */
+ }
+ 
+ .icon-grid img,
+ .social-icons img {
+   width: 40px;            /* Ancho fijo de 40px para los íconos */
+   height: auto;           /* Mantiene la proporción original de la imagen */
+ }
+ 
+ .social-icons {
+   display: flex;          /* Organiza los íconos sociales en fila */
+   gap: 10px;              /* Espacio de 10px entre los íconos sociales */
+   margin-bottom: 10px;    /* Espacio debajo del grupo de íconos */
+ }
+      
+ .consulta-btn {
+   background-color: #2b3a42;    /* Azul */
+   color: rgb(244, 227, 193);               /* Texto blanco */
+   padding: 10px 20px;          /* Espaciado interno */
+   border: none;                /* Sin borde */
+   border-radius: 5px;          /* Bordes redondeados */
+   cursor: pointer;             /* Mano al pasar el mouse */
+   transition: background-color 0.3s ease;
+ }
+ 
+ .consulta-btn:hover {
+   background-color: rgb(109, 174, 219);   /* Azul más oscuro al pasar el mouse */
+ }
+ 
