@@ -41,10 +41,10 @@
    gap: 10px;              /* Espacio de 10px entre los íconos */
  }
  
- .icon-grid img,
- .social-icons img {
-   width: 40px;            /* Ancho fijo de 40px para los íconos */
-   height: auto;           /* Mantiene la proporción original de la imagen */
+ .icon-grid img {
+   width: auto;            /* Ancho fijo de 40px para los íconos */
+   height: 29px;           /* Mantiene la proporción original de la imagen */
+   object-fit: contain;     /* Ajusta sin recortar ni deformar */
  }
  
  .social-icons {
@@ -52,6 +52,16 @@
    gap: 10px;              /* Espacio de 10px entre los íconos sociales */
    margin-bottom: 10px;    /* Espacio debajo del grupo de íconos */
  }
+
+ .social-icons i {
+  font-size: 25px;
+  color: rgb(244, 227, 193);
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: rgb(109, 174, 219);
+}
       
  .consulta-btn {
    background-color: #2b3a42;    /* Azul */
@@ -59,7 +69,6 @@
    padding: 10px 20px;          /* Espaciado interno */
    border: none;                /* Sin borde */
    border-radius: 5px;          /* Bordes redondeados */
-   cursor: pointer;             /* Mano al pasar el mouse */
    transition: background-color 0.3s ease;
  }
  

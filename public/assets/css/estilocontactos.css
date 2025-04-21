@@ -26,10 +26,16 @@ body {
       padding: 10px;        /* Espaciado interno para mejor visual */
       line-height: 1.4;     /* Mejora la legibilidad */
     }
-    .social-icons a {
-      margin-right: 10px;
-      font-size: 1.5rem;
+    .iconos-redes{
+      display: flex;          /* Organiza los íconos sociales en fila */
+      gap: 10px;              /* Espacio de 10px entre los íconos sociales */
+      margin-bottom: 10px;    /* Espacio debajo del grupo de íconos */
     }
+   
+    .iconos-redes i {
+      font-size: 29px;
+    }
+
 /*Mapa */
     .map-responsive {
       overflow: hidden;

@@ -1,4 +1,4 @@
-<link href="public/assets/css/estilofooter.css" rel="stylesheet">
+<link href="public/assets/css/estilofooter.css?v=2" rel="stylesheet">
 <footer class="footer mt-5">
   <div class="footer-section">
     <h4>Indice</h4>
@@ -22,7 +22,7 @@
       <img src="public/assets/img/visa.png" alt="Visa">
       <img src="public/assets/img/mastercard.png" alt="MasterCard">
       <img src="public/assets/img/naranja.png" alt="Tarjeta Naranja">
-      <img src="public/assets/img/logoMercadoPago.png" alt="MercadoPago">
+      <img src="public/assets/img/logoMercadoPago2.png" alt="MercadoPago">
       <img src="public/assets/img/logoBanelco.png" alt="Banelco">
       <img src="public/assets/img/logoLink.png" alt="Red Link">
       <img src="public/assets/img/logoTransferenciaBancaria.png" alt="Transferencia Bancaria">

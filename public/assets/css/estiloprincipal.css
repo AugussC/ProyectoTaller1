@@ -13,10 +13,50 @@ h1, h2{
     background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
   }
 
-  
+/* Contenedor del carrusel */
 .carousel-inner {
-    max-height: 660px; /* o el alto que te guste */
+  height: 600px; /* Altura fija del carrusel */
+  position: relative; /* Necesaria para posicionar elementos hijos como captions con position: absolute */
 }
+
+/* Imagen dentro del carrusel */
+.carousel-inner img {
+  width: 100%; /* Que ocupe todo el ancho disponible */
+  height: 100%; /* Que ocupe toda la altura del carrusel */
+  object-fit: contain; /* Ajusta la imagen al contenedor sin recortarla (puede dejar espacios vacíos) */
+}
+
+/* Texto del carrusel (caption) */
+.carousel-caption {
+  bottom: 20px; /* Posiciona el caption a 20px del borde inferior (requiere position: absolute para funcionar) */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para mejorar legibilidad sobre la imagen */
+  padding: 10px; /* Espacio interno alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados para un diseño más suave */
+  max-width: 90%; /* El caption no será más ancho que el 90% del carrusel */
+  word-wrap: break-word; /* Rompe palabras largas que no entren para evitar desbordes */
+  text-align: center; /* Centra el texto dentro del caption */
+  flex-shrink: 0; /* Impide que el texto se encoja si está dentro de un contenedor flexible */
+}
+
+
+
+@media (max-width: 768px) {
+  /* Reducimos altura del carrusel completo */
+  .carousel-inner {
+    margin-top: 30px;
+    height: 300px; /* mismo valor que la imagen */
+  }
+
+  /* Imagen dentro del carrusel */
+  #carouselExampleCaptions .carousel-item img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+
+
 
 
 .card.no-border {
@@ -38,24 +78,6 @@ h1, h2{
     width: 5%;
   }
 
-  @media (max-width: 768px) {
-    #carouselExampleCaptions .carousel-item img {
-      max-height: 300px;
-      width: 100%;
-      object-fit: cover;
-    }
-    #carouselExampleCaptions{
-      margin-top: 70px;
-    }
-  }
-  
- 
-  @media (max-width: 768px) {
-    #carouselExampleCaptions .carousel-caption h5 {
-      font-size: 1.2rem; /* más chico en celular */
-      text-align: center;
-    }
-  }
     
   .img-producto {
     width: 100%;
