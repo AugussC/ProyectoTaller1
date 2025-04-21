@@ -1,4 +1,4 @@
-<link href="public/assets/css/estilofooter.css" rel="stylesheet">
+<link href="public/assets/css/estilofooter.css?v=1" rel="stylesheet">
 <footer class="footer mt-5">
   <div class="footer-section">
     <h4>Indice</h4>
