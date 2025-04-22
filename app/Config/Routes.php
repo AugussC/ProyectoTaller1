@@ -12,7 +12,8 @@ $routes->set404Override();
  */
 $routes->get('/', 'Home::index');
 $routes->get('inicio', 'Home::index');
-$routes->get('quienes_somos', 'Home::contactos');
+$routes->get('quienes_somos', 'Home::quienes_somos');
+$routes->get('terminos', 'Home::terminos');
 $routes->get('contactos', 'Home::contactos');
 $routes->get('lavado_recomendado', 'Home::lavado_recomendado');
 $routes->get('guia_talles', 'Home::guia_talles');

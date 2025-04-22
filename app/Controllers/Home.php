@@ -52,4 +52,21 @@ class Home extends BaseController
          . view('preguntas_frecuentes')
          . view('footer', $data);
     }
+
+    public function terminos()
+    {
+    $data['titulo'] = 'Términos y Condiciones';
+    return view('navbar', $data)
+         . view('terminos')
+         . view('footer', $data);
+    }
+
+    public function quienes_somos()
+    {
+    $data['titulo'] = 'Quiénes Somos';
+    return view('navbar', $data)
+         . view('quienes_somos')
+         . view('footer', $data);
+    }
+
 }
