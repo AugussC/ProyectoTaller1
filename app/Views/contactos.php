@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contactos</title>
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estilocontactos.css?v=1" rel="stylesheet" >
+    <link href="public/assets/css/estilocontactos.css?v=2" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   </head>
   <body>
-
      <div class="container pt-3">
-        <div class="h1 mb-4 text-center">Comunicate con Nosotros</div>
+     <div class="bloque-titulares">
+        <h2>Titulares de la Empresa</h2>
+        <p>Cantero Augusto y Escalante Joaquín</p>
+        <p><strong>Razon social:</strong> RetroManiacos S.R.L.</p>
+        <div class="eslogan-box">
+            <p id="eslogan"></p>
+        </div>
+        </div>
+
+
+
+        <div class="h2 mb-4 text-center">Comunicate con Nosotros</div>
         <div class="row">
             <!-- Columna izquierda: Datos de contacto + Mapa -->
             <div class="col-md-6">
@@ -89,5 +99,6 @@
         
 
         <script src="public/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="public/assets/js/eslogan.js"></script>
   </body>
 </html>

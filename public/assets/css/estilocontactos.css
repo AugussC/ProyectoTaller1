@@ -1,3 +1,32 @@
+/* Bloque de titulares */
+.bloque-titulares {
+  background-color: #f9f4e8;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.bloque-titulares h2 {
+  color: #2a3d66;
+  margin-bottom: 10px;
+}
+
+.bloque-titulares p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.bloque-titulares .eslogan-box {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+
 
 body {
     background-color: rgb(244, 227, 193);
