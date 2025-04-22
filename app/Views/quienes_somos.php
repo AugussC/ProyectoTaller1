@@ -24,7 +24,7 @@
       </p>
     </div>
     <div class="col-md-6">
-      <img src="." class="img-fluid rounded" alt=".">
+      <img src="public/assets/img/Enviosymas.png" class="img-fluid rounded" alt=".">
     </div>
   </div>
 
@@ -37,7 +37,7 @@
       </p>
     </div>
     <div class="col-md-6 order-md-1">
-      <img src="ruta-a-tu-imagen2.jpg" class="img-fluid rounded" alt="Objetivos">
+      <img src="public/assets/img/Enviosymas.png" class="img-fluid rounded" alt="Objetivos">
     </div>
   </div>
 
@@ -49,7 +49,7 @@
       </p>
     </div>
     <div class="col-md-6">
-      <img src="ruta-a-tu-imagen.jpg" class="img-fluid rounded" alt="Trayectoria">
+      <img src="public/assets/img/Enviosymas.png" class="img-fluid rounded" alt="Trayectoria">
     </div>
   </div>
 
@@ -62,7 +62,7 @@
       </p>
     </div>
     <div class="col-md-6 order-md-1">
-      <img src="ruta-a-tu-imagen2.jpg" class="img-fluid rounded" alt="Objetivos">
+      <img src="public/assets/img/Enviosymas.png" class="img-fluid rounded" alt="Objetivos">
     </div>
     </div>
 </div>

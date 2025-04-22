@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <div class="contenedor-principal  mt-3 px-3">
+    <div class="contenedor-principal  mt-3 px-5">
       <h1 style="text-align: center">TÉRMINOS Y CONDICIONES DE USO - RETROMANIACOS.</h1>
       <h3 style="text-align: center">Última actualización: [20/04/2025]</h2>
       <br>

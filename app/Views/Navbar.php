@@ -23,7 +23,7 @@
           <a class="nav-link" href="<?= base_url('contactos')?>">Contactos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('terminos_condiciones')?>">Terminos</a>
+          <a class="nav-link" href="<?= base_url('terminos')?>">Terminos</a>
         </li>
       </ul>
       <form class="d-flex ms-2 mb-2 align-items-center" role="search">
