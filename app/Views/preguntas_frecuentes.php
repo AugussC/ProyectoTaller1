@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Preguntas Frecuentes</title>
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/assets/css/estilo_preguntas.css" rel="stylesheet" >
   </head>

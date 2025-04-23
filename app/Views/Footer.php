@@ -13,7 +13,7 @@
       <li><a href="<?= base_url('lavado_recomendado')?>">- Lavado Recomendado</a></li>
       <li><a href="<?= base_url('guia_talles')?>">- Guia de Talles</a></li>
       <li><a href="<?= base_url('preguntas_frecuentes')?>">- Preguntas Frecuentes</a></li>
-      <li><a href="<?= base_url('terminos_condiciones')?>">- Terminos y Condiciones</a></li>
+      <li><a href="<?= base_url('terminos')?>">- Terminos y Condiciones</a></li>
     </ul>
   </div>
 
