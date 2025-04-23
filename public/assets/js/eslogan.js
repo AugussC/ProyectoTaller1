@@ -8,7 +8,19 @@ const esloganes = [
   "“Pasión por la historia del fútbol, camiseta por camiseta”",
   "“No entendemos otra pasión que no sea el fútbol”",
   "“Una camiseta puede revivir esos 90 minutos”",
-  "“Nuestras camisetas tienen más historia que muchas selecciones”"
+  "“Nuestras camisetas tienen más historia que muchas selecciones”",
+  "“Cada camiseta, una historia que vuelve a latir”",
+  "“No vendemos ropa, vendemos recuerdos”",
+  "“Volvé al fútbol que te enamoró”",
+  "“Del potrero al corazón, un viaje en tela”",
+  "“Donde las leyendas aún sudan la camiseta”",
+  "“No entendemos otra pasión que no sea el fútbol”",
+  "“Vestirse de historia también es sentirla”",
+  "“Todo pasa, pero el fútbol queda”",
+  "“Jugamos como siempre, revivilo como nunca”",
+  "“El fútbol es pasión, locura y camisetas”",
+  "“Cuando salís a la cancha, salís con toda tu historia encima”",
+    
 ];
 
 let i = 0;
