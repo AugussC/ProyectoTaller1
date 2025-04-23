@@ -60,7 +60,7 @@
                 <img src="public/assets/img/visa.png" alt="Visa">
                 <img src="public/assets/img/mastercard.png" alt="Mastercard">
                 <img src="public/assets/img/naranja.png" alt="Naranja">
-                <img src="public/assets/img/logoMercadoPago.png" alt="MercadoPago">
+                <img src="public/assets/img/logoMercadoPago2.png" alt="MercadoPago">
                 <img src="public/assets/img/logoBanelco.png" alt="Banelco">
                 <img src="public/assets/img/logoLink.png" alt="Red Link">
                 <img src="public/assets/img/logoTransferenciaBancaria.png" alt="Transferencia Bancaria">

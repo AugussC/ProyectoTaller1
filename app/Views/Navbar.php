@@ -28,7 +28,7 @@
           <a class="nav-link" href="<?= base_url('terminos')?>">Terminos</a>
         </li>
       </ul>
-    
+      <!--
       <form class="d-flex ms-2 mb-2 align-items-center" role="search">
       <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
       
@@ -44,7 +44,7 @@
         <i class="bi bi-cart"></i>
       </button>
     </form> 
-
+-->
     </div>
   </div>
 </nav>

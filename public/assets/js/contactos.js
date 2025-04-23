@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Borra el mensaje luego de unos segundos (opcional)
       setTimeout(() => {
         mensajeExito.textContent = '';
-      }, 3000);
+      }, 4000);
     });
   });
   

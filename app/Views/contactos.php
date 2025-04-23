@@ -91,7 +91,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Enviar</button>
-                <div id="mensaje-exito" class="mt-3 text-success" style="opacity: 0; transition: opacity 0.5s;"></div>
+                <div id="mensaje-exito" class="mt-3 text-success" style=" opacity: 3; transition: opacity 0.5s;"></div>
             </form>
             </div>
         </div>
