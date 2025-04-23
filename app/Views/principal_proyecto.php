@@ -531,7 +531,7 @@
                   <img src="public/assets/img/Maradona.jpg" class="  img-producto" alt="Producto 1">
                 </div>
                   <div class="card-body">
-                    <h6 class="card-title">Boca Juniors 1981-82 Local</h6>
+                    <h6 class="card-title">Boca Jr 1981-82 Local</h6>
                     <p class="text-muted text-decoration-line-through">$37.000</p>
                     <h5 class="text-success">$27.750 <span class="small">25% OFF</span></h5>
                     <p class="text-success small">Pagando de Contado</p>
@@ -577,8 +577,8 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Napoli 1987-88 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$36.500</p>
-                    <h5 class="text-success">$32.850 <span class="small">10% OFF</span></h5>
+                    <p class="text-muted text-decoration-line-through">$32.850</p>
+                    <h5 class="text-success">  <span class="small">  </span></h5>
                     <p class="text-success small">6 Cuotas sin interés de $5.475</p>
                     <p class="text-success small">Envío gratis</p>
                   </div>
