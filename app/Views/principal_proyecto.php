@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RetroManiacos</title>
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estiloprincipal.css?v=1.9" rel="stylesheet">
+    <link href="public/assets/css/estiloprincipal.css?v=1.10" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
@@ -340,7 +340,7 @@
     
     <!-- Card a la izquierda -->
     <div class="col-md-3 d-flex justify-content-center">
-      <div class="card border-0" style="width: 18rem;">
+      <div class="card.no-border" style="width: 18rem;">
         <img src="public/assets/img/lionelmessi.jpg" class="  rounded-circle img-fluid" alt="Lionel Messi">
         <div class="card-body text-center">
           <h2>Lionel Messi</h2>
@@ -357,7 +357,7 @@
           <div class="carousel-item active">
             <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
               <!-- Producto 1 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi1.jpg" class=" img-producto" alt="Producto 1">
@@ -372,7 +372,7 @@
                 </div>
               </div>
               <!-- Producto 2 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi2.jpg" class=" img-producto" alt="Producto 6">
@@ -387,7 +387,7 @@
                 </div>
               </div>
               <!-- Producto 3 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi3.jpg" class=" img-producto" alt="Producto 6">
@@ -402,7 +402,7 @@
                 </div>
               </div>
               <!-- Producto 4 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi4.jpg" class=" img-producto" alt="Producto 6">
@@ -423,7 +423,7 @@
           <div class="carousel-item">
             <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
               <!-- Producto 4 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi5.png" class="  img-producto" alt="Producto 6">
@@ -438,7 +438,7 @@
                 </div>
               </div>
               <!-- Producto 6 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi6.jpg" class="  img-producto" alt="Producto 6">
@@ -453,7 +453,7 @@
                 </div>
               </div>
               <!-- Producto 7 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi7.jpg" class="  img-producto" alt="Producto 6">
@@ -468,7 +468,7 @@
                 </div>
               </div>
               <!-- Producto 8 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Messi8.jpg" class="  img-producto" alt="Producto 6">
@@ -505,13 +505,13 @@
 
       <!-- SecciÃ³n: Card Maradona + Carrusel en la misma fila -->
       <div class="container-fluid bgcustom my-5 py-4">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-4">
           <!-- Card a la izquierda -->
-          <div class="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
+          <div class="col-md-3 d-flex justify-content-center ">
             <div class="card.no-border" style="width: 18rem; ">
-              <img src="public/assets/img/diegomaradona.jpg" class="  rounded-circle" alt="...">
+              <img src="public/assets/img/diegomaradona.jpg" class=" rounded-circle img-fluid" alt="Diego Armando Maradona">
               <div class="card-body text-center">
-                <h2 class="card-text">Diego Armando Maradona</h2>
+                <h2>Diego Armando Maradona</h2>
               </div>
             </div>
           </div>
@@ -525,7 +525,7 @@
           <div class="carousel-item active">
             <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
               <!-- Producto 1 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona.jpg" class="  img-producto" alt="Producto 1">
@@ -540,7 +540,7 @@
                 </div>
               </div>
               <!-- Producto 2 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona2.jpg" class="  img-producto" alt="Producto 2">
@@ -555,7 +555,7 @@
                 </div>
               </div>
               <!-- Producto 3 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona3.jpg" class="  img-producto" alt="Producto 3">
@@ -570,7 +570,7 @@
                 </div>
               </div>
               <!-- Producto 4 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona4.jpg" class="  img-producto" alt="Producto 4">
@@ -591,7 +591,7 @@
           <div class="carousel-item">
             <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
               <!-- Producto 4 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona5.jpg" class="  img-producto" alt="Producto 5">
@@ -606,7 +606,7 @@
                 </div>
               </div>
               <!-- Producto 6 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona6.jpg" class="  img-producto" alt="Producto 6">
@@ -621,7 +621,7 @@
                 </div>
               </div>
               <!-- Producto 7 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona7.jpg" class="  img-producto" alt="Producto 5">
@@ -636,7 +636,7 @@
                 </div>
               </div>
               <!-- Producto 8 -->
-              <div class="col-6 col-md-3 col-lg-2">
+              <div class="col-6 col-md-3 col-xl-2">
                 <div class="card h-100">
                 <div class="card-img-container">
                   <img src="public/assets/img/Maradona8.jpg" class="  img-producto" alt="Producto 8">
