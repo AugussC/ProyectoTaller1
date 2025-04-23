@@ -13,7 +13,8 @@
   <div class="contenedor-principal  mt-3 px-3">
       <h1 style="text-align: center">¿Quienes Somos?</h1>
       <br>
-      <p style="text-align: center"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      <p style="text-align: center"> Somos dos estudiantes de la Licenciatura en Sistemas de Información y fanáticos del fútbol, unidos por la pasión y el deseo de hacer más accesibles y disfrutables esas mismas pasiones para otros hinchas como nosotros.
+      </p>
     
 
   <div class="container my-5">
@@ -21,10 +22,14 @@
   <div class="row align-items-center mb-5">
     <div class="col-md-6">
       <h2>Nuestra Historia</h2>
+      <p class="text-justify">
+      RetroManiacos nació en 2025, inspirada por una apasionada charla sobre camisetas icónicas de leyendas del fútbol. Porque, seamos sinceros, ¿quién no ha soñado alguna vez con jugar como Maradona en el '86 o como Pelé en sus días de gloria? De ese entusiasmo surgió la idea: crear una empresa que, aunque no puedas ser ellos, puedas sentirte como si lo fueras.
+
+      </p>
       <br>
       <h2>Objetivos</h2>
       <p class="text-justify">
-        RetroManiacos nació de la pasión por las camisetas retro y el fútbol. Desde nuestras primeras colecciones hasta hoy, seguimos creciendo con el objetivo de revivir la historia del deporte a través de sus prendas más emblemáticas.
+      La empresa surgió ante la dificultad de encontrar camisetas de fútbol emblemáticas e históricas, piezas que muchas veces resultan escasas y difíciles de conseguir. Por eso decidimos crear una tienda que reuniera estas joyas del deporte, para que otros fanáticos puedan acceder a ellas de forma mucho más simple.
       </p>
     </div>
     <div class="col-md-6">
@@ -32,16 +37,29 @@
     </div>
   </div>
     <br>
-    <h2 style= "text-align: center" >Nuestra Historia</h2>
+    <h2 style= "text-align: center" >Informacion del Equipo</h2>
     <br>
-
-    <p style="text-align: center"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-
+    <div class="row justify-content-center g-4">
+  <div class="col-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Escalante, Joaquín</h5>
+        <p class="card-text">Estudiante de Lic. en Sistemas de Informacion.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cantero, Augusto Joaquin</h5>
+        <p class="card-text">Estudiante de Lic. en Sistemas de Informacion.</p>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
-
-
-</div>
-
   
       <script src="public/assets/js/bootstrap.bundle.min.js"></script>
   </body>
