@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(244, 227, 193);
+    color:rgb(28, 28, 28);
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  h1, h2{
+    color:rgb(28, 28, 28);
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .bgcustom {
+      background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
+    }
+  
+  /* Contenedor del carrusel */
+  .carousel-inner {
+    height: 600px; /* Altura fija del carrusel */
+    position: relative; /* Necesaria para posicionar elementos hijos como captions con position: absolute */
+  }
+  
+  /* Imagen dentro del carrusel */
+  .carousel-inner img {
+    width: 100%; /* Que ocupe todo el ancho disponible */
+    height: 100%; /* Que ocupe toda la altura del carrusel */
+    object-fit: contain; /* Ajusta la imagen al contenedor sin recortarla (puede dejar espacios vacíos) */
+  }
+  
+  /* Texto del carrusel (caption) */
+  .carousel-caption {
+    bottom: 20px; /* Posiciona el caption a 20px del borde inferior (requiere position: absolute para funcionar) */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para mejorar legibilidad sobre la imagen */
+    padding: 10px; /* Espacio interno alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para un diseño más suave */
+    max-width: 90%; /* El caption no será más ancho que el 90% del carrusel */
+    word-wrap: break-word; /* Rompe palabras largas que no entren para evitar desbordes */
+    text-align: center; /* Centra el texto dentro del caption */
+    flex-shrink: 0; /* Impide que el texto se encoja si está dentro de un contenedor flexible */
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    /* Reducimos altura del carrusel completo */
+    .carousel-inner {
+      margin-top: 30px;
+      height: 300px; /* mismo valor que la imagen */
+    }
+  
+    /* Imagen dentro del carrusel */
+    #carouselExampleCaptions .carousel-item img {
+      max-height: 300px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  
+  
+  
+  
+  .card.no-border {
+      background-color: rgb(244, 227, 193);
+      border: none;
+      box-shadow: none; /* Opcional: también le quita la sombra si hay */
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.6);
+      background-size: 60% 60%;
+      border-radius: 50%;
+      padding: 20px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+  
+      
+    .img-producto {
+      width: 100%;
+      height: 250px;         /* altura fija */
+      object-fit: contain;   /* mostrar toda la camiseta sin recortar */
+      background-color: white; /* opcional: relleno blanco si sobra espacio */
+      display: block;
+      margin: 0 auto;
+    }
+    

@@ -13,7 +13,7 @@
   <div class="accordion" id="accordionFAQ">
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading1">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+      <button class="accordion-button collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
         ¿Necesito registrarme para comprar?
       </button>
     </h2>

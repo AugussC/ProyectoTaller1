@@ -20,21 +20,21 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="public/assets/img/SomosRetroManiacos.png" class="d-block w-100" alt="ejemplo 1">
+              <img src="public/assets/img/SomosRetroManiacos.png" class="d-block " alt="ejemplo 1">
               <div class="carousel-caption d-none d-lg-block">
                 <h5>▼RetroManiacos▼</h5>
                 <p>La camiseta de tu sueño la encontrás acá</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="public/assets/img/Enviosymas.png" class="d-block w-100" alt="ejemplo 2">
+              <img src="public/assets/img/Enviosymas.png" class="d-block " alt="ejemplo 2">
               <div class="carousel-caption d-none d-lg-block">
                 <h5>Tu Compra, Más Fácil</h5>
                 <p>Pagá en cuotas sin interés y recibí tu pedido sin cargo.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="public/assets/img/OfertasOtoño.png" class="d-block w-100" alt="ejemplo 3">
+              <img src="public/assets/img/OfertasOtoño.png" class="d-block" alt="ejemplo 3">
               <div class="carousel-caption d-none d-lg-block">
                 <h5>🍂¡Ofertas de Otoño!🍂</h5>
                 <p>Renová tu colección con los clásicos de siempre a precios que no se repiten.
@@ -137,7 +137,7 @@
                 <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                    <img src="public/assets/img/camiseta1.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                    <img src="public/assets/img/camiseta1.jpg" class=" img-producto" alt="Producto Mas Vendido 1">
                     <div class="card-body">
                       <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
                       <p class="text-muted text-decoration-line-through">$28.000</p>
@@ -615,21 +615,21 @@
   <div class="row justify-content-center mb-4">
     <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
     <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
-    <i class="bi bi-people-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+    <i class="bi bi-rulers" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
     <div class="card-body">
-    <h5 class="card-title">¿Quienes Somos?</h5>
-    <p class="card-text"> ¿Te interesa conocer más sobre nuestro negocio? ¡Este es el momento! </p>
-    <a href="#" class="btn btn-primary">Click Aquí</a>
+    <h5 class="card-title">Guia de talles</h5>
+    <p class="card-text"> ¿No sabes que talle sos?</p>
+    <a href="<?= base_url('guia_talles')?>" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
     </div>
     <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
     <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
-    <i class="bi bi-box-seam-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+    <i class="bi bi-droplet-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
   <div class="card-body">
-    <h5 class="card-title">Comercializacion</h5>
-    <p class="card-text">¡Información de envío, métodos de pago y más!.</p>
-    <a href="#" class="btn btn-primary">Click Aquí</a>
+    <h5 class="card-title">Lavados recomendados</h5>
+    <p class="card-text">Informacion de como lavar correctamente la camiseta.</p>
+    <a href="<?= base_url('lavado_recomendado')?>" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
   </div>
@@ -638,11 +638,11 @@
   <div class="row justify-content-center mt-4">
     <div class="col-md-6 d-flex justify-content-center">
     <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
-    <i class="bi bi-chat-left-text-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+    <i class="bi bi-question-circle" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
   <div class="card-body">
-    <h5 class="card-title">Contactos</h5>
-    <p class="card-text">¿Tienes alguna duda sobre el producto, la página o los talles? ¡No dudes en contactarnos!</p>
-    <a href="#" class="btn btn-primary">Click Aquí</a>
+    <h5 class="card-title">Preguntas frecuentes</h5>
+    <p class="card-text">¿Tienes alguna duda sobre el producto, la página o los talles?</p>
+    <a href="<?= base_url('preguntas_frecuentes')?>" class="btn btn-primary">Click Aquí</a>
   </div>
 </div>
     </div>
