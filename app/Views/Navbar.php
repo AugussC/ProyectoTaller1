@@ -10,9 +10,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <!--   
+      <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Catalogo</a>
         </li>
+-->
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('quienes_somos')?>">¿Quienes Somos?</a>
         </li>
@@ -26,6 +28,7 @@
           <a class="nav-link" href="<?= base_url('terminos')?>">Terminos</a>
         </li>
       </ul>
+      <!--
       <form class="d-flex ms-2 mb-2 align-items-center" role="search">
       <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
       
@@ -41,6 +44,7 @@
         <i class="bi bi-cart"></i>
       </button>
     </form> 
+-->
     </div>
   </div>
 </nav>

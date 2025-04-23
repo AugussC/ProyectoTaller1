@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RetroManiacos</title>
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estiloprincipal.css" rel="stylesheet">
+    <link href="public/assets/css/estiloprincipal.css?v=1.9" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
@@ -60,7 +60,7 @@
               <!-- Producto 1 -->
             <div class="col-md-12 col-lg-3 ms-0 ms-lg-5 me-0 me-lg-3 mb-3">
             <div class="card h-100">
-              <img src="public/assets/img/ImagenMasVendida1.jpg" class="card-img-top" alt="Producto Mas Vendido 1">
+              <img src="public/assets/img/ImagenMasVendida1.jpg" class=" " alt="Producto Mas Vendido 1">
               <div class="card-body">
                 <h6 class="card-title">AC Milan 2006-07 Local</h6>
                 <p class="text-muted text-decoration-line-through">$38.000</p>
@@ -73,7 +73,7 @@
               <!-- Producto 2 -->
           <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
             <div class="card h-100">
-              <img src="public/assets/img/ImagenMasVendida2.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 2">
+              <img src="public/assets/img/ImagenMasVendida2.jpg" class="  img-producto" alt="Producto Mas Vendido 2">
               <div class="card-body">
                 <h6 class="card-title">Schalke 04 1998-99 Local</h6>
                 <p class="text-muted text-decoration-line-through">$40.000</p>
@@ -86,9 +86,9 @@
           <!-- Producto 3 -->
           <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
             <div class="card h-100">
-              <img src="public/assets/img/ImagenMasVendida3.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 3">
+              <img src="public/assets/img/ImagenMasVendida3.jpg" class="  img-producto" alt="Producto Mas Vendido 3">
               <div class="card-body">
-                <h6 class="card-title">Camiseta Visitante Argentina 2006</h6>
+                <h6 class="card-title"> Argentina 2006 Visitante</h6>
                 <p class="text-muted text-decoration-line-through"></p>
                 <h5 class="text-success">$25.810</h5>
                 <p class="text-success small">3 Cuotas sin interes de $8.603,33</p>
@@ -99,7 +99,7 @@
           <!-- Producto 4 -->
           <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
             <div class="card h-100">
-              <img src="public/assets/img/ImagenMasVendida4.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 4">
+              <img src="public/assets/img/ImagenMasVendida4.jpg" class="  img-producto" alt="Producto Mas Vendido 4">
               <div class="card-body">
                 <h6 class="card-title">Alemania 1990 Local</h6>
                 <p class="text-muted text-decoration-line-through"></p>
@@ -112,9 +112,9 @@
           <!-- Producto 5 -->
           <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
             <div class="card h-100">
-              <img src="public/assets/img/ImagenMasVendida5.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 5">
+              <img src="public/assets/img/ImagenMasVendida5.jpg" class="  img-producto" alt="Producto Mas Vendido 5">
               <div class="card-body">
-                <h6 class="card-title">Camiseta Local Inter Milan 2001-02</h6>
+                <h6 class="card-title">Inter Milan 2001-02 Local</h6>
                 <p class="text-muted text-decoration-line-through">$32.000</p>
                 <h5 class="text-success">$23.000 <span class="text-success small">28% OFF</span></h5>
                 <p class="text-success small">6 Cuotas sin interes de $3.833,33</p>
@@ -137,7 +137,9 @@
                 <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                    <img src="public/assets/img/camiseta1.jpg" class=" img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta1.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                     <div class="card-body">
                       <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
                       <p class="text-muted text-decoration-line-through">$28.000</p>
@@ -149,7 +151,9 @@
                   </div>
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta2.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta2.png" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                       <div class="card-body">
                         <h6 class="card-title">River Plate 2017-18 Local</h6>
                         <p class="text-muted text-decoration-line-through">$22.000</p>
@@ -161,7 +165,9 @@
                   </div>
                   <div class="d-none d-md-block col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta3.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta3.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                     <div class="card-body">
                       <h6 class="card-title">Barcelona 2024-25 Local</h6>
                       <p class="text-muted text-decoration-line-through">$21.000</p>
@@ -173,7 +179,9 @@
                   </div>
                   <div class="d-none d-lg-block col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta4.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta4.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                     <div class="card-body">
                       <h6 class="card-title">Liverpool FC 17-18 Local</h6>
                       <p class="text-muted text-decoration-line-through">$24.500</p>
@@ -191,7 +199,9 @@
                 <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta5.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta5.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
               <div class="card-body">
                 <h6 class="card-title">Stade Brestois 21-22 Aniversario</h6>
                 <p class="text-muted text-decoration-line-through">$42.500</p>
@@ -203,7 +213,9 @@
                   </div>
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta6.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta6.png" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
               <div class="card-body">
                 <h6 class="card-title">UD Las Palmas 96-97 Local</h6>
                 <p class="text-muted text-decoration-line-through">$39.000</p>
@@ -215,7 +227,9 @@
                   </div>
                   <div class="d-none d-md-block col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta7.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta7.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
               <div class="card-body">
                 <h6 class="card-title">Strasbourg 78-79 Local</h6>
                 <p class="text-muted text-decoration-line-through">$40.000</p>
@@ -227,7 +241,9 @@
                   </div>
                   <div class="d-none d-lg-block col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta8.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta8.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
               <div class="card-body">
                 <h6 class="card-title">Red Star Belgrade 98-99 Local</h6>
                 <p class="text-muted text-decoration-line-through">$31.800</p>
@@ -244,7 +260,9 @@
                 <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta9.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta9.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                     <div class="card-body">
                       <h6 class="card-title">Uruguay 2010 Local</h6>
                       <p class="text-muted text-decoration-line-through">$33.500</p>
@@ -256,7 +274,9 @@
                   </div>
                   <div class="col-6 col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta10.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta10.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                       <div class="card-body">
                         <h6 class="card-title">EE.UU. 2018 Local</h6>
                         <p class="text-muted text-decoration-line-through">$38.000</p>
@@ -268,7 +288,9 @@
                   </div>
                   <div class="d-none d-md-block col-md-3 col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta11.jpg" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta11.jpg" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
                     <div class="card-body">
                       <h6 class="card-title">Real Betis 96-97 Local</h6>
                       <p class="text-muted text-decoration-line-through">$25.000</p>
@@ -280,8 +302,10 @@
                   </div>
                   <div class="d-none d-lg-block col-lg-2">
                   <div class="card h-100">
-                  <img src="public/assets/img/camiseta12.png" class="card-img-top img-producto" alt="Producto Mas Vendido 1">
-                    <div class="card-body">
+                  <div class="card-img-container">
+                  <img src="public/assets/img/camiseta12.png" class="  img-producto" alt="Producto Mas Vendido 1">
+                  </div>
+                  <div class="card-body">
                       <h6 class="card-title">Stade Rennais 18-19 European Third</h6>
                       <p class="text-muted text-decoration-line-through">$20.000</p>
                       <h5 class="text-success">$18.000 <span class="text-success small">10% OFF</span></h5>
@@ -317,7 +341,7 @@
     <!-- Card a la izquierda -->
     <div class="col-md-3 d-flex justify-content-center">
       <div class="card border-0" style="width: 18rem;">
-        <img src="public/assets/img/lionelmessi.jpg" class="card-img-top rounded-circle img-fluid" alt="Lionel Messi">
+        <img src="public/assets/img/lionelmessi.jpg" class="  rounded-circle img-fluid" alt="Lionel Messi">
         <div class="card-body text-center">
           <h2>Lionel Messi</h2>
         </div>
@@ -335,7 +359,9 @@
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi1.jpg" class="card-img-top  img-producto" alt="Producto 1">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi1.jpg" class=" img-producto" alt="Producto 1">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 2006 Local</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -348,7 +374,9 @@
               <!-- Producto 2 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi2.jpg" class="card-img-top img-producto" alt="Producto 2">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi2.jpg" class=" img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 2008 Visitante</h6>
                     <p class="text-muted text-decoration-line-through">$31.000</p>
@@ -361,7 +389,9 @@
               <!-- Producto 3 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi3.jpg" class="card-img-top img-producto" alt="Producto 2">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi3.jpg" class=" img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 2008-09 Local</h6>
                     <p class="text-muted text-decoration-line-through">$34.800</p>
@@ -374,7 +404,9 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi4.jpg" class="card-img-top img-producto" alt="Producto 3">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi4.jpg" class=" img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 2011-12 Local</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -393,7 +425,9 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi5.png" class="card-img-top img-producto" alt="Producto 4">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi5.png" class="  img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 2014 World Cup Final</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -406,7 +440,9 @@
               <!-- Producto 6 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi6.jpg" class="card-img-top img-producto" alt="Producto 5">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi6.jpg" class="  img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 2015-16 Local</h6>
                     <p class="text-muted text-decoration-line-through">$28.000</p>
@@ -419,7 +455,9 @@
               <!-- Producto 7 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi7.jpg" class="card-img-top img-producto" alt="Producto 5">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi7.jpg" class="  img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Paris Saint-Germain 2021-22 Local</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -432,7 +470,9 @@
               <!-- Producto 8 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Messi8.jpg" class="card-img-top img-producto" alt="Producto 6">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Messi8.jpg" class="  img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Inter Miami 2024 Local</h6>
                     <p class="text-muted text-decoration-line-through">$26.000</p>
@@ -469,7 +509,7 @@
           <!-- Card a la izquierda -->
           <div class="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
             <div class="card.no-border" style="width: 18rem; ">
-              <img src="public/assets/img/diegomaradona.jpg" class="card-img-top rounded-circle" alt="...">
+              <img src="public/assets/img/diegomaradona.jpg" class="  rounded-circle" alt="...">
               <div class="card-body text-center">
                 <h2 class="card-text">Diego Armando Maradona</h2>
               </div>
@@ -487,9 +527,11 @@
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona.jpg" class="card-img-top img-producto" alt="Producto 1">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona.jpg" class="  img-producto" alt="Producto 1">
+                </div>
                   <div class="card-body">
-                    <h6 class="card-title">Boca Juniors 1981-82 Camiseta Local</h6>
+                    <h6 class="card-title">Boca Juniors 1981-82 Local</h6>
                     <p class="text-muted text-decoration-line-through">$37.000</p>
                     <h5 class="text-success">$27.750 <span class="small">25% OFF</span></h5>
                     <p class="text-success small">Pagando de Contado</p>
@@ -500,7 +542,9 @@
               <!-- Producto 2 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona2.jpg" class="card-img-top img-producto" alt="Producto 2">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona2.jpg" class="  img-producto" alt="Producto 2">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 1982-83 Local</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -513,7 +557,9 @@
               <!-- Producto 3 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona3.jpg" class="card-img-top img-producto" alt="Producto 2">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona3.jpg" class="  img-producto" alt="Producto 3">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Napoli 1984-85 Visitante</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -526,7 +572,9 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona4.jpg" class="card-img-top img-producto" alt="Producto 3">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona4.jpg" class="  img-producto" alt="Producto 4">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Napoli 1987-88 Local</h6>
                     <p class="text-muted text-decoration-line-through">$36.500</p>
@@ -545,7 +593,9 @@
               <!-- Producto 4 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona5.jpg" class="card-img-top img-producto" alt="Producto 4">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona5.jpg" class="  img-producto" alt="Producto 5">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Boca Juniors 1995-96 Local</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -558,7 +608,9 @@
               <!-- Producto 6 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona6.jpg" class="card-img-top img-producto" alt="Producto 5">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona6.jpg" class="  img-producto" alt="Producto 6">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 1986 Local</h6>
                     <p class="text-muted text-decoration-line-through">$37.000</p>
@@ -571,7 +623,9 @@
               <!-- Producto 7 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona7.jpg" class="card-img-top img-producto" alt="Producto 5">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona7.jpg" class="  img-producto" alt="Producto 5">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 1993 Visitante</h6>
                     <p class="text-muted text-decoration-line-through"></p>
@@ -584,7 +638,9 @@
               <!-- Producto 8 -->
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                  <img src="public/assets/img/Maradona8.jpg" class="card-img-top img-producto" alt="Producto 6">
+                <div class="card-img-container">
+                  <img src="public/assets/img/Maradona8.jpg" class="  img-producto" alt="Producto 8">
+                  </div>
                   <div class="card-body">
                     <h6 class="card-title">Argentina 1994 Visitante</h6>
                     <p class="text-muted text-decoration-line-through">$32.000</p>

@@ -4,7 +4,9 @@
     <h4>Indice</h4>
     <ul>
       <li><a href="<?= base_url('inicio')?>">- Inicio</a></li>
+      <!--
       <li><a href="<?= base_url('catalogo')?>">- Catalogo</a></li>
+-->
       <li><a href="<?= base_url('quienes_somos')?>">- ¿Quienes somos?</a></li>
       <li><a href="<?= base_url('comercializacion')?>">- Comercializacion</a></li>
       <li><a href="<?= base_url('contactos')?>">- Contactos</a></li>
@@ -47,9 +49,9 @@
   <div class="footer-section">
     <h4>Redes Sociales</h4>
     <div class="social-icons">
-      <a href="#"><i class="bi bi-instagram"></i></a>
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/agussc_05/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.facebook.com/augustojoaquin.cantero/" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://wa.me/3795049857" target="_blank"><i class="bi bi-whatsapp"></i></a>
       </div>
 
     

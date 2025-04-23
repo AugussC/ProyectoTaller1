@@ -43,9 +43,9 @@
         <div class="col-sm-6">
             <h4>Redes Sociales</h4>
             <div class="iconos-redes">
-            <a href="#"><i class="bi bi-instagram "></i></a>
-            <a href="#"><i class="bi bi-facebook "></i></a>
-            <a href="#"><i class="bi bi-whatsapp "></i></a>
+            <a href="https://www.instagram.com/agussc_05/" target="_blank"><i class="bi bi-instagram "></i></a>
+            <a href="https://www.facebook.com/augustojoaquin.cantero/" target="_blank"><i class="bi bi-facebook "></i></a>
+            <a href="https://wa.me/3795049857" target="_blank"><i class="bi bi-whatsapp "></i></a>
             </div>
         </div>
         </div>
@@ -81,15 +81,17 @@
 
                 <div class="mb-3">
                 <label for="telefono" class="form-label">TELÉFONO (opcional)</label>
-                <input type="text" id="telefono" name="telefono" class="form-control">
+                <input type="tel" id="telefono" name="telefono" class="form-control" pattern="[0-9]+" title="Solo se permiten números">
+
                 </div>
 
                 <div class="mb-3">
-                <label for="mensaje" class="form-label">MENSAJE (opcional)</label>
-                <textarea id="mensaje" name="mensaje" rows="4" class="form-control"></textarea>
+                <label for="mensaje" class="form-label">MENSAJE</label>
+                <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Enviar</button>
+                <div id="mensaje-exito" class="mt-3 text-success" style="opacity: 0; transition: opacity 0.5s;"></div>
             </form>
             </div>
         </div>
@@ -100,5 +102,6 @@
 
         <script src="public/assets/js/bootstrap.bundle.min.js"></script>
         <script src="public/assets/js/eslogan.js"></script>
+        <script src="public/assets/js/contactos.js"></script>
   </body>
 </html>

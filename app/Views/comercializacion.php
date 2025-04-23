@@ -81,7 +81,8 @@
       <div class="mb-4">
         <h3><i class="bi bi-question-lg"></i> ¿Tenés otra duda?</h3>
         <ul>
-            <li>Estamos para ayudarte. si tenes mas dudas escribinos a nuestro correo retromaniacos@gmail.com o escribinos por <a href="https://wa.me/3795049857">WhatsApp</a> o desde el <a href="<?= base_url('contactos')?>" >formulario de contacto</a>. ¡Respondemos lo más rápido posible!</li>
+            <li>Estamos para ayudarte. si tenes mas dudas escribinos a nuestro correo retromaniacos@gmail.com o escribinos por <a href="https://wa.me/3795049857" target="_blank">WhatsApp</a>
+            o desde el <a href="<?= base_url('contactos')?>" >formulario de contacto</a>. ¡Respondemos lo más rápido posible!</li>
         </ul>  
     </div>
     </section>
