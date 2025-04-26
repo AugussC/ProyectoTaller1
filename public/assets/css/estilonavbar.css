@@ -1,13 +1,23 @@
 /* --- NAVBAR GENERAL --- */
 .navbar {
-  background-color: rgb(42, 76, 106); /* Color de fondo de la navbar  */
+  background-color: rgb(42, 76, 106); /* Color de fondo de la navbar */
   font-family: "Trebuchet MS", sans-serif; /* Tipo de letra para la navbar */
-  color: rgb(244, 227, 193) /* Color de texto  */
+  color: rgb(244, 227, 193); /* Color de texto */
 }
 
 /* Marca o logo de la navbar */
-.navbar-dark .navbar-brand {
-  color: rgb(244, 227, 193) !important; /* Color de la marca en la navbar (beige claro) */
+.navbar .navbar-brand {
+  color: rgb(244, 227, 193); /* Color de la marca en la navbar (beige claro) */
+}
+
+.navbar .navbar-brand img {
+  width: 60px; /* Ancho del logo */
+  height: 60px; /* Alto del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.navbar .navbar-brand:hover {
+  color: rgb(109, 174, 219); /* Color de la marca al pasar el cursor */
 }
 
 /* Estilo general para el contenedor de la marca (logo y nombre) */
@@ -17,33 +27,47 @@
   align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
 }
 
-/* --- LINKS DEL MENÚ --- */
 
+/* --- LINKS DEL MENÚ --- */
+.navbar-nav{
+ margin-left: 12px;
+ margin-right:auto;
+ margin-bottom: 8px;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(244, 227, 193); /* Color beige claro para los enlaces */
+}
 
 /* Efecto cuando se pasa el cursor sobre los enlaces */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: rgb(109, 174, 219);    /* Color del enlace al pasar el cursor */
+  color: rgb(109, 174, 219); /* Color del enlace al pasar el cursor */
+}
+
+/* --- FORMULARIO DE BÚSQUEDA --- */
+.navbar form {
+  display: flex; /* Mantiene la disposición flex */
+  align-items: rigth; /* Centra verticalmente los elementos */
+  margin-left: 8px; /* Equivalente a ms-2 */
+  margin-bottom: 8px; /* Equivalente a mb-2 */
 }
 
 /* --- INPUT DE BÚSQUEDA --- */
-
-/* Estilo general del campo de búsqueda */
 .form-control {
   height: 40px; /* Altura del campo de búsqueda */
   background-color: white; /* Fondo blanco para el campo de búsqueda */
-  color: rgb(28, 28, 28);        /* Color del texto (oscuro para contraste) */
+  color: rgb(28, 28, 28); /* Color del texto (oscuro para contraste) */
+  margin-right: 8px; /* Equivalente a me-2 */
 }
 
-/* Estilo cuando el campo de búsqueda está enfocado (cuando el usuario hace clic en él) */
+/* Estilo cuando el campo de búsqueda está enfocado */
 .form-control:focus {
   border-color: rgb(109, 174, 219); /* Borde azul claro al enfocar el campo */
   box-shadow: 0 0 0 0.2rem rgba(109, 174, 219, 0.25); /* Sombra azul suave al enfocar */
 }
 
 /* --- BOTONES DE ICONOS (como los de búsqueda, usuario y carrito) --- */
-
-/* Estilo para los botones que contienen íconos (como el de buscar, carrito, etc.) */
 .btn-icon {
   width: 60px; /* Ancho del botón */
   height: 40px; /* Alto del botón */
@@ -56,6 +80,12 @@
   color: rgb(244, 227, 193); /* Color del ícono (beige claro) */
   border-radius: 5px; /* Bordes redondeados */
   transition: all 0.2s ease-in-out; /* Transición suave al pasar el cursor */
+  margin-right: 8px; /* Equivalente a me-2 para los botones con esta clase */
+}
+
+/* El último botón no necesita margen derecho */
+.btn-icon:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último botón */
 }
 
 /* Efecto cuando se pasa el cursor sobre el botón con ícono */

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lavados Recomendados</title>
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estilolavado.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="public/assets/css/estilolavado.css?v=1.3" rel="stylesheet" >
   </head>
   <body>
     <!-- Contenedor principal -->
-    <div class="contenedor-principal mt-3 px-3">
+    <div class="contenedor-principal-lavados">
 
       <!-- Título -->
-      <h1 style="text-align: center">Lavado Recomendado</h1>
+      <h1>Lavado Recomendado</h1>
 
       <!-- Aclaración  -->
       <p>
@@ -48,7 +48,7 @@
       </p>
 
       <!-- Contenedor de imágenes del bordado -->
-      <div class="contenedor-imagenes pb-3 px-3">
+      <div class="contenedor-imagenes">
         <img src="public/assets/img/bordadocamiseta.jpg" class="imagen-uniforme" alt="Prenda con escudo bordado">
         <img src="public/assets/img/escudocamiseta.jpg" class="imagen-uniforme" alt="Prenda con escudo bordado">
       </div>

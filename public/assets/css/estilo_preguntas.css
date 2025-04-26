@@ -1,4 +1,4 @@
-
+/* Estilos para el cuerpo de la pagina*/
 body {
     text-align: justify;
     background-color: rgb(244, 227, 193);
@@ -8,7 +8,25 @@ body {
     
   }
 
+/* Estilos para el contenedor de la pagina*/
+  .container-preguntas{
+    margin-top: 12px;
+    padding-left: 12px ;
+    padding-right: 12px;
+    text-align: justify;
+  }
 
+  /* Estilos para el titulo de la pagina*/
+  .container-preguntas h1{
+    margin-top: 12px;
+    text-align: center;
+  }
+/* Estilos para el cuerpo del acordeon de la pagina (estilo especial como aclaraciones)*/
+  .accordion-body span{
+    font-style: italic;
+    font-weight: bold;
+  }
+/* Estilos para el accordion */
   .accordion-section {
     background-color: #f6e1b5;
     border-radius: 8px;

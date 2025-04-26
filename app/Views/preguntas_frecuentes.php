@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Preguntas Frecuentes</title>
-
+    <!-- Estilos incluidos -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estilo_preguntas.css" rel="stylesheet" >
+    <link href="public/assets/css/estilo_preguntas.css?v=1.4" rel="stylesheet" >
   
   </head>
   <body>
   
     <!-- Contenedor principal -->
-    <div class="container mt-3" style="text-align: justify;">
+    <div class="container-preguntas">
    
         <!-- Título principal centrado -->
-        <h1 style="text-align: center;">Preguntas Frecuentes</h1>
+        <h1>Preguntas Frecuentes</h1>
           
         <div class="accordion" id="accordionFAQ">
 
@@ -100,7 +100,7 @@
               <div class="accordion-body">
                 Sí, tenés 10 días corridos desde que lo recibís para solicitar una devolución. 
                 El producto debe estar sin uso, con etiquetas y embalaje original. 
-                Una vez que lo recibimos y verificamos, te reintegramos el dinero <span style="font-style: italic; font-weight: bold;" >(descontando el costo del envío inicial).</span>
+                Una vez que lo recibimos y verificamos, te reintegramos el dinero <span>(descontando el costo del envío inicial).</span>
               </div>
             </div>
           </div>
@@ -130,12 +130,12 @@
               <div class="accordion-body">
               En caso de no retirar tu pedido dentro de los 4 o 5 días habiles desde que el pedido está disponible para su retiro en CORREO el pedido vuelve a nosotros. Esto demora unos dias (aproximadamente una semana). 
             Una vez que tengamos el pedido nosotros nuevamente estaremos en contacto para reprogramar el envío.
-            <span style="font-style: italic; font-weight: bold;" >(El costo de este envío debe ser abonado nuevamente.)</span>
+            <span>(El costo de este envío debe ser abonado nuevamente.)</span>
               </div>
             </div>
          </div>
         
-         <!-- Pregunta 9 -->
+         <!-- Pregunta 9 -->   
         <div class="accordion-item">
           <h2 class="accordion-header" id="heading9">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
@@ -159,7 +159,7 @@
           </h2>
           <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
             <div class="accordion-body">
-            Podés usar la sección de <strong>Contacto</strong> en el sitio o escribirnos por WhatsApp. Respondemos consultas, reclamos o sugerencias lo antes posible.
+            Podés usar la sección de <span>Contactos</span> en el sitio o escribirnos por WhatsApp. Respondemos consultas, reclamos o sugerencias lo antes posible.
             </div>
           </div>
         </div>
@@ -170,3 +170,4 @@
       <script src="public/assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+

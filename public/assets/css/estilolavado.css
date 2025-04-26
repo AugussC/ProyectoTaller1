@@ -7,9 +7,30 @@ body {
   padding-top: 80px; 
 }
 
+/* Estilos  para el contenedor */
+.contenedor-principal-lavados{
+  margin-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Estilos  para el titulo del contenedor */
+.contenedor-principal-lavados h1{
+  text-align: center;
+  font-family: 'Oswald', sans-serif; 
+}
+
+/* Estilos  para el contenedor de imagenes*/
+.contenedor-imagenes{
+  padding-bottom: 12px; 
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 /* Estilos para las imágenes*/
 .imagen-uniforme {
   max-width: 40%; /* Limita el ancho máximo de la imagen */
   width: 200px; /* Establece un ancho base fijo */
   height: auto; /* Mantiene la proporción original de la imagen al ajustar el ancho */
 }
+
