@@ -7,7 +7,7 @@
     <!-- Estilos incluidos -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="public/assets/css/estiloprincipal.css?v=1.16" rel="stylesheet">
+    <link href="public/assets/css/estiloprincipal.css?v=1.20" rel="stylesheet">
   </head>
   <body>
 
@@ -213,9 +213,10 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
-                    <p class="card-previous-price">$28.000</p>
-                    <h5 class="card-price-now">$25.200 <span class="beneficios">10%OFF</span></h5>
+                    <p class="card-previous-price">$35.000</p>
+                    <h5 class="card-price-now">$25.200 <span class="beneficios">28%OFF</span></h5>
                     <p class="beneficios">Pagando de Contado</p>
+                    <p class="beneficios">Envío gratis</p>
                   </div>
                 </div>
               </div>
@@ -280,7 +281,7 @@
                     <h6 class="card-title">Stade Brestois 21-22 Aniversario</h6>
                     <p class="card-previous-price">$42.500</p>
                     <h5 class="card-price-now">$36.125 <span class="beneficios">15%OFF</span></h5>
-                    <p class="beneficios">6 Cuotas sin interés de $6.021</p>
+                    <p class="beneficios">Pagando de Contado</p>
                     <p class="beneficios">Envío gratis</p>
                   </div>
                 </div>
@@ -363,6 +364,7 @@
                     <p class="card-previous-price">$38.000</p>
                     <h5 class="card-price-now">$19.000 <span class="beneficios">50%OFF</span></h5>
                     <p class="beneficios">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="beneficios">Envío gratis</p>
                   </div>
                 </div>
               </div>
@@ -476,9 +478,10 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2008-09 Local</h6>
-                        <p class="card-previous-price">$34.800</p>
-                        <h5 class="card-price-now">$27.840 <span class="beneficios">20%OFF</span></h5>
+                        <p class="card-previous-price">$35.800</p>
+                        <h5 class="card-price-now">$27.840 <span class="beneficios">22%OFF</span></h5>
                         <p class="beneficios">3 Cuotas sin interés de $9.280</p>
+                        
                       </div>
                     </div>
                   </div>
@@ -508,13 +511,12 @@
                   <div class="col-6 col-md-3 col-xl-2">
                     <div class="card">
                       <div class="card-img-container">
-                        <img src="public/assets/img/Messi5.png" class="img-producto" alt="Producto 5">
+                        <img src="public/assets/img/Messi5 (2).jpg" class="img-producto" alt="Producto 5">
                       </div>
                       <div class="card-body">
-                        <h6 class="card-title">Argentina 2014 World Cup Final</h6>
-                        <h5 class="card-price-now">$35.000</h5>
-                        <p class="beneficios">6 Cuotas sin interés de $5.833,33</p>
-                        <p class="beneficios">Envío gratis</p>
+                        <h6 class="card-title">Paris Saint-Germain 2021-22 Local</h6>
+                        <h5 class="card-price-now">$29.000</h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -538,12 +540,13 @@
                   <div class="col-6 col-md-3 col-xl-2">
                     <div class="card">
                       <div class="card-img-container">
-                        <img src="public/assets/img/Messi7.jpg" class="img-producto" alt="Producto 7">
+                        <img src="public/assets/img/Messi7.png" class="img-producto" alt="Producto 7">
                       </div>
                       <div class="card-body">
-                        <h6 class="card-title">Paris Saint-Germain 2021-22 Local</h6>
-                        <h5 class="card-price-now">$29.000</h5>
+                        <h6 class="card-title">Argentina 2014 World Cup Final</h6>
+                        <h5 class="card-price-now">$35.000</h5>
                         <p class="beneficios">Pagando de Contado</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -701,7 +704,7 @@
                         <h6 class="card-title">Argentina 1986 Local</h6>
                         <p class="card-previous-price">$37.000</p>
                         <h5 class="card-price-now">$31.450 <span class="beneficios">10%OFF</span></h5>
-                        <p class="beneficios">3 Cuotas sin interés de $10.483</p>
+                        <p class="beneficios">Pagando de Contado</p>
                         <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
