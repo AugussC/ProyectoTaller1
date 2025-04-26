@@ -34,6 +34,10 @@ body {
   object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
 }
 
+.seccion-ofertas{
+  margin-top: 25px;
+}
+
 /* Texto superpuesto en el carrusel */
 .carousel-caption {
   display: none;
@@ -131,6 +135,7 @@ body {
    overflow: hidden;         /* Oculta cualquier contenido que se desborde */
    display: flex;            /* Importante: para que justify-content y flex-wrap funcionen */
    height: 500px;
+   margin-top: 30px;
  }
 
 
