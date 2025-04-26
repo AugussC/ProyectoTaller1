@@ -5,11 +5,6 @@ body {
   font-family: 'Rubik', sans-serif; /* Fuente principal para todo el sitio */
 }
 
-/* Estilo para títulos principales y secundarios */
-.container-mas-vendidos h1, h2 {
-  font-family: 'Oswald', sans-serif; /* Fuente especial para encabezados */
-}
-
 .container{
   margin-top: 48px;
   padding-top: 24px ;
@@ -23,55 +18,6 @@ body {
 /* Clase para aplicar fondo blanco a elementos */
 .bgcustom {
   background-color: #ffffff; /* Blanco */
-}
-
-.mas-vendidos{
- margin-top: 48px;
- margin-bottom: 48px;
- text-align:center ;
-}
-.row{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.producto-1{
-  margin-right: 0px;
-  margin-left: 0px;
-  margin-bottom: 16px;
-}
-
-.producto{
-  margin-bottom: 16px;
-}
-
-.card{
-  height: 100%;
-}
-
-.img-producto-1{
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: 300px; /* Ocupa toda la altura definida del carrusel */
-  object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
-}
-
-.img-producto{
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: 250px; /* Ocupa toda la altura definida del carrusel */
-  object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
-}
-
-.card-previous-price{
-  color: #6c757d;
-  text-decoration: line-through;
-}
-
-.card-price-now, .beneficios{
-  color: #198754;
-}
-
-.beneficios{
-  font-size: 0.875rem
 }
   /* --- Estilos para el carrusel --- */
 
@@ -120,17 +66,171 @@ body {
   }
 }
 
+.mas-vendidos{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  text-align:center ;
+ }
+ .row{
+   padding-left: 0px;
+   padding-right: 0px;
+ }
+ 
+ .producto-1{
+   margin-right: 0px;
+   margin-left: 0px;
+   margin-bottom: 16px;
+ }
+ 
+ .producto{
+   margin-bottom: 16px;
+ }
+ 
+ .card{
+   height: 100%;
+ }
+ 
+ .img-producto-1{
+   width: 100%; /* Ocupa todo el ancho disponible */
+   height: 300px; /* Ocupa toda la altura definida del carrusel */
+   object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
+ }
+ 
+ .img-producto{
+   width: 100%; /* Ocupa todo el ancho disponible */
+   height: 250px; /* Ocupa toda la altura definida del carrusel */
+   object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
+ }
+ 
+ .card-previous-price{
+   color: #6c757d;
+   text-decoration: line-through;
+ }
+ 
+ .card-price-now, .beneficios{
+   color: #198754;
+ }
+ 
+ .beneficios{
+   font-size: 0.875rem
+ }
+ 
+ .seccion-ofertas{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  
+ }
+ 
+ .producto-ofertas, .producto-jugador{
+   justify-content: center;  /* Centra horizontalmente los elementos hijos */
+   text-align: center;       /* Centra el texto */
+   flex-wrap: nowrap;        /* No permite que los elementos hagan "salto de línea" */
+   overflow: hidden;         /* Oculta cualquier contenido que se desborde */
+   display: flex;            /* Importante: para que justify-content y flex-wrap funcionen */
+ }
 
-  /* --- Otros estilos visuales --- */
+
+/* Estilo para ocultar en pantallas pequeñas y mostrar en md */
+.producto-visible-md {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .producto-visible-md {
+    display: block;
+  }
+}
+
+/* Estilo para ocultar en pantallas hasta md y mostrar en lg */
+.producto-visible-lg {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .producto-visible-lg {
+    display: block;
+  }
+}
+
+/* Contenedor para imágenes dentro de tarjetas (cards) */
+ .card-img-container {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 250px; /* Altura fija */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: white; /* Fondo blanco (opcional) */
+  overflow: hidden; /* Oculta cualquier desborde de imagen */
+}
 
 
-/* Card sin bordes ni sombra, con fondo igual al del body */
-.card.no-border {
-  background-color: rgb(244, 227, 193); /* Mismo fondo que el body */
+.container-jugador{
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+
+.productos-jugador{
+  align-items: center;
+}
+
+.card-jugador{
+  display: flex;
+  justify-content: center;
+}
+
+/* Card sin bordes  */
+.no-border {
+  width: 18rem;
   border: none; /* Sin borde */
   box-shadow: none; /* Sin sombra */
 }
 
+.imagen-jugador{
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.titulo-card-jugador{
+  text-align: center;
+}
+
+
+.container-tarjetas{
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.fila-tarjetas{
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.tarjetas{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.card-tarjetas{
+ text-align: center;
+ width: 40rem;
+ padding-top: 2rem;
+}
+
+.icono{
+  font-size: 4rem;
+  color: rgb(42, 76, 106);
+}
+  /* --- Otros estilos visuales --- */
 /* Estilo de los íconos de navegación del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -146,15 +246,7 @@ body {
   width: 5%; /* Solo ocupan el 5% del ancho del carrusel */
 }
 
-/* Contenedor para imágenes dentro de tarjetas (cards) */
-.card-img-container {
-  width: 100%; /* Ocupa todo el ancho */
-  height: 250px; /* Altura fija */
-  display: flex; /* Flexbox para centrar el contenido */
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal */
-  background-color: white; /* Fondo blanco (opcional) */
-  overflow: hidden; /* Oculta cualquier desborde de imagen */
-}
+
+
 
  

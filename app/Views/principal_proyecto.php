@@ -7,7 +7,7 @@
     <!-- Estilos incluidos -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="public/assets/css/estiloprincipal.css?v=1.14" rel="stylesheet">
+    <link href="public/assets/css/estiloprincipal.css?v=1.16" rel="stylesheet">
   </head>
   <body>
 
@@ -170,7 +170,7 @@
         </div>
         
         <!-- Producto 5 -->
-        <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
+        <div class="producto col-sm-6 col-md-3 col-lg-2 mb-3">
           <!-- Tarjeta del producto 5 -->
           <div class="card">
             <!-- Imagen del producto -->
@@ -195,7 +195,7 @@
 
 
     <!-- Sección: Ofertas del Día -->
-    <div class="container-fluid bgcustom py-4 text-center">
+    <div class="container-fluid seccion-ofertas bgcustom">
       <h1>Ofertas del Día</h1>
 
       <!-- Carrusel de Ofertas -->
@@ -204,10 +204,10 @@
 
           <!-- Slide 1 -->
           <div class="carousel-item active">
-            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+            <div class="row producto-ofertas">
               <!-- Producto 1 -->
               <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta1.jpg" class="img-producto" alt="Producto Más Vendido 1">
                   </div>
@@ -221,8 +221,8 @@
               </div>
 
               <!-- Producto 2 -->
-              <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+              <div class= "col-6 col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta2.png" class="img-producto" alt="Producto Más Vendido 2">
                   </div>
@@ -236,8 +236,8 @@
               </div>
 
               <!-- Producto 3 -->
-              <div class="d-none d-md-block col-md-3 col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-md col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta3.jpg" class="img-producto" alt="Producto Más Vendido 3">
                   </div>
@@ -251,8 +251,8 @@
               </div>
 
               <!-- Producto 4 -->
-              <div class="d-none d-lg-block col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-lg col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta4.jpg" class="img-producto" alt="Producto Más Vendido 4">
                   </div>
@@ -269,10 +269,10 @@
 
           <!-- Slide 2 -->
           <div class="carousel-item">
-            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+            <div class="row producto-ofertas">
               <!-- Producto 5 -->
-              <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+              <div class=" col-6 col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta5.jpg" class="img-producto" alt="Producto Más Vendido 5">
                   </div>
@@ -288,7 +288,7 @@
 
               <!-- Producto 6 -->
               <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta6.png" class="img-producto" alt="Producto Más Vendido 6">
                   </div>
@@ -302,8 +302,8 @@
               </div>
 
               <!-- Producto 7  -->
-              <div class="d-none d-md-block col-md-3 col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-md col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta7.jpg" class="img-producto" alt="Producto Más Vendido 7">
                   </div>
@@ -318,8 +318,8 @@
               </div>
 
               <!-- Producto 8 -->
-              <div class="d-none d-lg-block col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-lg col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta8.jpg" class="img-producto" alt="Producto Más Vendido 8">
                   </div>
@@ -336,10 +336,10 @@
 
           <!-- Slide 3 -->
           <div class="carousel-item">
-            <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+            <div class="row producto-ofertas">
               <!-- Producto 9 -->
               <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta9.jpg" class="img-producto" alt="Producto Más Vendido 9">
                   </div>
@@ -354,7 +354,7 @@
 
               <!-- Producto 10 -->
               <div class="col-6 col-md-3 col-lg-2">
-                <div class="card h-100">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta10.jpg" class="img-producto" alt="Producto Más Vendido 10">
                   </div>
@@ -368,8 +368,8 @@
               </div>
 
               <!-- Producto 11  -->
-              <div class="d-none d-md-block col-md-3 col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-md col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta11.jpg" class="img-producto" alt="Producto Más Vendido 11">
                   </div>
@@ -383,8 +383,8 @@
               </div>
 
               <!-- Producto 12  -->
-              <div class="d-none d-lg-block col-lg-2">
-                <div class="card h-100">
+              <div class="producto-visible-lg col-md-3 col-lg-2">
+                <div class="card">
                   <div class="card-img-container">
                     <img src="public/assets/img/camiseta12.png" class="img-producto" alt="Producto Más Vendido 12">
                   </div>
@@ -415,15 +415,15 @@
     </div>
 
     <!-- Sección: Card Messi + Carrusel en la misma fila -->
-    <div class="container-fluid bgcustom my-5 py-4">
-      <div class="row align-items-center g-4">
+    <div class="container-fluid container-jugador bgcustom">
+      <div class="row productos-jugador">
 
         <!-- Card de Messi  -->
-        <div class="col-md-3 d-flex justify-content-center">
-          <div class="card.no-border" style="width: 18rem;">
+        <div class="card-jugador col-md-3">
+          <div class="card no-border bgcustom">
             <!-- Imagen de Messi -->
-            <img src="public/assets/img/lionelmessi.jpg" class="rounded-circle img-fluid" alt="Lionel Messi">
-            <div class="card-body text-center">
+            <img src="public/assets/img/lionelmessi.jpg" class="imagen-jugador" alt="Lionel Messi">
+            <div class="titulo-card-jugador">
               <!-- Título con el nombre de Messi -->
               <h2>Lionel Messi</h2> 
             </div>
@@ -437,11 +437,11 @@
 
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                <div class="row producto-jugador">
                   
                   <!-- Producto 1 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi1.jpg" class="img-producto" alt="Producto 1">
                       </div>
@@ -455,14 +455,14 @@
 
                   <!-- Producto 2 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi2.jpg" class="img-producto" alt="Producto 2">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 2008 Visitante</h6>
                         <p class="card-previous-price">$31.000</p>
-                        <h5 class="card-price-now">$27.900 <span class="small">10% OFF</span></h5>
+                        <h5 class="card-price-now">$27.900 <span class="beneficios">10%OFF</span></h5>
                         <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
@@ -470,14 +470,14 @@
 
                   <!-- Producto 3 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi3.jpg" class="img-producto" alt="Producto 3">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2008-09 Local</h6>
                         <p class="card-previous-price">$34.800</p>
-                        <h5 class="card-price-now">$27.840 <span class="small">20% OFF</span></h5>
+                        <h5 class="card-price-now">$27.840 <span class="beneficios">20%OFF</span></h5>
                         <p class="beneficios">3 Cuotas sin interés de $9.280</p>
                       </div>
                     </div>
@@ -485,7 +485,7 @@
 
                   <!-- Producto 4 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi4.jpg" class="img-producto" alt="Producto 4">
                       </div>
@@ -502,11 +502,11 @@
 
               <!-- Slide 2 -->
               <div class="carousel-item">
-                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                <div class="row producto-jugador">
                   
                   <!-- Producto 5 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi5.png" class="img-producto" alt="Producto 5">
                       </div>
@@ -521,14 +521,14 @@
 
                   <!-- Producto 6 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi6.jpg" class="img-producto" alt="Producto 6">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2015-16 Local</h6>
                         <p class="card-previous-price">$28.000</p>
-                        <h5 class="card-price-now">$25.200 <span class="small">10% OFF</span></h5>
+                        <h5 class="card-price-now">$25.200 <span class="beneficios">10%OFF</span></h5>
                         <p class="beneficios">6 Cuotas sin interés de $4.200</p>
                       </div>
                     </div>
@@ -536,7 +536,7 @@
 
                   <!-- Producto 7 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi7.jpg" class="img-producto" alt="Producto 7">
                       </div>
@@ -550,14 +550,14 @@
 
                   <!-- Producto 8 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Messi8.jpg" class="img-producto" alt="Producto 8">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Inter Miami 2024 Local</h6>
                         <p class="card-previous-price">$26.000</p>
-                        <h5 class="card-price-now">$22.100 <span class="small">15% OFF</span></h5>
+                        <h5 class="card-price-now">$22.100 <span class="beneficios">15%OFF</span></h5>
                         <p class="beneficios">3 Cuotas sin interés de $7.366</p>
                       </div>
                     </div>
@@ -585,13 +585,13 @@
     </div>
 
     <!-- Sección: Card Maradona + Carrusel en la misma fila -->
-    <div class="container-fluid bgcustom my-5 py-4">
-      <div class="row align-items-center g-4">
+    <div class="container-fluid container-jugador bgcustom">
+      <div class="row productos-jugador">
         <!-- Imagen de Diego Maradona -->
-        <div class="col-md-3 d-flex justify-content-center">
-          <div class="card.no-border" style="width: 18rem;">
-            <img src="public/assets/img/diegomaradona.jpg" class="rounded-circle img-fluid" alt="Diego Armando Maradona">
-            <div class="card-body text-center">
+        <div class="card-jugador col-md-3">
+          <div class="card no-border bgcustom">
+            <img src="public/assets/img/diegomaradona.jpg" class="imagen-jugador" alt="Diego Armando Maradona">
+            <div class="titulo-card-jugador">
               <!-- titulo de la card -->
               <h2>Diego Armando Maradona</h2>
             </div>
@@ -605,18 +605,18 @@
 
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                <div class="row producto-jugador">
                   
                   <!-- Producto 1 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona.jpg" class="img-producto" alt="Producto 1">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Boca Jr 1981-82 Local</h6>
                         <p class="card-previous-price">$37.000</p>
-                        <h5 class="card-price-now">$27.750 <span class="small">25% OFF</span></h5>
+                        <h5 class="card-price-now">$27.750 <span class="beneficios">25% OFF</span></h5>
                         <p class="beneficios">Pagando de Contado</p>
                         <p class="beneficios">Envío gratis</p>
                       </div>
@@ -625,7 +625,7 @@
 
                   <!-- Producto 2 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona2.jpg" class="img-producto" alt="Producto 2">
                       </div>
@@ -641,7 +641,7 @@
 
                   <!-- Producto 3 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona3.jpg" class="img-producto" alt="Producto 3">
                       </div>
@@ -656,7 +656,7 @@
 
                   <!-- Producto 4 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona4.jpg" class="img-producto" alt="Producto 4">
                       </div>
@@ -674,11 +674,11 @@
 
               <!-- Slide 2 -->
               <div class="carousel-item">
-                <div class="row justify-content-center text-center flex-nowrap overflow-hidden">
+                <div class="row producto-jugador">
 
                   <!-- Producto 5 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona5.jpg" class="img-producto" alt="Producto 5">
                       </div>
@@ -693,14 +693,14 @@
 
                   <!-- Producto 6 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona6.jpg" class="img-producto" alt="Producto 6">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 1986 Local</h6>
                         <p class="card-previous-price">$37.000</p>
-                        <h5 class="card-price-now">$31.450 <span class="small">10% OFF</span></h5>
+                        <h5 class="card-price-now">$31.450 <span class="beneficios">10%OFF</span></h5>
                         <p class="beneficios">3 Cuotas sin interés de $10.483</p>
                         <p class="beneficios">Envío gratis</p>
                       </div>
@@ -709,7 +709,7 @@
 
                   <!-- Producto 7 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona7.jpg" class="img-producto" alt="Producto 7">
                       </div>
@@ -724,14 +724,14 @@
 
                   <!-- Producto 8 -->
                   <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-img-container">
                         <img src="public/assets/img/Maradona8.jpg" class="img-producto" alt="Producto 8">
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 1994 Visitante</h6>
                         <p class="card-previous-price">$32.000</p>
-                        <h5 class="card-price-now">$28.800 <span class="small">10% OFF</span></h5>
+                        <h5 class="card-price-now">$28.800 <span class="beneficios">10%OFF</span></h5>
                         <p class="beneficios">6 cuotas sin interés de $4.800</p>
                       </div>
                     </div>
@@ -755,16 +755,16 @@
     </div>
 
     <!-- Contenedor principal -->
-    <div class="container-fluid bgcustom my-5 py-5">
+    <div class="container-fluid container-tarjetas bgcustom">
 
       <!-- Fila superior con dos cards -->
-      <div class="row justify-content-center mb-4">
+      <div class="row fila-tarjetas">
 
         <!-- Card 1: Guía de talles -->
-        <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
-          <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+        <div class="tarjetas col-md-5">
+          <div class="card card-tarjetas">
             <!-- Icono de la card -->
-            <i class="bi bi-rulers" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+            <i class="bi icono bi-rulers"></i>
             <!-- Cuerpo de la card -->
             <div class="card-body">
               <h5 class="card-title">Guía de talles</h5>
@@ -776,10 +776,10 @@
         </div>
 
         <!-- Card 2: Lavados recomendados -->
-        <div class="col-md-5 d-flex justify-content-center mb-2 mb-md-0">
-          <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+        <div class="tarjetas col-md-5">
+          <div class="card card-tarjetas">
             <!-- Icono de la card -->
-            <i class="bi bi-droplet-fill" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+            <i class="bi icono bi-droplet-fill"></i>
             <!-- Cuerpo de la card -->
             <div class="card-body">
               <h5 class="card-title">Lavados recomendados</h5>
@@ -790,14 +790,14 @@
           </div>
         </div>
 
-      </div> <!-- Fin de la fila superior -->
+      </div> 
 
       <!-- Fila inferior con una card -->
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-6 d-flex justify-content-center">
-          <div class="card text-center" style="width: 40rem; padding-top: 2rem;">
+      <div class="row fila-tarjetas">
+        <div class="tarjetas col-md-6 ">
+          <div class="card card-tarjetas">
             <!-- Icono de la card -->
-            <i class="bi bi-question-circle" style="font-size: 4rem; color: rgb(42, 76, 106);"></i>
+            <i class="bi icono bi-question-circle"></i>
             <!-- Cuerpo de la card -->
             <div class="card-body">
               <h5 class="card-title">Preguntas frecuentes</h5>
