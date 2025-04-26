@@ -15,9 +15,8 @@ h1, h2 {
   background-color: #ffffff; /* Blanco */
 }
 
-/* ============================= */
-/* --- Estilos para el carrusel --- */
-/* ============================= */
+
+  /* --- Estilos para el carrusel --- */
 
 /* Contenedor principal del carrusel */
 .carousel-inner {
@@ -44,9 +43,9 @@ h1, h2 {
   flex-shrink: 0; /* Impide que el texto se reduzca en contenedores flex */
 }
 
-/* ============================= */
-/* --- Estilos responsivos (pantallas chicas) --- */
-/* ============================= */
+
+  /* --- Estilos pantallas chicas --- */
+
 @media (max-width: 768px) {
 
   /* Ajuste del carrusel para pantallas pequeñas */
@@ -63,9 +62,9 @@ h1, h2 {
   }
 }
 
-/* ============================= */
-/* --- Otros estilos visuales --- */
-/* ============================= */
+
+  /* --- Otros estilos visuales --- */
+
 
 /* Card sin bordes ni sombra, con fondo igual al del body */
 .card.no-border {
