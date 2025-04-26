@@ -98,7 +98,7 @@
               <!-- Precio original tachado -->
               <p class="card-previous-price">$38.000</p>
               <!-- Precio con descuento -->
-              <h5 class="card-price-now">$19.000 <span class="beneficios">50% OFF</span></h5>
+              <h5 class="card-price-now">$19.000 <span class="beneficios">50%OFF</span></h5>
               <!-- Información sobre cuotas -->
               <p class="beneficios">3 Cuotas sin interés de $6.333,33</p>
             </div>
@@ -118,7 +118,7 @@
               <!-- Precio original tachado -->
               <p class="card-previous-price">$40.000</p>
               <!-- Precio con descuento -->
-              <h5 class="card-price-now">$26.000 <span class="beneficios">35% OFF</span></h5>
+              <h5 class="card-price-now">$26.000 <span class="beneficios">35%OFF</span></h5>
               <!-- Información sobre cuotas -->
               <p class="beneficios">3 Cuotas sin interés de $8.666,67</p>
             </div>
@@ -182,7 +182,7 @@
               <!-- Precio original tachado -->
               <p class="card-previous-price">$32.000</p>
               <!-- Precio con descuento -->
-              <h5 class="card-price-now">$23.000 <span class="beneficios">28% OFF</span></h5>
+              <h5 class="card-price-now">$23.000 <span class="beneficios">28%OFF</span></h5>
               <!-- Información sobre cuotas -->
               <p class="beneficios">6 Cuotas sin interés de $3.833,33</p>
             </div>
@@ -214,7 +214,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
                     <p class="card-previous-price">$28.000</p>
-                    <h5 class="card-price-now">$25.200 <span class="beneficios">10% OFF</span></h5>
+                    <h5 class="card-price-now">$25.200 <span class="beneficios">10%OFF</span></h5>
                     <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@
                   <div class="card-body">
                     <h6 class="card-title">River Plate 2017-18 Local</h6>
                     <p class="card-previous-price">$22.000</p>
-                    <h5 class="card-price-now">$20.900 <span class="beneficios">5% OFF</span></h5>
+                    <h5 class="card-price-now">$20.900 <span class="beneficios">5%OFF</span></h5>
                     <p class="beneficios">3 Cuotas sin interés de $6.967</p>
                   </div>
                 </div>
@@ -244,7 +244,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 2024-25 Local</h6>
                     <p class="card-previous-price">$21.000</p>
-                    <h5 class="card-price-now">$19.000 <span class="beneficios">10% OFF</span></h5>
+                    <h5 class="card-price-now">$19.000 <span class="beneficios">10%OFF</span></h5>
                     <p class="beneficios">6 Cuotas sin interés de $5.200</p>
                   </div>
                 </div>
@@ -259,7 +259,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Liverpool FC 17-18 Local</h6>
                     <p class="card-previous-price">$24.500</p>
-                    <h5 class="card-price-now">$22.540 <span class="beneficios">8% OFF</span></h5>
+                    <h5 class="card-price-now">$22.540 <span class="beneficios">8%OFF</span></h5>
                     <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
@@ -279,7 +279,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Stade Brestois 21-22 Aniversario</h6>
                     <p class="card-previous-price">$42.500</p>
-                    <h5 class="card-price-now">$36.125 <span class="beneficios">15% OFF</span></h5>
+                    <h5 class="card-price-now">$36.125 <span class="beneficios">15%OFF</span></h5>
                     <p class="beneficios">6 Cuotas sin interés de $6.021</p>
                     <p class="beneficios">Envío gratis</p>
                   </div>
@@ -295,7 +295,7 @@
                   <div class="card-body">
                     <h6 class="card-title">UD Las Palmas 96-97 Local</h6>
                     <p class="card-previous-price">$39.000</p>
-                    <h5 class="card-price-now">$31.200 <span class="beneficios">20% OFF</span></h5>
+                    <h5 class="card-price-now">$31.200 <span class="beneficios">20%OFF</span></h5>
                     <p class="beneficios">6 cuotas sin interés de $5.200</p>
                   </div>
                 </div>
@@ -310,7 +310,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Strasbourg 78-79 Local</h6>
                     <p class="card-previous-price">$40.000</p>
-                    <h5 class="card-price-now">$36.000<span class="beneficios"> 10% OFF</span></h5>
+                    <h5 class="card-price-now">$36.000<span class="beneficios"> 10%OFF</span></h5>
                     <p class="beneficios">3 Cuotas sin interés de $12.000</p>
                     <p class="beneficios">Envío gratis</p>
                   </div>
@@ -326,7 +326,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Red Star Belgrade 98-99 Local</h6>
                     <p class="card-previous-price">$31.800</p>
-                    <h5 class="card-price-now">$26.076 <span class="beneficios">18% OFF</span></h5>
+                    <h5 class="card-price-now">$26.076 <span class="beneficios">18%OFF</span></h5>
                     <p class="beneficios">6 Cuotas sin interés de $4.346</p>
                   </div>
                 </div>
@@ -346,7 +346,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Uruguay 2010 Local</h6>
                     <p class="card-previous-price">$33.500</p>
-                    <h5 class="card-price-now">$28.475 <span class="beneficios">15% OFF</span></h5>
+                    <h5 class="card-price-now">$28.475 <span class="beneficios">15%OFF</span></h5>
                     <p class="beneficios">6 Cuotas sin interés de $4.746</p>
                   </div>
                 </div>
@@ -361,7 +361,7 @@
                   <div class="card-body">
                     <h6 class="card-title">EE.UU. 2018 Local</h6>
                     <p class="card-previous-price">$38.000</p>
-                    <h5 class="card-price-now">$19.000 <span class="beneficios">50% OFF</span></h5>
+                    <h5 class="card-price-now">$19.000 <span class="beneficios">50%OFF</span></h5>
                     <p class="beneficios">3 Cuotas sin interés de $6.333,33</p>
                   </div>
                 </div>
@@ -376,7 +376,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Real Betis 96-97 Local</h6>
                     <p class="card-previous-price">$25.000</p>
-                    <h5 class="card-price-now">$22.540 <span class="beneficios">10% OFF</span></h5>
+                    <h5 class="card-price-now">$22.540 <span class="beneficios">10%OFF</span></h5>
                     <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
@@ -391,7 +391,7 @@
                   <div class="card-body">
                     <h6 class="card-title">Stade Rennais 18-19 European Third</h6>
                     <p class="card-previous-price">$20.000</p>
-                    <h5 class="card-price-now">$18.000 <span class="beneficios">10% OFF</span></h5>
+                    <h5 class="card-price-now">$18.000 <span class="beneficios">10%OFF</span></h5>
                     <p class="beneficios">3 cuotas sin interés de $6.000</p>
                   </div>
                 </div>
@@ -616,7 +616,7 @@
                       <div class="card-body">
                         <h6 class="card-title">Boca Jr 1981-82 Local</h6>
                         <p class="card-previous-price">$37.000</p>
-                        <h5 class="card-price-now">$27.750 <span class="beneficios">25% OFF</span></h5>
+                        <h5 class="card-price-now">$27.750 <span class="beneficios">25%OFF</span></h5>
                         <p class="beneficios">Pagando de Contado</p>
                         <p class="beneficios">Envío gratis</p>
                       </div>
