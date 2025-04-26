@@ -1,38 +1,39 @@
 .footer{
     background: rgb(42, 76, 106);
     color: rgb(244, 227, 193);
-      padding: 40px 20px;
-      font-family: 'Trebuchet MS', sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-      border-top: 1px solid #eee
+    padding: 40px 20px; /* Espaciado interno: 40px arriba/abajo, 20px a los lados */
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex; /* Layout flexible para acomodar las secciones */
+    flex-wrap: wrap; /* Permite que los elementos bajen a la siguiente línea si no entran */
+    justify-content: space-between; /* Espacio uniforme entre secciones */
+    gap: 20px; /* Espacio entre los elementos del footer */
+    border-top: 1px solid #eee /* Línea superior sutil para separar del contenido anterior */
   }
   .footer-section {
-    flex: 1 1 200px;
+    flex: 1 1 200px; /* Cada sección del footer ocupa al menos 200px y puede expandirse */
   }
+
   .footer-section h4 {
-   font-weight: bold;
+   font-weight: bold; /* Títulos dentro de cada sección con negrita */
  }
- /* Mostrar a joa como le gusta mas si con o sin este*/
+ /* Lista sin viñetas ni espaciado interno */
  .footer-section ul {
    list-style: none;
    padding: 0;
  }
  
  .footer-section ul li {
-   margin-bottom: 5px;
+   margin-bottom: 5px; /* Espacio inferior de 5px (entre elementos de una lista) */
  }
  
  .footer-section a {
    color: rgb(244, 227, 193);
-   text-decoration: none;
+   text-decoration: none; /* Elimina la subrayado del texto */
  }
  
  .footer-section a:hover {
    color: rgb(109, 174, 219);
-   text-decoration: underline;
+   text-decoration: underline; /* Subraya el texto  */
  }
  
  .icon-grid {
@@ -56,7 +57,7 @@
  .social-icons i {
   font-size: 25px;
   color: rgb(244, 227, 193);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease;/* Transición suave cuando cambia el color del texto */
 }
 
 .social-icons i:hover {
@@ -69,7 +70,7 @@
    padding: 10px 20px;          /* Espaciado interno */
    border: none;                /* Sin borde */
    border-radius: 5px;          /* Bordes redondeados */
-   transition: background-color 0.3s ease;
+   transition: background-color 0.3s ease; /* Transición suave cuando cambia el color de fondo */
  }
  
  .consulta-btn:hover {

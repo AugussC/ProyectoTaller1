@@ -1,4 +1,4 @@
-
+/* Estilos generales para el cuerpo de la página */
 body {
     text-align: justify;
     background-color: rgb(244, 227, 193);
@@ -7,43 +7,45 @@ body {
     padding-top: 80px;
   }
 
+  /* Contenedor principal */
   .contenedor {
-    max-width: 900px;
-    margin: auto;
+    max-width: 900px; /* Limita el ancho para mejor lectura en pantallas grandes */
+    margin: auto; /* Centra el contenedor horizontalmente */
   }
 
-  h1{
-    color:rgb(28, 28, 28);
-    font-family: 'Oswald', sans-serif;
-  }
-
+  /* Texto especial*/
   .text_especial {
-    font-style: italic;
-    margin-bottom: 20px;
+    font-style: italic; /* Aplica estilo en cursiva */
+    margin-bottom: 20px; /* Agrega espacio inferior con el contenido siguiente */
   }
 
+  /* Tabla de talles */
   table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fbeec1;
+    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas */
+    background-color: #fbeec1; /* Color de fondo claro para toda la tabla */
   }
 
+  /* Estilos comunes para todas las celdas */
   th, td {
-    border: 1px solid #e0d3a0;
+    border: 1px solid #e0d3a0; /* Borde de color claro para suavidad visual */
     padding: 12px;
-    text-align: center;
+    text-align: center; /* Centra el contenido dentro de cada celda */
   }
 
+  /* Encabezados de la tabla */
   th {
     background-color: #2a4563;
     color: #ffffff;
     font-weight: bold;
   }
- 
+  
+  /* Estilo alternado para filas pares */
   tr:nth-child(even) td {
     background-color: #fdf3d7;
   }
 
+  /* Estilo alternado para filas impares */
   tr:nth-child(odd) td {
     background-color: #f7ebc8;
   }

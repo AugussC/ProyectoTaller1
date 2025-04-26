@@ -1,64 +1,66 @@
+/* --- NAVBAR GENERAL --- */
 .navbar {
-    background-color: rgb(42, 76, 106);
-    font-family: "Trebuchet MS" , sans-serif;
-    color: cadetblue;
-  }
+  background-color: rgb(42, 76, 106); /* Color de fondo de la navbar  */
+  font-family: "Trebuchet MS", sans-serif; /* Tipo de letra para la navbar */
+  color: rgb(244, 227, 193) /* Color de texto  */
+}
 
-  .navbar-dark .navbar-brand {
-    color: rgb(244, 227, 193) !important;
-  }
-  
+/* Marca o logo de la navbar */
+.navbar-dark .navbar-brand {
+  color: rgb(244, 227, 193) !important; /* Color de la marca en la navbar (beige claro) */
+}
 
-  .navbar-brand {
-    padding: 0px;
-    color: rgb(244, 227, 193); 
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-brand:hover {
-    color: rgb(109, 174, 219);
-  }
-  
-  .navbar-nav .nav-link {
-    color: rgb(244, 227, 193);
-    font-weight: bold;
-  }
-  
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link.active {
-    color: rgb(109, 174, 219);
-  }
-  
-  .form-control {
-    height: 40px;
-    background-color: white;
-    color: 	rgb(28, 28, 28);
-  }
-  
-  .form-control:focus {
-    border-color: rgb(109, 174, 219);
-    box-shadow: 0 0 0 0.2rem rgba(109, 174, 219, 0.25);
-  }
-  
-  .btn-icon {
-    width: 60px;
-    height: 40px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: 1px solid rgb(244, 227, 193);  /* borde beige */
-    color: rgb(244, 227, 193);             /* ícono beige */
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .btn-icon:hover {
-    background-color: rgb(109, 174, 219);  /* azulcito */
-    color: rgb(28, 28, 28);                /* ícono oscuro */
-    border: 1px solid rgb(109, 174, 219);  /* borde azul al pasar el mouse */
-  }
-  
-  
+/* Estilo general para el contenedor de la marca (logo y nombre) */
+.navbar-brand {
+  padding: 0px; /* Elimina el padding para que el logo se ajuste bien */
+  display: flex; /* Utiliza flexbox para alinear el contenido de la marca */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+
+/* --- LINKS DEL MENÚ --- */
+
+
+/* Efecto cuando se pasa el cursor sobre los enlaces */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: rgb(109, 174, 219);    /* Color del enlace al pasar el cursor */
+}
+
+/* --- INPUT DE BÚSQUEDA --- */
+
+/* Estilo general del campo de búsqueda */
+.form-control {
+  height: 40px; /* Altura del campo de búsqueda */
+  background-color: white; /* Fondo blanco para el campo de búsqueda */
+  color: rgb(28, 28, 28);        /* Color del texto (oscuro para contraste) */
+}
+
+/* Estilo cuando el campo de búsqueda está enfocado (cuando el usuario hace clic en él) */
+.form-control:focus {
+  border-color: rgb(109, 174, 219); /* Borde azul claro al enfocar el campo */
+  box-shadow: 0 0 0 0.2rem rgba(109, 174, 219, 0.25); /* Sombra azul suave al enfocar */
+}
+
+/* --- BOTONES DE ICONOS (como los de búsqueda, usuario y carrito) --- */
+
+/* Estilo para los botones que contienen íconos (como el de buscar, carrito, etc.) */
+.btn-icon {
+  width: 60px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  padding: 0; /* Sin padding extra */
+  display: flex; /* Utiliza flexbox para centrar el ícono dentro del botón */
+  align-items: center; /* Centra verticalmente el ícono */
+  justify-content: center; /* Centra horizontalmente el ícono */
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid rgb(244, 227, 193); /* Borde beige claro */
+  color: rgb(244, 227, 193); /* Color del ícono (beige claro) */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: all 0.2s ease-in-out; /* Transición suave al pasar el cursor */
+}
+
+/* Efecto cuando se pasa el cursor sobre el botón con ícono */
+.btn-icon:hover {
+  background-color: rgb(109, 174, 219); /* Fondo azul claro al pasar el cursor */
+  color: rgb(28, 28, 28); /* Color del ícono oscuro al pasar el cursor */
+  border: 1px solid rgb(109, 174, 219); /* Borde azul claro al pasar el cursor */
+}

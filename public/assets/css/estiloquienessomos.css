@@ -8,14 +8,8 @@ body {
     
   }
 
-  h1{
-    color:rgb(28, 28, 28);
-    font-family: 'Oswald', sans-serif;
-  }
-  
-  .imagen-uniforme {
-    max-width: 40%;
-    width: 200px; /* o cualquier valor fijo o relativo */
-    height: auto;
+  .card {
+    height: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
   

@@ -1,21 +1,9 @@
-
+/*Estilo para el cuerpo de la pagina */
 body {
     text-align: justify;
     background-color: rgb(244, 227, 193);
     color:rgb(28, 28, 28);
     font-family: 'Rubik', sans-serif;
     padding-top: 80px;
-    
-  }
-
-  h1{
-    color:rgb(28, 28, 28);
-    font-family: 'Oswald', sans-serif;
-  }
-  
-  .imagen-uniforme {
-    max-width: 40%;
-    width: 200px; /* o cualquier valor fijo o relativo */
-    height: auto;
   }
   

@@ -1,21 +1,15 @@
-
+/* Estilos generales para el cuerpo */
 body {
-    text-align: justify;
-    background-color: rgb(244, 227, 193);
-    color:rgb(28, 28, 28);
-    font-family: 'Rubik', sans-serif;
-    padding-top: 80px;
-    
-  }
+  text-align: justify; /* Justifica el texto  */
+  background-color: rgb(244, 227, 193); 
+  color: rgb(28, 28, 28); /* Color del texto*/
+  font-family: 'Rubik', sans-serif; 
+  padding-top: 80px; 
+}
 
-  h1{
-    color:rgb(28, 28, 28);
-    font-family: 'Oswald', sans-serif;
-  }
-  
-  .imagen-uniforme {
-    max-width: 40%;
-    width: 200px; /* o cualquier valor fijo o relativo */
-    height: auto;
-  }
-  
+/* Estilos para las imágenes*/
+.imagen-uniforme {
+  max-width: 40%; /* Limita el ancho máximo de la imagen */
+  width: 200px; /* Establece un ancho base fijo */
+  height: auto; /* Mantiene la proporción original de la imagen al ajustar el ancho */
+}

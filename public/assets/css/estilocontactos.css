@@ -1,84 +1,82 @@
-/* Bloque de titulares */
+/* === Bloque de Titulares === */
 .bloque-titulares {
-  background-color: #f9f4e8;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: center;
+  background-color: #f9f4e8;       
+  padding: 20px;                   /* Espaciado interno alrededor del contenido */
+  border-radius: 15px;             /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra para resaltar el bloque */
+  margin: 20px auto;              /* Margen superior e inferior + centrado horizontal */
+  max-width: 600px;               /* Ancho máximo del bloque */
+  text-align: center;             /* Centra el texto dentro del bloque */
 }
 
 .bloque-titulares h2 {
-  color: #2a3d66;
-  margin-bottom: 10px;
+  color: #2a3d66;                 /* Color azul  para el título */
+  margin-bottom: 10px;           /* Espacio debajo del título */
 }
 
 .bloque-titulares p {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 18px;               /* Tamaño de fuente */
+  margin: 5px 0;                 /* Margen superior e inferior entre párrafos */
 }
 
 .bloque-titulares .eslogan-box {
-  font-style: italic;
-  color: #555;
-  margin-top: 10px;
+  font-style: italic;            /* Estilo de fuente en cursiva para el eslogan */
+  color: #555;                   /* color de fuente Gris oscuro  */
+  margin-top: 10px;              /* Espacio sobre el eslogan */
 }
 
-
-
-
+/* === Estilos Generales del Body === */
 body {
-    background-color: rgb(244, 227, 193);
-    color:rgb(28, 28, 28);
-    font-family: 'Rubik', sans-serif;
-    padding-top: 80px;
-  }
+  background-color: rgb(244, 227, 193); 
+  color: rgb(28, 28, 28);              
+  font-family: 'Rubik', sans-serif;    
+  padding-top: 80px;                  
+}
 
-  h1, h2{
-    color:rgb(28, 28, 28);
-    font-family: 'Oswald', sans-serif;
-  }
-  /*Contactos */
-  .bgcustom {
-      background-color: #ffffff; /* ejemplo de amarillo tipo Tailwind yellow-400 */
-    }
-  
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 8px;
-      cursor:text;
-    }
-    #mensaje{
-      resize: none;         /* Quita la esquina de agrandar */
-      height: 160px;        /* Aproximadamente 7 filas de texto */
-      padding: 10px;        /* Espaciado interno para mejor visual */
-      line-height: 1.4;     /* Mejora la legibilidad */
-    }
-    .iconos-redes{
-      display: flex;          /* Organiza los íconos sociales en fila */
-      gap: 10px;              /* Espacio de 10px entre los íconos sociales */
-      margin-bottom: 10px;    /* Espacio debajo del grupo de íconos */
-    }
-   
-    .iconos-redes i {
-      font-size: 29px;
-    }
+/* === Estilo para sección de Contactos === */
+.bgcustom {
+  background-color: #ffffff;           /* Fondo blanco para secciones específicas */
+}
 
-/*Mapa */
-    .map-responsive {
-      overflow: hidden;
-      padding-bottom: 56.25%; /* relación 16:9 */
-      position: relative;
-      height: 0;
-    }
-    
-    .map-responsive iframe {
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-    }
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;                         /* Que ocupen todo el ancho disponible */
+  margin-bottom: 15px;                 /* Espacio debajo de cada campo */
+  padding: 8px;                        /* Relleno interno para comodidad al escribir */
+  cursor: text;                        /* Cambia el cursor al tipo texto */
+}
 
+/* === Campo de Mensaje del Formulario === */
+#mensaje {
+  resize: none;                        /* Desactiva el redimensionamiento manual */
+  height: 160px;                       /* Altura fija para 7 filas aprox. */
+  padding: 10px;                       /* Espaciado interno */
+  line-height: 1.4;                    /* Altura de línea para mejor legibilidad */
+}
+
+/* === Íconos de Redes Sociales === */
+.iconos-redes {
+  display: flex;                       /* Distribuye en fila */
+  gap: 10px;                           /* Espacio entre los íconos */
+  margin-bottom: 10px;                /* Espacio inferior del contenedor */
+}
+
+.iconos-redes i {
+  font-size: 29px;                     /* Tamaño de los íconos */
+}
+
+/* === Mapa de Ubicación === */
+.map-responsive {
+  overflow: hidden;                   /* Oculta desbordes del contenido */
+  padding-bottom: 56.25%;             /* Mantiene proporción 16:9 */
+  position: relative;                 /* Permite posicionar el iframe correctamente */
+  height: 0;                          /* Altura cero para trabajar con padding-bottom */
+}
+
+.map-responsive iframe {
+  left: 0;                            /* coloca el borde izquierdo del iframe alineado con el borde izquierdo de su contenedor.*/
+  top: 0;                             /* coloca el borde superior del iframe alineado con el borde superior de su contenedor*/
+  height: 100%;                       /* Ocupa toda la altura del contenedor */
+  width: 100%;                        /* Ocupa todo el ancho del contenedor */
+  position: absolute;                /* Posición absoluta dentro del contenedor relativo */
+}
