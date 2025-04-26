@@ -7,8 +7,11 @@
     flex-wrap: wrap; /* Permite que los elementos bajen a la siguiente línea si no entran */
     justify-content: space-between; /* Espacio uniforme entre secciones */
     gap: 20px; /* Espacio entre los elementos del footer */
-    border-top: 1px solid #eee /* Línea superior sutil para separar del contenido anterior */
+    border-top: 1px solid #eee; /* Línea superior sutil para separar del contenido anterior */
+    margin-top: 48px;
   }
+
+  
   .footer-section {
     flex: 1 1 200px; /* Cada sección del footer ocupa al menos 200px y puede expandirse */
   }

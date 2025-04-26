@@ -1,3 +1,17 @@
+.container{
+  padding-top: 12px;
+}
+
+.container .titulo{
+  margin-top: 24px;
+  text-align: center;
+}
+
+.container .seccion-contactos, .titulo-ubicacion{
+  margin-top: 24px;
+  
+}
+
 /* === Bloque de Titulares === */
 .bloque-titulares {
   background-color: #f9f4e8;       
@@ -79,4 +93,19 @@ body {
   height: 100%;                       /* Ocupa toda la altura del contenedor */
   width: 100%;                        /* Ocupa todo el ancho del contenedor */
   position: absolute;                /* Posición absoluta dentro del contenedor relativo */
+  border: 0;
+}
+
+.form-contacto{
+  margin-top: 48px;
+}
+
+.form-contacto .linea-text, .mensaje-confirmacion{
+  margin-bottom: 16px;
+}
+
+.form-contacto .mensaje-confirmacion{
+  color: #198754; 
+  opacity: 3;
+  transition: opacity 0.5s;
 }

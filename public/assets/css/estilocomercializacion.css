@@ -1,12 +1,40 @@
 /* Estilos generales para el body de la página */
 body {
-  text-align: justify; 
   background-color: rgb(244, 227, 193); 
   color: rgb(28, 28, 28); 
   font-family: 'Rubik', sans-serif; 
   padding-top: 80px; 
 }
 
+.conteiner{
+  margin-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: justify; 
+}
+
+.conteiner h1{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.conteiner .formas_envios{
+  margin-bottom: 12px;
+}
+
+.accordion-body{
+  text-align:center;
+}
+
+.conteiner .medios_pagos{
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.conteiner .cambios_devoluciones, .consulta_dudas{
+  margin-bottom: 16px;
+  
+}
 /* Estilo para los íconos de pago  */
 .payment-icons img {
   width: 60px; /* Ancho fijo de los íconos */

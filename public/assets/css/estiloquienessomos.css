@@ -8,8 +8,74 @@ body {
     
   }
 
+.contenedor-principal, .fila-card{
+  margin-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ .quienes_somos{
+  text-align: center;
+  padding: 24px;
+  padding-bottom: 24px;
+}
+
+.quienes_somos h2{
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.quienes_somos p{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+.historia_objetivo{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.historia_objetivo row{
+  align-items: center;
+  gap: 24px;
+}
+
+.historia_objetivo h2{
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.historia_objetivo img{
+    max-width: 100%;     /* Equivale a img-fluid */
+    height: auto;
+    border-radius: 0.25rem; /* Equivale a rounded (4px) */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15); /* Equivale a shadow */
+}
+
+.informacion_equipo{
+  text-align: center;
+  margin-top: 48px;
+  
+}
+
+.informacion_equipo h2{
+  font-weight: bold;
+}
+
+.fila-card{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 24px;
+
+}
+
   .card {
     height: 100%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
-  
+ 
+  .card-body{
+    text-align: center;
+  }

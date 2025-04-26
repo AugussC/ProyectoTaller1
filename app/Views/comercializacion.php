@@ -6,20 +6,20 @@
     <title>Comercialización</title>
     <!-- Estilos Incluidos -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estilocomercializacion.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+    <link href="public/assets/css/estilocomercializacion.css?v=1.5" rel="stylesheet">
+
   </head>
   <body>
 
-  <!-- Sección principal de comercialización -->
-  <section class="mt-3 px-3" style="text-align: justify;">
+  <!-- contenedor principal de comercialización -->
+  <div class="conteiner">
 
     <!-- Título principal -->
-    <h1 class="text-center mb-3">Comercialización</h1>
+    <h1>Comercialización</h1>
 
     <!-- Sección: Formas de Entrega y Envío -->
-    <div class="mb-3">
+    <div class="formas_envios">
       <h3><i class="bi bi-box-seam"></i> Formas de Entrega y Envío</h3>
       <ul>
         <li><strong>¿A dónde enviamos?</strong> Realizamos envíos a todo el territorio argentino 🇦🇷.</li>
@@ -38,7 +38,7 @@
           </button>
         </h2>
         <div id="collapseFormaEnviosyEntrega" class="accordion-collapse collapse" aria-labelledby="headingFormasEnviosyEntrega" data-bs-parent="#accordionFormaEnviosyEntrega">
-          <div class="accordion-body payment-icons text-center">
+          <div class="accordion-body payment-icons">
             <img src="public/assets/img/correoargentino.png" alt="Correo Argentino">
             <img src="public/assets/img/andreani.png" alt="Andreani">
             <img src="public/assets/img/retiroSucursal.png" alt="Retiro por Sucursal">
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Sección: Medios de Pago -->
-    <div class="my-3">
+    <div class="medios_pagos">
       <h3><i class="bi bi-credit-card"></i> Medios de Pago</h3>
       <ul>
         <li><strong>¿Cómo puedo pagar?</strong> Aceptamos pagos con MercadoPago, tarjetas de crédito/débito y transferencia bancaria.</li>
@@ -64,7 +64,7 @@
             </button>
           </h2>
           <div id="collapsePagos" class="accordion-collapse collapse" aria-labelledby="headingPagos" data-bs-parent="#accordionPagos">
-            <div class="accordion-body payment-icons text-center">
+            <div class="accordion-body payment-icons">
               <img src="public/assets/img/visa.png" alt="Visa">
               <img src="public/assets/img/mastercard.png" alt="Mastercard">
               <img src="public/assets/img/naranja.png" alt="Naranja">
@@ -79,7 +79,7 @@
     </div>
 
     <!-- Sección: Cambios y Devoluciones -->
-    <div class="mb-4">
+    <div class="cambios_devoluciones ">
       <h3><i class="bi bi-repeat"></i> Cambios y Devoluciones</h3>
       <ul>
         <li><strong>¿Puedo cambiar un producto?</strong> Sí, tenés hasta 30 días corridos desde que recibís tu pedido. La prenda debe estar sin uso y en su empaque original. El costo del envío (ida y vuelta) corre por cuenta del cliente.</li>
@@ -88,7 +88,7 @@
     </div>
 
     <!-- Sección: Consultas y dudas -->
-    <div class="mb-4">
+    <div class="consulta_dudas ">
       <h3><i class="bi bi-question-lg"></i> ¿Tenés otra duda?</h3>
       <ul>
         <li>
@@ -99,7 +99,7 @@
         </li>
       </ul>
     </div>
-  </section>
+</div>
 
   <!-- Script de Bootstrap -->
   <script src="public/assets/js/bootstrap.bundle.min.js"></script>

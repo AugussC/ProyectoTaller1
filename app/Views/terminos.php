@@ -6,16 +6,16 @@
     <title>Terminos y Condiciones</title>
     <!-- Estilos personalizados para el navbar -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estiloterminos.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="public/assets/css/estiloterminos.css?v=1.5" rel="stylesheet" >
   </head>
   <body>
     <!-- Contenedor principal con margen superior y padding horizontal -->
-    <div class="contenedor-principal mt-3 px-5">
+    <div class="contenedor-principal">
       
       <!-- Título principal -->
-      <h1 style="text-align: center">TÉRMINOS Y CONDICIONES DE USO - RETROMANIACOS.</h1>
-      <h3 style="text-align: center">Última actualización: [20/04/2025]</h3>
+      <h1>TÉRMINOS Y CONDICIONES DE USO - RETROMANIACOS.</h1>
+      <h3>Última actualización: [20/04/2025]</h3>
       <br>
 
       <!-- Introducción -->

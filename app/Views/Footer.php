@@ -1,8 +1,8 @@
 <!-- Vinculación del archivo de estilos del footer -->
-<link href="public/assets/css/estilofooter.css?v=1" rel="stylesheet">
+<link href="public/assets/css/estilofooter.css?v=1.12" rel="stylesheet">
 
 <!-- Estructura principal del pie de página -->
-<footer class="footer mt-5">
+<footer class="footer ">
 
   <!-- Sección de navegación interna -->
   <div class="footer-section">
