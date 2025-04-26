@@ -130,6 +130,7 @@ body {
    flex-wrap: nowrap;        /* No permite que los elementos hagan "salto de línea" */
    overflow: hidden;         /* Oculta cualquier contenido que se desborde */
    display: flex;            /* Importante: para que justify-content y flex-wrap funcionen */
+   height: 500px;
  }
 
 

@@ -356,7 +356,7 @@
               <div class="col-6 col-md-3 col-lg-2">
                 <div class="card">
                   <div class="card-img-container">
-                    <img src="public/assets/img/camiseta10.jpg" class="img-producto" alt="Producto Más Vendido 10">
+                    <img src="public/assets/img/camiseta10.png" class="img-producto" alt="Producto Más Vendido 10">
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">EE.UU. 2018 Local</h6>
