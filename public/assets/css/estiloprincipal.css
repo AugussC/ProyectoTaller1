@@ -6,8 +6,18 @@ body {
 }
 
 /* Estilo para títulos principales y secundarios */
-h1, h2 {
+.container-mas-vendidos h1, h2 {
   font-family: 'Oswald', sans-serif; /* Fuente especial para encabezados */
+}
+
+.container{
+  margin-top: 48px;
+  padding-top: 24px ;
+  
+}
+
+.container .carousel-indicators button{
+  background-color: black;
 }
 
 /* Clase para aplicar fondo blanco a elementos */
@@ -15,7 +25,54 @@ h1, h2 {
   background-color: #ffffff; /* Blanco */
 }
 
+.mas-vendidos{
+ margin-top: 48px;
+ margin-bottom: 48px;
+ text-align:center ;
+}
+.row{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
+.producto-1{
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 16px;
+}
+
+.producto{
+  margin-bottom: 16px;
+}
+
+.card{
+  height: 100%;
+}
+
+.img-producto-1{
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 300px; /* Ocupa toda la altura definida del carrusel */
+  object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
+}
+
+.img-producto{
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 250px; /* Ocupa toda la altura definida del carrusel */
+  object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
+}
+
+.card-previous-price{
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.card-price-now, .beneficios{
+  color: #198754;
+}
+
+.beneficios{
+  font-size: 0.875rem
+}
   /* --- Estilos para el carrusel --- */
 
 /* Contenedor principal del carrusel */
@@ -33,6 +90,7 @@ h1, h2 {
 
 /* Texto superpuesto en el carrusel */
 .carousel-caption {
+  display: none;
   bottom: 20px; /* Se posiciona 20px desde el borde inferior */
   background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido para mejorar visibilidad del texto */
   padding: 10px; /* Espaciado interno */

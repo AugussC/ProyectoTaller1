@@ -4,147 +4,187 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RetroManiacos</title>
+    <!-- Estilos incluidos -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/estiloprincipal.css?v=1.10" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="public/assets/css/estiloprincipal.css?v=1.14" rel="stylesheet">
   </head>
   <body>
 
-  <!-- Contenedor principal con márgenes superiores -->
-  <div class="container mt-5 pt-4">
+    <!-- Contenedor principal -->
+    <div class="container">
 
-    <!-- Carrusel Bootstrap con ID para controlarlo -->
+    <!-- Carrusel con ID para controlarlo -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
 
-      <!-- Indicadores del carrusel (los botones de abajo que marcan la posición) -->
-      <div class="carousel-indicators">
-        <button type="button" style="background-color: black;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" style="background-color: black;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" style="background-color: black;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <!-- Indicadores del carrusel (los botones de abajo que marcan la posición) -->
+        <div class="carousel-indicators">
+          <!-- Primer indicador -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <!-- Segundo indicador -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <!-- Tercer indicador -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Contenedor de las diapositivas -->
+        <div class="carousel-inner">
+          
+          <!-- Primera diapositiva activa -->
+          <div class="carousel-item active">
+            <img src="public/assets/img/SomosRetroManiacos.png" alt="Imagen Carrusel 1">
+            <div class="carousel-caption d-lg-block">
+              <h5>▼RetroManiacos▼</h5>
+              <p>La camiseta de tu sueño la encontrás acá</p>
+            </div>
+          </div>
+
+          <!-- Segunda diapositiva -->
+          <div class="carousel-item">
+            <img src="public/assets/img/Enviosymas.png" alt="Imagen Carrusel 2">
+            <div class="carousel-caption d-lg-block">
+              <h5>Tu Compra, Más Fácil</h5>
+              <p>Pagá en cuotas sin interés y recibí tu pedido sin cargo.</p>
+            </div>
+          </div>
+
+          <!-- Tercera diapositiva -->
+          <div class="carousel-item">
+            <img src="public/assets/img/OfertasOtoño.png" alt="Imagen Carrusel 3">
+            <div class="carousel-caption d-lg-block">
+              <h5>🍂¡Ofertas de Otoño!🍂</h5>
+              <p>Renová tu colección con los clásicos de siempre a precios que no se repiten. ¡Solo por tiempo limitado!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles para avanzar a la diapositiva anterior -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <!-- Controles para avanzar a la diapositiva siguiente -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
       </div>
 
-      <!-- Contenedor de las diapositivas -->
-      <div class="carousel-inner">
+    </div>
+    </div>
 
-        <!-- Primera diapositiva activa -->
-        <div class="carousel-item active">
-          <img src="public/assets/img/SomosRetroManiacos.png" class="d-block" alt="ejemplo 1">
-          <div class="carousel-caption d-none d-lg-block">
-            <h5>▼RetroManiacos▼</h5>
-            <p>La camiseta de tu sueño la encontrás acá</p>
-          </div>
-        </div>
-
-        <!-- Segunda diapositiva -->
-        <div class="carousel-item">
-          <img src="public/assets/img/Enviosymas.png" class="d-block" alt="ejemplo 2">
-          <div class="carousel-caption d-none d-lg-block">
-            <h5>Tu Compra, Más Fácil</h5>
-            <p>Pagá en cuotas sin interés y recibí tu pedido sin cargo.</p>
-          </div>
-        </div>
-
-        <!-- Tercera diapositiva -->
-        <div class="carousel-item">
-          <img src="public/assets/img/OfertasOtoño.png" class="d-block" alt="ejemplo 3">
-          <div class="carousel-caption d-none d-lg-block">
-            <h5>🍂¡Ofertas de Otoño!🍂</h5>
-            <p>
-              Renová tu colección con los clásicos de siempre a precios que no se repiten.
-              ¡Solo por tiempo limitado!
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Controles para avanzar a la diapositiva anterior -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <!-- Controles para avanzar a la diapositiva siguiente -->
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div> 
-
-  </div> 
-
-    <!-- Productos Mas Vendidos -->
-    <div class="container-fluid bgcustom my-5 text-center">
+    <!-- Sección de productos más vendidos -->
+    <div class="container-fluid mas-vendidos bgcustom ">
       
       <!-- Título de la sección -->
       <h1>Mas vendidos</h1>
       
       <!-- Fila de productos -->
       <div class="row">
-      
+        
         <!-- Producto 1 -->
-        <div class="col-md-12 col-lg-3 ms-0 ms-lg-5 me-0 me-lg-3 mb-3">
-          <div class="card h-100">
-            <img src="public/assets/img/ImagenMasVendida1.jpg" class="" alt="Producto Mas Vendido 1">
+        <div class="producto-1 col-md-12 col-lg-3 ms-lg-5 me-lg-3 ">
+          <!-- Tarjeta del producto 1 -->
+          <div class="card">
+            <!-- Imagen del producto -->
+            <img src="public/assets/img/ImagenMasVendida1.jpg" class="img-producto-1" alt="Producto Mas Vendido 1">
+            <!-- Contenido de la tarjeta -->
             <div class="card-body">
+              <!-- Título del producto -->
               <h6 class="card-title">AC Milan 2006-07 Local</h6>
-              <p class="text-muted text-decoration-line-through">$38.000</p>
-              <h5 class="text-success">$19.000 <span class="text-success small">50% OFF</span></h5>
-              <p class="text-success small">3 Cuotas sin interes de $6.333,33</p>
+              <!-- Precio original tachado -->
+              <p class="card-previous-price">$38.000</p>
+              <!-- Precio con descuento -->
+              <h5 class="card-price-now">$19.000 <span class="beneficios">50% OFF</span></h5>
+              <!-- Información sobre cuotas -->
+              <p class="beneficios">3 Cuotas sin interés de $6.333,33</p>
             </div>
           </div>
         </div>
         
         <!-- Producto 2 -->
-        <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-          <div class="card h-100">
+        <div class="producto col-sm-6 col-md-3 col-lg-2">
+          <!-- Tarjeta del producto 2 -->
+          <div class="card">
+            <!-- Imagen del producto -->
             <img src="public/assets/img/ImagenMasVendida2.jpg" class="img-producto" alt="Producto Mas Vendido 2">
+            <!-- Contenido de la tarjeta -->
             <div class="card-body">
+              <!-- Título del producto -->
               <h6 class="card-title">Schalke 04 1998-99 Local</h6>
-              <p class="text-muted text-decoration-line-through">$40.000</p>
-              <h5 class="text-success">$26.000 <span class="text-success small">35% OFF</span></h5>
-              <p class="text-success small">3 Cuotas sin interes de $8.666,67</p>
+              <!-- Precio original tachado -->
+              <p class="card-previous-price">$40.000</p>
+              <!-- Precio con descuento -->
+              <h5 class="card-price-now">$26.000 <span class="beneficios">35% OFF</span></h5>
+              <!-- Información sobre cuotas -->
+              <p class="beneficios">3 Cuotas sin interés de $8.666,67</p>
             </div>
           </div>
         </div>
         
         <!-- Producto 3 -->
-        <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-          <div class="card h-100">
+        <div class="producto col-sm-6 col-md-3 col-lg-2 ">
+          <!-- Tarjeta del producto 3 -->
+          <div class="card">
+            <!-- Imagen del producto -->
             <img src="public/assets/img/ImagenMasVendida3.jpg" class="img-producto" alt="Producto Mas Vendido 3">
+            <!-- Contenido de la tarjeta -->
             <div class="card-body">
+              <!-- Título del producto -->
               <h6 class="card-title">Argentina 2006 Visitante</h6>
-              <p class="text-muted text-decoration-line-through"></p>
-              <h5 class="text-success">$25.810</h5>
-              <p class="text-success small">3 Cuotas sin interes de $8.603,33</p>
+              <!-- Precio original tachado -->
+              <p class="card-previous-price"> </p>
+              <!-- Precio sin descuento (sin tachado) -->
+              <h5 class="card-price-now">$25.810</h5><span class="beneficios"></span></h5>
+              <!-- Información sobre cuotas -->
+              <p class="beneficios">3 Cuotas sin interés de $8.603,33</p>
+              <!-- Información adicional de envío -->
+              <p class="beneficios"></p>
             </div>
           </div>
         </div>
         
         <!-- Producto 4 -->
-        <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-          <div class="card h-100">
+        <div class="producto col-sm-6 col-md-3 col-lg-2">
+          <!-- Tarjeta del producto 4 -->
+          <div class="card">
+            <!-- Imagen del producto -->
             <img src="public/assets/img/ImagenMasVendida4.jpg" class="img-producto" alt="Producto Mas Vendido 4">
+            <!-- Contenido de la tarjeta -->
             <div class="card-body">
+              <!-- Título del producto -->
               <h6 class="card-title">Alemania 1990 Local</h6>
-              <p class="text-muted text-decoration-line-through"></p>
-              <h5 class="text-success">$39.000</h5>
-              <p class="text-success small">3 Cuotas sin interes de $13.300</p>
-              <p class="text-success small">Envío gratis</p>
+              <!-- Precio original tachado -->
+              <p class="card-previous-price"></p>
+              <!-- Precio sin descuento (sin tachado) -->
+              <h5 class="card-price-now">$39.000</h5><span class="beneficios"></span></h5>
+              <!-- Información sobre cuotas -->
+              <p class="beneficios">3 Cuotas sin interés de $13.300</p>
+              <!-- Información adicional de envío -->
+              <p class="beneficios">Envío gratis</p>
             </div>
           </div>
         </div>
         
         <!-- Producto 5 -->
         <div class="col-sm-6 col-md-3 col-lg-2 mb-3">
-          <div class="card h-100">
+          <!-- Tarjeta del producto 5 -->
+          <div class="card">
+            <!-- Imagen del producto -->
             <img src="public/assets/img/ImagenMasVendida5.jpg" class="img-producto" alt="Producto Mas Vendido 5">
+            <!-- Contenido de la tarjeta -->
             <div class="card-body">
+              <!-- Título del producto -->
               <h6 class="card-title">Inter Milan 2001-02 Local</h6>
-              <p class="text-muted text-decoration-line-through">$32.000</p>
-              <h5 class="text-success">$23.000 <span class="text-success small">28% OFF</span></h5>
-              <p class="text-success small">6 Cuotas sin interes de $3.833,33</p>
+              <!-- Precio original tachado -->
+              <p class="card-previous-price">$32.000</p>
+              <!-- Precio con descuento -->
+              <h5 class="card-price-now">$23.000 <span class="beneficios">28% OFF</span></h5>
+              <!-- Información sobre cuotas -->
+              <p class="beneficios">6 Cuotas sin interés de $3.833,33</p>
             </div>
           </div>
         </div>
@@ -152,6 +192,7 @@
       </div> 
       
     </div> 
+
 
     <!-- Sección: Ofertas del Día -->
     <div class="container-fluid bgcustom py-4 text-center">
@@ -172,9 +213,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Boca Juniors 2001-02 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$28.000</p>
-                    <h5 class="text-success">$25.200 <span class="text-success small">10% OFF</span></h5>
-                    <p class="text-success small">Pagando de Contado</p>
+                    <p class="card-previous-price">$28.000</p>
+                    <h5 class="card-price-now">$25.200 <span class="beneficios">10% OFF</span></h5>
+                    <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
               </div>
@@ -187,9 +228,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">River Plate 2017-18 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$22.000</p>
-                    <h5 class="text-success">$20.900 <span class="text-success small">5% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.967</p>
+                    <p class="card-previous-price">$22.000</p>
+                    <h5 class="card-price-now">$20.900 <span class="beneficios">5% OFF</span></h5>
+                    <p class="beneficios">3 Cuotas sin interés de $6.967</p>
                   </div>
                 </div>
               </div>
@@ -202,9 +243,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Barcelona 2024-25 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$21.000</p>
-                    <h5 class="text-success">$19.000 <span class="text-success small">10% OFF</span></h5>
-                    <p class="text-success small">6 Cuotas sin interés de $5.200</p>
+                    <p class="card-previous-price">$21.000</p>
+                    <h5 class="card-price-now">$19.000 <span class="beneficios">10% OFF</span></h5>
+                    <p class="beneficios">6 Cuotas sin interés de $5.200</p>
                   </div>
                 </div>
               </div>
@@ -217,9 +258,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Liverpool FC 17-18 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$24.500</p>
-                    <h5 class="text-success">$22.540 <span class="text-success small">8% OFF</span></h5>
-                    <p class="text-success small">Pagando de Contado</p>
+                    <p class="card-previous-price">$24.500</p>
+                    <h5 class="card-price-now">$22.540 <span class="beneficios">8% OFF</span></h5>
+                    <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
               </div>
@@ -237,10 +278,10 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Stade Brestois 21-22 Aniversario</h6>
-                    <p class="text-muted text-decoration-line-through">$42.500</p>
-                    <h5 class="text-success">$36.125 <span class="text-success small">15% OFF</span></h5>
-                    <p class="text-success small">6 Cuotas sin interés de $6.021</p>
-                    <p class="text-success small">Envío gratis</p>
+                    <p class="card-previous-price">$42.500</p>
+                    <h5 class="card-price-now">$36.125 <span class="beneficios">15% OFF</span></h5>
+                    <p class="beneficios">6 Cuotas sin interés de $6.021</p>
+                    <p class="beneficios">Envío gratis</p>
                   </div>
                 </div>
               </div>
@@ -253,9 +294,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">UD Las Palmas 96-97 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$39.000</p>
-                    <h5 class="text-success">$31.200 <span class="text-success small">20% OFF</span></h5>
-                    <p class="text-success small">6 cuotas sin interés de $5.200</p>
+                    <p class="card-previous-price">$39.000</p>
+                    <h5 class="card-price-now">$31.200 <span class="beneficios">20% OFF</span></h5>
+                    <p class="beneficios">6 cuotas sin interés de $5.200</p>
                   </div>
                 </div>
               </div>
@@ -268,10 +309,10 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Strasbourg 78-79 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$40.000</p>
-                    <h5 class="text-success">$36.000<span class="text-success small"> 10% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $12.000</p>
-                    <p class="text-success small">Envío gratis</p>
+                    <p class="card-previous-price">$40.000</p>
+                    <h5 class="card-price-now">$36.000<span class="beneficios"> 10% OFF</span></h5>
+                    <p class="beneficios">3 Cuotas sin interés de $12.000</p>
+                    <p class="beneficios">Envío gratis</p>
                   </div>
                 </div>
               </div>
@@ -284,9 +325,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Red Star Belgrade 98-99 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$31.800</p>
-                    <h5 class="text-success">$26.076 <span class="text-success small">18% OFF</span></h5>
-                    <p class="text-success small">6 Cuotas sin interés de $4.346</p>
+                    <p class="card-previous-price">$31.800</p>
+                    <h5 class="card-price-now">$26.076 <span class="beneficios">18% OFF</span></h5>
+                    <p class="beneficios">6 Cuotas sin interés de $4.346</p>
                   </div>
                 </div>
               </div>
@@ -304,9 +345,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Uruguay 2010 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$33.500</p>
-                    <h5 class="text-success">$28.475 <span class="text-success small">15% OFF</span></h5>
-                    <p class="text-success small">6 Cuotas sin interés de $4.746</p>
+                    <p class="card-previous-price">$33.500</p>
+                    <h5 class="card-price-now">$28.475 <span class="beneficios">15% OFF</span></h5>
+                    <p class="beneficios">6 Cuotas sin interés de $4.746</p>
                   </div>
                 </div>
               </div>
@@ -319,9 +360,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">EE.UU. 2018 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$38.000</p>
-                    <h5 class="text-success">$19.000 <span class="text-success small">50% OFF</span></h5>
-                    <p class="text-success small">3 Cuotas sin interés de $6.333,33</p>
+                    <p class="card-previous-price">$38.000</p>
+                    <h5 class="card-price-now">$19.000 <span class="beneficios">50% OFF</span></h5>
+                    <p class="beneficios">3 Cuotas sin interés de $6.333,33</p>
                   </div>
                 </div>
               </div>
@@ -334,9 +375,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Real Betis 96-97 Local</h6>
-                    <p class="text-muted text-decoration-line-through">$25.000</p>
-                    <h5 class="text-success">$22.540 <span class="text-success small">10% OFF</span></h5>
-                    <p class="text-success small">Pagando de Contado</p>
+                    <p class="card-previous-price">$25.000</p>
+                    <h5 class="card-price-now">$22.540 <span class="beneficios">10% OFF</span></h5>
+                    <p class="beneficios">Pagando de Contado</p>
                   </div>
                 </div>
               </div>
@@ -349,9 +390,9 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Stade Rennais 18-19 European Third</h6>
-                    <p class="text-muted text-decoration-line-through">$20.000</p>
-                    <h5 class="text-success">$18.000 <span class="text-success small">10% OFF</span></h5>
-                    <p class="text-success small">3 cuotas sin interés de $6.000</p>
+                    <p class="card-previous-price">$20.000</p>
+                    <h5 class="card-price-now">$18.000 <span class="beneficios">10% OFF</span></h5>
+                    <p class="beneficios">3 cuotas sin interés de $6.000</p>
                   </div>
                 </div>
               </div>
@@ -406,8 +447,8 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 2006 Local</h6>
-                        <h5 class="text-success">$24.000</h5>
-                        <p class="text-success small">6 Cuotas sin interés de $4.000</p>
+                        <h5 class="card-price-now">$24.000</h5>
+                        <p class="beneficios">6 Cuotas sin interés de $4.000</p>
                       </div>
                     </div>
                   </div>
@@ -420,9 +461,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 2008 Visitante</h6>
-                        <p class="text-muted text-decoration-line-through">$31.000</p>
-                        <h5 class="text-success">$27.900 <span class="small">10% OFF</span></h5>
-                        <p class="text-success small">Pagando de Contado</p>
+                        <p class="card-previous-price">$31.000</p>
+                        <h5 class="card-price-now">$27.900 <span class="small">10% OFF</span></h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -435,9 +476,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2008-09 Local</h6>
-                        <p class="text-muted text-decoration-line-through">$34.800</p>
-                        <h5 class="text-success">$27.840 <span class="small">20% OFF</span></h5>
-                        <p class="text-success small">3 Cuotas sin interés de $9.280</p>
+                        <p class="card-previous-price">$34.800</p>
+                        <h5 class="card-price-now">$27.840 <span class="small">20% OFF</span></h5>
+                        <p class="beneficios">3 Cuotas sin interés de $9.280</p>
                       </div>
                     </div>
                   </div>
@@ -450,8 +491,8 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2011-12 Local</h6>
-                        <h5 class="text-success">$33.000</h5>
-                        <p class="text-success small">Pagando de Contado</p>
+                        <h5 class="card-price-now">$33.000</h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -471,9 +512,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 2014 World Cup Final</h6>
-                        <h5 class="text-success">$35.000</h5>
-                        <p class="text-success small">6 Cuotas sin interés de $5.833,33</p>
-                        <p class="text-success small">Envío gratis</p>
+                        <h5 class="card-price-now">$35.000</h5>
+                        <p class="beneficios">6 Cuotas sin interés de $5.833,33</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -486,9 +527,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 2015-16 Local</h6>
-                        <p class="text-muted text-decoration-line-through">$28.000</p>
-                        <h5 class="text-success">$25.200 <span class="small">10% OFF</span></h5>
-                        <p class="text-success small">6 Cuotas sin interés de $4.200</p>
+                        <p class="card-previous-price">$28.000</p>
+                        <h5 class="card-price-now">$25.200 <span class="small">10% OFF</span></h5>
+                        <p class="beneficios">6 Cuotas sin interés de $4.200</p>
                       </div>
                     </div>
                   </div>
@@ -501,8 +542,8 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Paris Saint-Germain 2021-22 Local</h6>
-                        <h5 class="text-success">$29.000</h5>
-                        <p class="text-success small">Pagando de Contado</p>
+                        <h5 class="card-price-now">$29.000</h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -515,9 +556,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Inter Miami 2024 Local</h6>
-                        <p class="text-muted text-decoration-line-through">$26.000</p>
-                        <h5 class="text-success">$22.100 <span class="small">15% OFF</span></h5>
-                        <p class="text-success small">3 Cuotas sin interés de $7.366</p>
+                        <p class="card-previous-price">$26.000</p>
+                        <h5 class="card-price-now">$22.100 <span class="small">15% OFF</span></h5>
+                        <p class="beneficios">3 Cuotas sin interés de $7.366</p>
                       </div>
                     </div>
                   </div>
@@ -555,7 +596,7 @@
               <h2>Diego Armando Maradona</h2>
             </div>
           </div>
-        </div>
+          </div>
 
         <!-- Carrusel de Productos de Maradona -->
         <div class="col-md-9">
@@ -574,10 +615,10 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Boca Jr 1981-82 Local</h6>
-                        <p class="text-muted text-decoration-line-through">$37.000</p>
-                        <h5 class="text-success">$27.750 <span class="small">25% OFF</span></h5>
-                        <p class="text-success small">Pagando de Contado</p>
-                        <p class="text-success small">Envío gratis</p>
+                        <p class="card-previous-price">$37.000</p>
+                        <h5 class="card-price-now">$27.750 <span class="small">25% OFF</span></h5>
+                        <p class="beneficios">Pagando de Contado</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -590,10 +631,10 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Barcelona 1982-83 Local</h6>
-                        <p class="text-muted text-decoration-line-through"></p>
-                        <h5 class="text-success">$35.000</h5>
-                        <p class="text-success small">3 Cuotas sin interés de $11.666</p>
-                        <p class="text-success small">Envío gratis</p>
+                        <p class="card-previous-price"></p>
+                        <h5 class="card-price-now">$35.000</h5>
+                        <p class="beneficios">3 Cuotas sin interés de $11.666</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -606,9 +647,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Napoli 1984-85 Visitante</h6>
-                        <p class="text-muted text-decoration-line-through"></p>
-                        <h5 class="text-success">$27.000</h5>
-                        <p class="text-success small">Pagando de Contado</p>
+                        <p class="card-previous-price"></p>
+                        <h5 class="card-price-now">$27.000</h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -621,10 +662,10 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Napoli 1987-88 Local</h6>
-                        <p class="text-muted text-decoration-line-through"></p>
-                        <h5 class="text-success">$32.850</h5>
-                        <p class="text-success small">6 Cuotas sin interés de $5.475</p>
-                        <p class="text-success small">Envío gratis</p>
+                        <p class="card-previous-price"></p>
+                        <h5 class="card-price-now">$32.850</h5>
+                        <p class="beneficios">6 Cuotas sin interés de $5.475</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -643,9 +684,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Boca Juniors 1995-96 Local</h6>
-                        <p class="text-muted text-decoration-line-through"></p>
-                        <h5 class="text-success">$23.000</h5>
-                        <p class="text-success small">6 Cuotas sin interés de $3.833</p>
+                        <p class="card-previous-price"></p>
+                        <h5 class="card-price-now">$23.000</h5>
+                        <p class="beneficios">6 Cuotas sin interés de $3.833</p>
                       </div>
                     </div>
                   </div>
@@ -658,10 +699,10 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 1986 Local</h6>
-                        <p class="text-muted text-decoration-line-through">$37.000</p>
-                        <h5 class="text-success">$31.450 <span class="small">10% OFF</span></h5>
-                        <p class="text-success small">3 Cuotas sin interés de $10.483</p>
-                        <p class="text-success small">Envío gratis</p>
+                        <p class="card-previous-price">$37.000</p>
+                        <h5 class="card-price-now">$31.450 <span class="small">10% OFF</span></h5>
+                        <p class="beneficios">3 Cuotas sin interés de $10.483</p>
+                        <p class="beneficios">Envío gratis</p>
                       </div>
                     </div>
                   </div>
@@ -674,9 +715,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 1993 Visitante</h6>
-                        <p class="text-muted text-decoration-line-through"></p>
-                        <h5 class="text-success">$30.000</h5>
-                        <p class="text-success small">Pagando de Contado</p>
+                        <p class="card-previous-price"></p>
+                        <h5 class="card-price-now">$30.000</h5>
+                        <p class="beneficios">Pagando de Contado</p>
                       </div>
                     </div>
                   </div>
@@ -689,9 +730,9 @@
                       </div>
                       <div class="card-body">
                         <h6 class="card-title">Argentina 1994 Visitante</h6>
-                        <p class="text-muted text-decoration-line-through">$32.000</p>
-                        <h5 class="text-success">$28.800 <span class="small">10% OFF</span></h5>
-                        <p class="text-success small">6 cuotas sin interés de $4.800</p>
+                        <p class="card-previous-price">$32.000</p>
+                        <h5 class="card-price-now">$28.800 <span class="small">10% OFF</span></h5>
+                        <p class="beneficios">6 cuotas sin interés de $4.800</p>
                       </div>
                     </div>
                   </div>
@@ -769,6 +810,7 @@
       </div> 
 
     </div> 
+</div> 
 
     <!-- Script de Bootstrap  -->
     <script src="public/assets/js/bootstrap.bundle.min.js"></script>
