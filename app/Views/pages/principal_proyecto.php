@@ -35,7 +35,7 @@
           </div>
 
           <!-- Segunda diapositiva -->
-          <div class="carousel-item">
+          <div class="carousel-item carrusel-imagen">
             <img src="public/assets/img/Enviosymas.png" alt="Imagen Carrusel 2">
             <div class="carousel-caption d-lg-block">
               <h5>Tu Compra, Más Fácil</h5>
@@ -44,7 +44,7 @@
           </div>
 
           <!-- Tercera diapositiva -->
-          <div class="carousel-item">
+          <div class="carousel-item carrusel-imagen">
             <img src="public/assets/img/OfertasOtoño.png" alt="Imagen Carrusel 3">
             <div class="carousel-caption d-lg-block">
               <h5>🍂¡Ofertas de Otoño!🍂</h5>
