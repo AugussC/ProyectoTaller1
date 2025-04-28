@@ -29,15 +29,12 @@ body {
 }
 
 /* Imagen dentro del carrusel */
-.carousel-inner img {
+.carrusel-imagen img {
   width: 100%; /* Ocupa todo el ancho disponible */
   height: 550px; /* Ocupa toda la altura definida del carrusel */
   object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
 }
 
-.seccion-ofertas{
-  margin-top: 25px;
-}
 
 /* Texto superpuesto en el carrusel */
 .carousel-caption {
@@ -105,7 +102,7 @@ body {
  
  .img-producto{
    width: 100%; /* Ocupa todo el ancho disponible */
-   height: 250px; /* Ocupa toda la altura definida del carrusel */
+   height: 100%; /* Ocupa toda la altura definida del carrusel */
    object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
  }
  
@@ -126,7 +123,7 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   text-align: center;
-  
+  margin-top: 25px;
  }
  
  .producto-ofertas, .producto-jugador{
