@@ -24,13 +24,14 @@ body {
 /* Contenedor principal del carrusel */
 .carousel-inner {
   height: 550px; /* Altura fija del carrusel */
-  position: relative; /* Permite posicionar captions con position: absolute */
+  position:relative; /* Permite posicionar captions con position: absolute */
+ 
 }
 
 /* Imagen dentro del carrusel */
 .carousel-inner img {
   width: 100%; /* Ocupa todo el ancho disponible */
-  height: 100%; /* Ocupa toda la altura definida del carrusel */
+  height: 550px; /* Ocupa toda la altura definida del carrusel */
   object-fit: contain; /* Ajusta la imagen sin recortarla (puede dejar espacios vacíos) */
 }
 

@@ -5,68 +5,52 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     public function index(): string
-{
-    $data['titulo'] = 'principal';
-    return view('navbar', $data)
-         . view('principal_proyecto')
-         . view('footer', $data);
-}
+    {
+        $data['titulo'] = 'Principal';
+        return view('pages/principal_proyecto', $data);
+    }
 
 
     public function contactos()
     {
         $data['titulo'] = 'Contactos';
-    return view('navbar', $data)
-         . view('contactos')
-         . view('footer', $data);
+        return view('pages/contactos', $data);
     }
 
     public function lavado_recomendado()
     {
         $data['titulo'] = 'Lavado Recomendado';
-    return view('navbar', $data)
-         . view('lavado_recomendado')
-         . view('footer', $data);
+        return view('pages/lavado_recomendado', $data);
     }
 
     public function guia_talles()
     {
         $data['titulo'] = 'Guia de Talles';
-    return view('navbar', $data)
-         . view('guia_talles')
-         . view('footer', $data);
+        return view('pages/guia_talles', $data);
     }
 
     public function comercializacion()
     {
         $data['titulo'] = 'Comercializacion';
-    return view('navbar', $data)
-         . view('comercializacion')
-         . view('footer', $data);
+        return view('pages/comercializacion', $data);
     }
 
     public function preguntas_frecuentes()
     {
         $data['titulo'] = 'Preguntas Frecuentes';
-    return view('navbar', $data)
-         . view('preguntas_frecuentes')
-         . view('footer', $data);
+        return view('pages/preguntas_frecuentes', $data);
     }
 
     public function terminos()
     {
-    $data['titulo'] = 'Términos y Condiciones';
-    return view('navbar', $data)
-         . view('terminos')
-         . view('footer', $data);
+        $data['titulo'] = 'Términos y Condiciones';
+        return view('pages/terminos', $data);
     }
 
     public function quienes_somos()
     {
-    $data['titulo'] = 'Quiénes Somos';
-    return view('navbar', $data)
-         . view('quienes_somos')
-         . view('footer', $data);
+        $data['titulo'] = 'Quiénes Somos';
+        return view('pages/quienes_somos', $data);
     }
 
 }
