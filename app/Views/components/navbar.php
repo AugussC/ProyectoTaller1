@@ -23,11 +23,10 @@
 
         <!-- Menú de navegación principal -->
         <!-- Catalogo -->
-         <!--
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Catálogo</a>
         </li>
-       -->
+       
 
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('quienes_somos') ?>">¿Quiénes Somos?</a>
@@ -47,7 +46,7 @@
       </ul>
 
       <!-- Sección de búsqueda e iconos-->
-     <!--
+     
       <form class="formulario" role="search">
         <input class="form-control" type="search" placeholder="Buscar..." aria-label="Buscar">
         
@@ -63,7 +62,7 @@
           <i class="bi bi-cart"></i>
         </button>
       </form>
-      -->
+     
     </div>
   </div>
 </nav>
