@@ -1,0 +1,55 @@
+CRITICAL - 2025-05-13 13:17:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/admin.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/admin', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('pages/admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 13:31:29 --> ErrorException: unlink(C:\xampp\htdocs\Proyecto_CanteroAugusto_EscalanteJoaquin\writable\debugbar/debugbar_1747142236.751266.json): No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\writable\\debugbar/debugbar_1747142236.751266.json): No such file or directory', 'C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): unlink('C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\writable\\debugbar/debugbar_1747142236.751266.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(517): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1747143088.456822', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(496): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(339): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 13:37:44 --> ErrorException: unlink(C:\xampp\htdocs\Proyecto_CanteroAugusto_EscalanteJoaquin\writable\debugbar/debugbar_1747143446.954880.json): No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\writable\\debugbar/debugbar_1747143446.954880.json): No such file or directory', 'C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): unlink('C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\writable\\debugbar/debugbar_1747143446.954880.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(517): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1747143463.591349', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(496): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(339): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 13:55:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/navbar_.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/navbar_.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('components/navbar_.php', null, true)
+ 3 APPPATH\Views\layout.php(27): CodeIgniter\View\View->include('components/navbar_.php')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_CanteroAugusto_EscalanteJoaquin\\app\\Views\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/admin_principal', [], true)
+ 8 APPPATH\Controllers\Admin.php(10): view('pages/admin_principal', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

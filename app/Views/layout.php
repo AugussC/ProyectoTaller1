@@ -24,7 +24,7 @@
 
   <body>
   <!-- Inclusión del componente de navbar utilizando PHP -->
-  <?php echo $this->include("components/navbar.php"); ?> 
+  <?php echo $this->include("components/navbar_admin.php"); ?> 
 
   <!-- Sección dinámica para el contenido principal de la página -->
   <?php echo $this->renderSection("contenido"); ?>
