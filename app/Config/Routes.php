@@ -21,3 +21,4 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('preguntas_frecuentes', 'Home::preguntas_frecuentes');
 
 $routes->get('admin', 'Admin::index');
+$routes->get('productos', 'Admin::productos');

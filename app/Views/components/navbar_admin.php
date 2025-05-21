@@ -24,12 +24,12 @@
         <!-- Menú de navegación principal -->
         <!-- Catalogo -->
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Añadir Producto</a>
+          <a class="nav-link" aria-current="page" href="#">Productos</a>
         </li>
        
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Ver Pedidos</a>
+          <a class="nav-link" href="#">Pedidos</a>
         </li>
 
         <li class="nav-item">
