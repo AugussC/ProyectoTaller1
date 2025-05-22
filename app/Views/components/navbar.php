@@ -24,7 +24,7 @@
         <!-- Menú de navegación principal -->
         <!-- Catalogo -->
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Catálogo</a>
+          <a class="nav-link" aria-current="page" href="<?= base_url('catalogo') ?>">Catálogo</a>
         </li>
        
 
@@ -54,13 +54,14 @@
           <i class="bi bi-search"></i>
         </button>
         
-        <button class="btn-icon" type="button">
+        <button id="openModalBtn" class="btn-icon" type="button">
           <i class="bi bi-person-circle"></i>
         </button>
         
         <button class="btn-icon" type="button">
           <i class="bi bi-cart"></i>
         </button>
+
       </form>
      
     </div>

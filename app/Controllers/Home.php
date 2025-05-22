@@ -2,12 +2,30 @@
 
 namespace App\Controllers;
 
+
+
+use App\Models\ProductosModel;
+
 class Home extends BaseController
-{
+{   
+
+
     public function index(): string
     {
         $data['titulo'] = 'Principal';
         return view('pages/principal_proyecto', $data);
+    }
+
+    public function catalogo() 
+    {
+        
+
+        
+        $productoModel = new ProductosModel();
+        $resultado = $productoModel->where('activo', 1)->findAll();
+        $data['titulo'] = 'Catalogo';
+        $data['lista_productos'] = $resultado;
+        return view('pages/catalogo', $data);
     }
 
 

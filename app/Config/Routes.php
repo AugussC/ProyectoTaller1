@@ -12,6 +12,7 @@ $routes->set404Override();
  */
 $routes->get('/', 'Home::index');
 $routes->get('inicio', 'Home::index');
+$routes->get('catalogo', 'Home::catalogo');
 $routes->get('quienes_somos', 'Home::quienes_somos');
 $routes->get('terminos', 'Home::terminos');
 $routes->get('contactos', 'Home::contactos');
