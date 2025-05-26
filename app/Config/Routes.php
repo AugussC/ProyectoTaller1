@@ -10,6 +10,7 @@ $routes->set404Override();
 /**
  * @var RouteCollection $routes
  */
+// Rutas públicas (sin filtro)
 $routes->get('/', 'Home::index');
 $routes->get('inicio', 'Home::index');
 $routes->get('catalogo', 'Home::catalogo');
@@ -21,5 +22,14 @@ $routes->get('guia_talles', 'Home::guia_talles');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('preguntas_frecuentes', 'Home::preguntas_frecuentes');
 
-$routes->get('admin', 'Admin::index');
-$routes->get('productos', 'Admin::productos');
+// Rutas solo para administrador
+$routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
+$routes->get('productos', 'Admin::productos', ['filter' => 'auth:admin']);
+
+// Rutas de autenticación y registro
+$routes->get('login', 'Login::index');
+$routes->post('auth', 'Login::auth');
+$routes->get('logout', 'Login::logout');
+$routes->get('register', 'Usuarios::index');
+$routes->post('register', 'Usuarios::create');
+

@@ -6,24 +6,34 @@ use CodeIgniter\Model;
 
 class UsuarioModel extends Model
 {
-    protected $table      = 'usuario';
-    protected $primaryKey = 'id_usuario';
-
+    protected $table            = 'usuario';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-
-    protected $returnType     = 'array';
-    protected $useSoftDeletes = false;
-
-    // Campos permitidos para inserciones y actualizaciones
-    protected $allowedFields = ['nombre', 'apellido', 'email', 'contraseña', 'telefono', 'rol'];
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+    protected $allowedFields    = ['nombre', 'apellido', 'email', 'contraseña', 'rol'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
 
-    // Fechas
+    protected array $casts = [];
+    protected array $castHandlers = [];
+
+    // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at'; // No se usa si useSoftDeletes es false
+    
+    public function validarUsuario($email, $password){
+    $usuario = $this->where('email', $email)->first();
+
+    if ($usuario && password_verify($password, $usuario['contraseña'])) {
+        return $usuario;
+    }
+
+    return null;
 }
+}
+

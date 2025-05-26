@@ -1,0 +1,99 @@
+/* Fondo general y fuente */
+body {
+  background-color: rgb(244, 227, 193);
+  color: rgb(28, 28, 28);
+  font-family: 'Rubik', sans-serif;
+  padding-top: 80px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Tarjeta del login */
+.form-signin {
+  background-color: #fff7e9;
+  border-radius: 16px;
+  border: 1px solid #e2c799;
+}
+
+/* Título del formulario */
+.form-signin h1 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #6d4c41;
+}
+
+/* Etiquetas */
+label {
+  font-weight: 500;
+  color: #5a3726;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #d4a373;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #b98049;
+  box-shadow: 0 0 0 0.2rem rgba(185, 128, 73, 0.25);
+}
+
+/* Botón de enviar */
+.btn-primary {
+  background-color: #b98049;
+  border-color: #b98049;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a5693b;
+  border-color: #a5693b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Enlace "olvidé mi contraseña" */
+.float-end {
+  font-size: 0.875rem;
+  color: #b98049;
+  text-decoration: none;
+}
+
+.float-end:hover {
+  text-decoration: underline;
+  color: #a5693b;
+}
+
+/* Mensajes de error */
+.alert-danger {
+  border-radius: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Footer */
+.card-footer {
+  background-color: transparent;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #b98049;
+  font-weight: 500;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+  color: #a5693b;
+}

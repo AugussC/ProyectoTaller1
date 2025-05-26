@@ -1,3 +1,9 @@
+
+
+<?php 
+$session = session(); 
+$rol = $session->get('rol');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,7 +30,12 @@
 
   <body>
   <!-- Inclusión del componente de navbar utilizando PHP -->
-  <?php echo $this->include("components/navbar.php"); ?> 
+    
+  <?php if ($rol === 'admin'): ?>
+      <?php echo $this->include("components/navbar_admin.php"); ?>
+  <?php else: ?>
+      <?php echo $this->include("components/navbar.php"); ?>
+  <?php endif; ?>
 
   <!-- Sección dinámica para el contenido principal de la página -->
   <?php echo $this->renderSection("contenido"); ?>

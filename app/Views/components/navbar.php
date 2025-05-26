@@ -1,3 +1,4 @@
+<?php $session = session(); ?>
 
 
 
@@ -53,11 +54,29 @@
         <button class="btn-icon" type="button">
           <i class="bi bi-search"></i>
         </button>
+
+       
         
-        <button id="openModalBtn" class="btn-icon" type="button">
-          <i class="bi bi-person-circle"></i>
-        </button>
-        
+        <?php if (!$session->get('login_in')): ?>
+        <!-- Usuario no logueado: mostrar botón para iniciar sesión -->
+        <a href="<?= base_url('login') ?>" class="btn-icon btn-outline-primary"><i class="bi bi-person-circle"></i></a>
+        <?php else: ?>
+            <!-- Usuario logueado: mostrar menú desplegable -->
+            <div class="dropdown">
+                <button class="btn-icon btn-outline-primary dropdown-toggle" type="button" id="perfilDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                    <li><a class="dropdown-item" href="<?= base_url('perfil') ?>">Tu perfil</a></li>
+                    <li><a class="dropdown-item" href="<?= base_url('facturas') ?>">Facturas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        <?php endif; ?>
+
+
+
         <button class="btn-icon" type="button">
           <i class="bi bi-cart"></i>
         </button>
