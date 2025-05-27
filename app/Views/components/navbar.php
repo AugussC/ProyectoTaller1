@@ -66,7 +66,7 @@
                 <button class="btn-icon btn-outline-primary dropdown-toggle" type="button" id="perfilDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person-circle"></i>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                <ul class="dropdown-menu me-5" aria-labelledby="perfilDropdown">
                     <li><a class="dropdown-item" href="<?= base_url('perfil') ?>">Tu perfil</a></li>
                     <li><a class="dropdown-item" href="<?= base_url('facturas') ?>">Facturas</a></li>
                     <li><hr class="dropdown-divider"></li>

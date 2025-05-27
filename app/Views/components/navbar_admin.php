@@ -5,7 +5,7 @@
   <div class="container-fluid">
 
     <!-- Logo y nombre de la marca -->
-    <a class="navbar-brand" href="<?= base_url('inicio') ?>">
+    <a class="navbar-brand" href="<?= base_url('admin') ?>">
       <img src="public/assets/img/LogoRetromaniacos.png" alt="Logo">
       RetroManiacos
     </a>
@@ -21,7 +21,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- Menú de navegación principal -->
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Productos</a>
+          <a class="nav-link" aria-current="page" href="<?= base_url('productos') ?>">Productos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pedidos</a>

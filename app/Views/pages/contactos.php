@@ -72,7 +72,7 @@
 
       <!-- Columna derecha: Formulario de contacto -->
       <div class="form-contacto col-md-6 mt-md-0">
-        <form id="form-contacto" class="contact-form" action="<?= base_url('enviar') ?>" method="post">
+        <form id="form-contacto" class="contact-form" action="<?= base_url('consulta') ?>" method="post">
 
 
           <!-- Campo: Nombre -->

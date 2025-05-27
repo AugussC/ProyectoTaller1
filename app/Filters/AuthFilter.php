@@ -28,7 +28,7 @@ class AuthFilter implements FilterInterface
         $session = session();
 
         // Si el usuario no está logueado
-        if (!$session->get('isLoggedIn')) {
+        if (!$session->get('login_in')) {
             return redirect()->to('/login');
         }
 
