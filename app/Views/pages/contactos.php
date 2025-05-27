@@ -67,32 +67,43 @@
         </div>
       </div>
 
+     
+         
+
       <!-- Columna derecha: Formulario de contacto -->
       <div class="form-contacto col-md-6 mt-md-0">
-        <form class="contact-form" action="#" method="post">
-          
+        <form id="form-contacto" class="contact-form" action="<?= base_url('enviar') ?>" method="post">
+
+
           <!-- Campo: Nombre -->
           <div class="linea-text ">
             <label for="nombre" class="form-label">NOMBRE</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo se permiten letras">
+            <input type="text" id="nombre" name="nombre" value="<?= set_value('nombre', $usuario['nombre'] ?? ''); ?>" class="form-control"  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo se permiten letras"<?= isset($usuario) ? 'readonly' : '' ?>>
+          </div>
+
+
+          <!-- Campo: Apellido -->
+          <div class="linea-text ">
+            <label for="apellido" class="form-label">APELLIDO</label>
+            <input type="text" id="apellido" name="apellido" value="<?= set_value('apellido', $usuario['apellido'] ?? ''); ?>" class="form-control"  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo se permiten letras"<?= isset($usuario) ? 'readonly' : '' ?>>
           </div>
 
           <!-- Campo: Email -->
           <div class="linea-text ">
             <label for="email" class="form-label">EMAIL</label>
-            <input type="email" id="email" name="email" class="form-control" required>
+            <input type="email" id="email" name="email" value="<?= set_value('email', $usuario['email'] ?? ''); ?>" class="form-control" <?= isset($usuario) ? 'readonly' : '' ?>>
           </div>
 
           <!-- Campo: Teléfono -->
           <div class="linea-text ">
             <label for="telefono" class="form-label">TELÉFONO (opcional)</label>
-            <input type="tel" id="telefono" name="telefono" class="form-control" pattern="[0-9]+" title="Solo se permiten números">
+            <input type="tel" id="telefono" name="telefono" value="<?= set_value('telefono', $usuario['telefono'] ?? ''); ?>" class="form-control" pattern="[0-9]+" title="Solo se permiten números"<?= isset($usuario['telefono']) ? 'readonly' : '' ?>>
           </div>
 
           <!-- Campo: Mensaje -->
           <div class="linea-text">
             <label for="mensaje" class="form-label">MENSAJE</label>
-            <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" value="<?= set_value('mensaje'); ?>" class="form-control" ></textarea>
           </div>
 
           <!-- Botón de envío -->
@@ -101,6 +112,18 @@
           <!-- Mensaje de éxito tras enviar el formulario -->
           <div id="mensaje-exito" class=" mensaje-confirmacion"></div>
         </form>
+        <!-- Mensajes de éxito o error -->
+            <?php if(session()->getFlashdata('success')!== null) : ?>
+                <div class="alert alert-success my-3" role="alert">
+                    <?= session()->getFlashdata('success'); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if(session()->getFlashdata('errors')!== null) : ?>
+                <div class="alert alert-danger my-3" role="alert">
+                    <?= session()->getFlashdata('errors'); ?>
+                </div>
+            <?php endif; ?>
       </div>
     </div>
   </div>
@@ -109,5 +132,5 @@
  
   <?php echo $this->section('javascrip'); ?> 
   <script src="public/assets/js/eslogan.js"></script>
-  <script src="public/assets/js/contactos.js"></script>
+  
   <?php echo $this->endSection(); ?>

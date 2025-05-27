@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsuarioModel extends Model
+class ConsultaModel extends Model
 {
-    protected $table            = 'usuario';
-    protected $primaryKey       = 'id_usuario';
+    protected $table            = 'consulta';
+    protected $primaryKey       = 'id_consulta';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nombre', 'apellido', 'email', 'telefono', 'direccion', 'contraseña', 'rol'];
+    protected $allowedFields    = ['id_usuario','mensaje', 'activo'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -25,15 +25,5 @@ class UsuarioModel extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    
-    public function validarUsuario($email, $password){
-    $usuario = $this->where('email', $email)->first();
-
-    if ($usuario && password_verify($password, $usuario['contraseña'])) {
-        return $usuario;
-    }
-
-    return null;
+    protected $deletedField  = 'deleted_at';
 }
-}
-

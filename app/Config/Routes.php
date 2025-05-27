@@ -32,4 +32,7 @@ $routes->post('auth', 'Login::auth');
 $routes->get('logout', 'Login::logout');
 $routes->get('register', 'Usuarios::index');
 $routes->post('register', 'Usuarios::create');
+$routes->post('enviar', 'Contacto::consulta');
+
+
 

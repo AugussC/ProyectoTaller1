@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 
-
+use App\Models\UsuarioModel;
 use App\Models\ProductosModel;
 
 class Home extends BaseController
@@ -31,7 +31,18 @@ class Home extends BaseController
 
     public function contactos()
     {
-        $data['titulo'] = 'Contactos';
+        $session = session();
+        $usuario = null;
+
+        if ($session->get('login_in')) {
+            $usuarioModel = new UsuarioModel();
+            $usuario = $usuarioModel->find($session->get('userid'));
+        }
+
+        $data = [
+        'titulo'  => 'Contactos',
+        'usuario' => $usuario
+    ];
         return view('pages/contactos', $data);
     }
 
