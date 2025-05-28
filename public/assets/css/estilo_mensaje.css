@@ -1,0 +1,50 @@
+/* Asegura que se use la misma tipografía */
+body {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(244, 227, 193);
+    color: #1c1c1c;
+}
+
+/* Contenedor con estética de perfil */
+.mensaje-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff7e6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Caja del mensaje */
+.mensaje-caja {
+    background-color:#fff7e6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Texto del mensaje */
+.mensaje-texto {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Botón igual al perfil */
+.button-perfil {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-perfil:hover {
+    background-color: #444;
+}

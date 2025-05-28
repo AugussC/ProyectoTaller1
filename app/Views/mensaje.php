@@ -1,19 +1,21 @@
 <?php echo $this->extend('layout'); ?>
 
+<?php echo $this->section('estilos'); ?> 
+<link href="public/assets/css/estilo_mensaje.css?v=1.3" rel="stylesheet" >
+<?php echo $this->endSection(); ?>
+
 <?php echo $this->section('contenido'); ?>
- 
 
-        <div class="card shadow-lg form-signin pt-5 mt-5">
-            <div class="card-body p-5">
-                <h1 class="fs-4 card-title fw-bold mb-4"><?= $titulo; ?></h1>
-            </div>
-        </div>
-
-        <p><?= $mensaje; ?></p>
+<div class="container mensaje-container">
+    <h1><?= esc($titulo); ?></h1>
+    
+    <div class="mensaje-caja">
+        <p class="mensaje-texto"><?= esc($mensaje); ?></p>
         
-        <div class="f-flex align-items-center">
-            <a href="<?= base_url(); ?>" class="btn btn-primary ms-auto"> 
-                Iniciar Sesión
-            </a>
+        <div class="mensaje-acciones">
+            <a href="<?= base_url('login'); ?>" class="button-perfil">Iniciar Sesión</a>
         </div>
-<?php echo $this->endSection(); ?> 
+    </div>
+</div>
+
+<?php echo $this->endSection(); ?>

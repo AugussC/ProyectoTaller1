@@ -21,6 +21,7 @@ $routes->get('lavado_recomendado', 'Home::lavado_recomendado');
 $routes->get('guia_talles', 'Home::guia_talles');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('preguntas_frecuentes', 'Home::preguntas_frecuentes');
+$routes->get('perfil', 'Home::perfil');
 
 // Rutas solo para administrador
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
@@ -34,5 +35,8 @@ $routes->get('register', 'Usuarios::index');
 $routes->post('register', 'Usuarios::create');
 $routes->post('consulta', 'Contacto::consulta');
 
+$routes->post('usuario/guardar_cambios', 'Usuarios::guardarCambios');
+$routes->post('usuario/cambiar_password', 'Usuarios::cambiarPassword');
 
 
+$routes->get('mensaje', 'Usuarios::showMessage');

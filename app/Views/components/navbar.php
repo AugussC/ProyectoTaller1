@@ -1,5 +1,6 @@
-<?php $session = session(); ?>
+<?php $session = session(); 
 
+?>
 
 
 <!-- Navbar principal -->
@@ -76,7 +77,7 @@
         <?php endif; ?>
 
 
-
+          
         <button class="btn-icon" type="button">
           <i class="bi bi-cart"></i>
         </button>

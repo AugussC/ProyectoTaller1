@@ -40,9 +40,11 @@ $rol = $session->get('rol');
   <!-- Sección dinámica para el contenido principal de la página -->
   <?php echo $this->renderSection("contenido"); ?>
 
+     
+  <?php if ($rol !== 'admin'): ?>
   <!-- Inclusión del componente de footer utilizando PHP -->
   <?php echo $this->include("components/footer.php"); ?> 
-  
+  <?php endif; ?>
   <!-- Enlace al archivo JS de Bootstrap que incluye funcionalidades como modales, menús desplegables, etc. -->
   <script src="public/assets/js/bootstrap.bundle.min.js"></script>
 

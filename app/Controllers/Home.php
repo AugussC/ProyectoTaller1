@@ -42,7 +42,7 @@ class Home extends BaseController
         $data = [
         'titulo'  => 'Contactos',
         'usuario' => $usuario
-    ];
+         ];
         return view('pages/contactos', $data);
     }
 
@@ -82,4 +82,16 @@ class Home extends BaseController
         return view('pages/quienes_somos', $data);
     }
 
+    public function perfil()
+    {
+        $session = session();
+        $usuarioModel = new UsuarioModel();
+        $usuario = $usuarioModel->find($session->get('userid'));
+
+        $data = [
+        'titulo'  => 'Perfil',
+        'usuario' => $usuario
+         ];
+        return view('pages/perfil', $data);
+    }
 }
