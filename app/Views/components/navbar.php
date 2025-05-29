@@ -48,13 +48,9 @@
       </ul>
 
       <!-- Sección de búsqueda e iconos-->
-     
-      <form class="formulario" role="search">
-        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Buscar">
-        
-        <button class="btn-icon" type="button">
-          <i class="bi bi-search"></i>
-        </button>
+      <form class="formulario" role="search" action="catalogo" method="GET">
+          <input class="form-control" type="search" name="q" placeholder="Buscar..." aria-label="Buscar" value="<?= htmlspecialchars($_GET['q'] ?? '') ?>">
+          <button class="btn-icon" type="submit"> <i class="bi bi-search"></i></button>
 
        
         

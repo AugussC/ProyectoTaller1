@@ -14,7 +14,7 @@ class ProductosModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_categoria','nombre', 'talla', 'precio', 'stock'];
+    protected $allowedFields = ['id_categoria','nombre', 'jugador_relevante', 'ruta_imagen','cantidad_vendida', 'precio', 'descuento', 'envio_gratis', 'stock' ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -26,10 +26,16 @@ class ProductosModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    public function obtenerProductosConCategoria()
+    public function obtenerProductosConEquipo()
     {
         return $this->select('productos.*, categoria.equipo')
                     ->join('categoria', 'categoria.id_categoria = productos.id_categoria')
+                    ->where('productos.activo', 1)
                     ->findAll();
     }
+
+   
+
+
+
 }
