@@ -67,6 +67,7 @@ class Home extends BaseController
 
     $data['titulo'] = 'Catalogo';
     $data['lista_productos'] = $resultado;
+    $data['palabra_buscada'] = $termino;
     
     return view('pages/catalogo', $data);
 }
