@@ -49,30 +49,43 @@ class Home extends BaseController
     public function catalogo() 
 {
     $productoModel = new ProductosModel();
-    $termino = $this->request->getGet('q'); // Obtener el término de búsqueda
 
+    $termino = $this->request->getGet('q');
+    $equipo = $this->request->getGet('equipo');
+    $jugador = $this->request->getGet('jugador');
+
+    $builder = $productoModel->where('activo', 1);
+
+    // Filtro por búsqueda general
     if (!empty($termino)) {
-        // Filtrar por nombre o descripción y activo = 1
-        $resultado = $productoModel
-            ->groupStart()
-                ->like('nombre', $termino)
-                ->orLike('jugador_relevante', $termino)
-            ->groupEnd()
-            ->where('activo', 1)
-            ->findAll();
-    } else {
-        // Sin búsqueda: mostrar todos los activos
-        $resultado = $productoModel->where('activo', 1)->findAll();
+        $builder->groupStart()
+            ->like('nombre', $termino)
+            ->orLike('jugador_relevante', $termino)
+            ->groupEnd();
     }
 
-    $data['titulo'] = 'Catalogo';
-    $data['lista_productos'] = $resultado;
-    $data['palabra_buscada'] = $termino;
-    
+    // Filtro por equipo (categoría)
+    if (!empty($equipo)) {
+        $builder->where('id_categoria', $equipo);
+    }
+
+    // Filtro por jugador
+    if (!empty($jugador)) {
+        $builder->like('jugador_relevante', $jugador);
+    }
+
+    $resultado = $builder->findAll();
+
+    $data = [
+        'titulo' => 'Catálogo',
+        'lista_productos' => $resultado,
+        'palabra_buscada' => $termino,
+        'equipo' => $equipo,
+        'jugador' => $jugador
+    ];
+
     return view('pages/catalogo', $data);
 }
-
-
 
     public function contactos()
     {
@@ -126,6 +139,12 @@ class Home extends BaseController
         $data['titulo'] = 'Quiénes Somos';
         return view('pages/quienes_somos', $data);
     }
+
+    public function facturas()
+{
+        $data['titulo'] = 'Tus Facturas';
+        return view('pages/facturas', $data);
+}
 
     public function perfil()
     {

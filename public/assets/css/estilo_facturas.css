@@ -1,0 +1,8 @@
+/* Estilos generales para el body de la página */
+body {
+  background-color: rgb(244, 227, 193); 
+  color: rgb(28, 28, 28); 
+  font-family: 'Rubik', sans-serif; 
+  padding-top: 80px; 
+}
+  
