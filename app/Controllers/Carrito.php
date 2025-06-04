@@ -1,0 +1,205 @@
+<?php
+
+namespace App\Controllers;
+
+use App\Models\ProductosModel;
+use App\Models\ItemCarritoModel;
+use App\Models\FacturaModel;
+use App\Models\DetalleFacturaModel;
+class Carrito extends BaseController
+{
+    public function agregarCarrito($id_producto)
+    {
+        $session = session();
+
+        $id_usuario = $session->get('userid');
+
+        $productoModel = new ProductosModel();
+        $producto = $productoModel->find($id_producto);
+
+        if (!$producto) {
+            return redirect()->back()->with('error', 'Producto no encontrado.');
+        }
+
+        $itemCarritoModel = new ItemCarritoModel();
+
+        // Verificamos si ya existe ese producto en el carrito del usuario
+        $itemExistente = $itemCarritoModel
+            ->where('id_usuario', $id_usuario)
+            ->where('id_producto', $id_producto)
+            ->first();
+
+        if ($itemExistente) {
+            // Si existe, solo actualizamos la cantidad
+            $itemExistente['cantidad'] += 1;
+            $itemCarritoModel->update($itemExistente['id_detalle_carrito'], $itemExistente);
+        } else {
+            // Si no existe, lo insertamos
+            $itemCarritoModel->insert([
+                'id_usuario' => $id_usuario,
+                'id_producto' => $id_producto,
+                'cantidad' => 1
+            ]);
+        }
+
+        return redirect()->back()->with('mensaje', 'Producto agregado al carrito.');
+    }
+
+    public function ver()
+    {
+        $session = session();
+        $id_usuario = $session->get('userid');
+
+        if (!$id_usuario) {
+            return redirect()->to(base_url('login'))->with('error', 'Iniciá sesión para ver tu carrito.');
+        }
+
+        $itemCarritoModel = new ItemCarritoModel();
+        $productoModel = new ProductosModel();
+
+        $items = $itemCarritoModel->where('id_usuario', $id_usuario)->findAll();
+
+        $carrito = [];
+        foreach ($items as $item) {
+            $producto = $productoModel->find($item['id_producto']);
+            if ($producto) {
+                // Usar el precio con descuento si está definido y es mayor a 0
+                $precioFinal = (isset($producto['precio_descuento']) && $producto['precio_descuento'] > 0)
+                    ? $producto['precio_descuento']
+                    : $producto['precio'];
+
+                $carrito[] = [
+                    'id_producto' => $producto['id_producto'],
+                    'nombre' => $producto['nombre'],
+                    'precio' => $precioFinal,
+                    'cantidad' => $item['cantidad'],
+                    'subtotal' => $precioFinal * $item['cantidad']
+                ];
+            }
+        }
+
+        $data['titulo'] = 'Carrito';
+        $data['carrito'] = $carrito;
+
+        return view('pages/carrito', $data);
+    }
+
+    public function eliminar($id_producto)
+    {
+        $session = session();
+        $id_usuario = $session->get('userid');
+
+        $itemCarritoModel = new ItemCarritoModel();
+
+        $itemCarritoModel
+            ->where('id_usuario', $id_usuario)
+            ->where('id_producto', $id_producto)
+            ->delete();
+
+        return redirect()->to(base_url('carrito'))->with('mensaje', 'Producto eliminado del carrito.');
+    }
+
+    public function actualizar($id_producto, $accion)
+    {
+        $session = session();
+        $id_usuario = $session->get('userid');
+
+        $itemCarritoModel = new ItemCarritoModel();
+
+        $item = $itemCarritoModel
+            ->where('id_usuario', $id_usuario)
+            ->where('id_producto', $id_producto)
+            ->first();
+
+        if (!$item) {
+            return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado.');
+        }
+
+        if ($accion === 'sumar') {
+            $item['cantidad'] += 1;
+            $itemCarritoModel->update($item['id_detalle_carrito'], $item);
+        } elseif ($accion === 'restar') {
+            $item['cantidad'] -= 1;
+            if ($item['cantidad'] < 1) {
+                $itemCarritoModel->delete($item['id_detalle_carrito']);
+            } else {
+                $itemCarritoModel->update($item['id_detalle_carrito'], $item);
+            }
+        }
+
+        return redirect()->to(base_url('carrito'))->with('mensaje', 'Carrito actualizado.');
+    }
+   public function finalizarCompra()
+{
+    $session = session();
+    $idUsuario = $session->get('userid');
+
+    // Obtener carrito desde la base de datos
+    $carritoModel = new ItemCarritoModel();
+    $carrito = $carritoModel->where('id_usuario', $idUsuario)->findAll();
+
+    if (empty($carrito)) {
+        return redirect()->back()->with('error', 'El carrito está vacío.');
+    }
+
+    // Modelos necesarios
+    $productoModel = new ProductosModel();
+    $facturaModel = new FacturaModel();
+    $detalleModel = new DetalleFacturaModel();
+
+    // Calcular total
+    $total = 0;
+    foreach ($carrito as $item) {
+        $producto = $productoModel->find($item['id_producto']);
+
+        if (!$producto) {
+            continue;
+        }
+
+        $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
+            ? $producto['precio_descuento']
+            : $producto['precio'];
+
+        $total += $precioUnitario * $item['cantidad'];
+    }
+
+    // Crear factura
+    $facturaData = [
+        'id_usuario'  => $idUsuario,
+        'costo_envio' => 3000,
+        'total'       => $total,
+        'activo'      => 1
+    ];
+    $facturaId = $facturaModel->insert($facturaData, true);
+
+    // Guardar detalles
+    foreach ($carrito as $item) {
+        $producto = $productoModel->find($item['id_producto']);
+
+        if (!$producto) {
+            continue;
+        }
+
+        $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
+            ? $producto['precio_descuento']
+            : $producto['precio'];
+
+        $detalleModel->insert([
+            'id_factura'      => $facturaId,
+            'id_producto'     => $item['id_producto'],
+            'cantidad'        => $item['cantidad'],
+            'precio_unitario' => $precioUnitario,
+            'subtotal'        => $precioUnitario * $item['cantidad'],
+            'activo'          => 1
+        ]);
+    }
+
+    // Vaciar carrito desde base de datos
+    $carritoModel->where('id_usuario', $idUsuario)->delete();
+
+    return redirect()->to(base_url('catalogo'))->with('success', 'Compra realizada con éxito.');
+}
+
+
+
+}

@@ -1,11 +1,22 @@
 /* Estilos generales para el body de la página */
+
 body {
   background-color: rgb(244, 227, 193); 
   color: rgb(28, 28, 28); 
   font-family: 'Rubik', sans-serif; 
-  padding-top: 80px; 
+  padding-top: 70px; 
+  margin: 0;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
+
+.hero-banner img{
+  margin: 0px;
+  
+}
 .card-img-container {
   height: 200px; /* o el alto que prefieras */
   overflow: hidden;
@@ -20,4 +31,22 @@ body {
   object-fit: contain; /* recorta sin deformar */
 }
 
-  
+.img-producto {
+  width: 100%;
+  height: 300px; /* o el alto que prefieras */
+  object-fit: contain; /* recorta y rellena sin deformar */
+  border-radius: 8px;
+}
+ .card-previous-price{
+   color: #6c757d;
+   text-decoration: line-through;
+ }
+ 
+ .card-price-now, .beneficios{
+   color: #198754;
+ }
+ 
+ .beneficios{
+   font-size: 0.875rem
+ }
+ 

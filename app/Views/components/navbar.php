@@ -69,14 +69,15 @@
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>">Cerrar sesión</a></li>
                 </ul>
-                
+            </div>
             <!-- Botón del carrito -->
-    <button class="btn-icon btn-outline-primary" type="button">
+    <a href="<?= base_url('carrito') ?>" class="btn btn-icon btn-outline-primary">
         <i class="bi bi-cart"></i>
-    </button>
-        <?php endif; ?>
+    </a>
 
+        <?php endif; ?>
       </form>
+      
      
     </div>
   </div>

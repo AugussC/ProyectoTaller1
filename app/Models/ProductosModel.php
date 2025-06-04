@@ -14,7 +14,7 @@ class ProductosModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_categoria','nombre', 'jugador_relevante', 'ruta_imagen','cantidad_vendida', 'precio', 'descuento', 'envio_gratis', 'stock' ];
+    protected $allowedFields = ['id_categoria', 'cuotas', 'nombre', 'jugador_relevante', 'ruta_imagen','cantidad_vendida', 'precio','precio_descuento', 'descuento', 'envio_gratis','activo' , 'stock' ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

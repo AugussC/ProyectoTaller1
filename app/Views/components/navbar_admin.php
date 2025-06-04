@@ -24,10 +24,13 @@
           <a class="nav-link" aria-current="page" href="<?= base_url('productos') ?>">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pedidos</a>
+          <a class="nav-link" href="<?= base_url('pedidos') ?>">Pedidos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Mensajes de Consulta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Vista Usuario</a>
         </li>
       </ul>
       <!-- Botón de inicio de sesión alineado a la derecha -->
