@@ -46,4 +46,8 @@ body {
  .beneficios{
    font-size: 0.875rem
  }
- 
+
+ .filtro-con-borde {
+  border-right: 3px solid #e2c799;
+  padding-right: 15px;
+}

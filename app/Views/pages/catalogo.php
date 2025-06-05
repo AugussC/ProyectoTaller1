@@ -2,7 +2,7 @@
 <?php $session = session(); ?>
 
 <?php echo $this->section('estilos'); ?> 
-    <link href="public/assets/css/estilo_catalogo copy 2.css?v=1.9" rel="stylesheet">
+    <link href="public/assets/css/estilo_catalogo.css?v=1.9" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
@@ -14,7 +14,7 @@
   <div class="row">
       
     <!-- Columna izquierda: filtros -->
-    <div class="col-12 col-md-3 mb-4">
+    <div class="col-12 col-md-3 mb-4 filtro-con-borde">
       <h5>Filtrar</h5>
       <form method="get" action="<?= base_url('catalogo') ?>">
         <div class="mb-3">
