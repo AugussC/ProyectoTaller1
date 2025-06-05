@@ -28,7 +28,8 @@ $routes->get('facturas', 'Home::facturas');
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
 $routes->get('productos', 'Admin::productos', ['filter' => 'auth:admin']);
 $routes->get('pedidos', 'Admin::listarFacturas');
-$routes->get('pedidos/(:num)', 'Admin::pedido/$1');
+$routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
+
 
 
 // Rutas de autenticación y registro

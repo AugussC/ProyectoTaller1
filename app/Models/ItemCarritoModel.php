@@ -26,4 +26,17 @@ class ItemCarritoModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+    public function consultarCarrito(){
+        $session = session();
+        $id_usuario = $session->get('userid');
+
+        $itemCarritoModel = new ItemCarritoModel();
+        $hayProductosEnCarrito = $itemCarritoModel
+            ->where('id_usuario', $id_usuario)
+            ->countAllResults() > 0;
+
+        // Enviás esto a la vista
+        $data['carrito_con_items'] = $hayProductosEnCarrito;
+        return $data;
+    }
 }

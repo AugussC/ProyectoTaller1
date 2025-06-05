@@ -1,58 +1,43 @@
+body {
+    margin-top: 50px;
+    padding-top: 50px;
+    background-color: rgb(244, 227, 193);
+    font-family: 'Rubik', sans-serif;
+    color: #1c1c1c;
+}
+ .factura-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
-    .detalle-container {
-        background-color: #fff7e6;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        margin-top: 50px;
-    }
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 100%;
+    margin: 0 20px;
+}
 
-    .detalle-header {
-        text-align: center;
-        margin-bottom: 30px;
-    }
+.usuario-info p,
+.empresa-info p,
+.factura-info p {
+    margin-bottom: 5px;
+}
 
-    .detalle-header h2 {
-        font-weight: bold;
-        color: #1c1c1c;
-    }
+.btn-volver {
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-    .factura-info, .usuario-info {
-        margin-bottom: 20px;
-    }
-
-    .factura-info h4, .usuario-info h4 {
-        color: #d4a373;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    .detalle-table th {
-        background-color: #f8dfb5;
-    }
-
-    .detalle-table td, .detalle-table th {
-        vertical-align: middle;
-    }
-
-    .total-box {
-        text-align: right;
-        font-size: 1.2rem;
-        margin-top: 20px;
-        color: #198754;
-        font-weight: bold;
-    }
-
-    .btn-volver {
-        margin-top: 20px;
-        background-color: #1c1c1c;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 6px;
-        text-decoration: none;
-    }
-
-    .btn-volver:hover {
-        background-color: #444;
-    }
+.btn-volver:hover {
+    background-color: #444;
+}

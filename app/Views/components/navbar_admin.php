@@ -6,7 +6,7 @@
 
     <!-- Logo y nombre de la marca -->
     <a class="navbar-brand" href="<?= base_url('admin') ?>">
-      <img src="public/assets/img/LogoRetromaniacos.png" alt="Logo">
+      <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>">
       RetroManiacos
     </a>
 

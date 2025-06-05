@@ -1,5 +1,10 @@
-<?php $session = session(); 
+<?php
+use App\Models\ItemCarritoModel;
 
+$session = session();
+$carritoModel = new ItemCarritoModel();
+$estadoCarrito = $carritoModel->consultarCarrito();
+$carrito_con_items = $estadoCarrito['carrito_con_items'] ?? false;
 ?>
 
 
@@ -71,9 +76,15 @@
                 </ul>
             </div>
             <!-- Botón del carrito -->
-    <a href="<?= base_url('carrito') ?>" class="btn btn-icon btn-outline-primary">
-        <i class="bi bi-cart"></i>
-    </a>
+   <a href="<?= base_url('carrito') ?>" class="btn-icon btn-outline-primary position-relative">
+    <i class="bi bi-cart"></i>
+    <?php if ($carrito_con_items): ?>
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <span class="visually-hidden">Productos en el carrito</span>
+        </span>
+    <?php endif; ?>
+</a>
+
 
         <?php endif; ?>
       </form>

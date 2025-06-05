@@ -99,36 +99,53 @@ class Carrito extends BaseController
         return redirect()->to(base_url('carrito'))->with('mensaje', 'Producto eliminado del carrito.');
     }
 
-    public function actualizar($id_producto, $accion)
-    {
-        $session = session();
-        $id_usuario = $session->get('userid');
+   public function actualizar($id_producto, $accion)
+{
+    $session = session();
+    $id_usuario = $session->get('userid');
 
-        $itemCarritoModel = new ItemCarritoModel();
+    $itemCarritoModel = new ItemCarritoModel();
+    $productoModel = new ProductosModel();
 
-        $item = $itemCarritoModel
-            ->where('id_usuario', $id_usuario)
-            ->where('id_producto', $id_producto)
-            ->first();
+    // Buscar el ítem del carrito
+    $item = $itemCarritoModel
+        ->where('id_usuario', $id_usuario)
+        ->where('id_producto', $id_producto)
+        ->first();
 
-        if (!$item) {
-            return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado.');
-        }
+    if (!$item) {
+        return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado en el carrito.');
+    }
 
-        if ($accion === 'sumar') {
+    // Obtener stock actual del producto
+    $producto = $productoModel->find($id_producto);
+    if (!$producto) {
+        return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado en la base de datos.');
+    }
+
+    $stockDisponible = $producto['stock'];
+
+    // Acción: sumar o restar
+    if ($accion === 'sumar') {
+        if ($item['cantidad'] < $stockDisponible) {
             $item['cantidad'] += 1;
             $itemCarritoModel->update($item['id_detalle_carrito'], $item);
-        } elseif ($accion === 'restar') {
-            $item['cantidad'] -= 1;
-            if ($item['cantidad'] < 1) {
-                $itemCarritoModel->delete($item['id_detalle_carrito']);
-            } else {
-                $itemCarritoModel->update($item['id_detalle_carrito'], $item);
-            }
+        } else {
+            return redirect()->to(base_url('carrito'))->with('error', 'No hay más stock disponible para este producto.');
         }
-
-        return redirect()->to(base_url('carrito'))->with('mensaje', 'Carrito actualizado.');
+    } elseif ($accion === 'restar') {
+        
+        if ($item['cantidad'] > 1) {
+            $item['cantidad'] -= 1;
+            $itemCarritoModel->update($item['id_detalle_carrito'], $item);
+        } else {
+            return redirect()->to(base_url('carrito'))->with('error', 'La cantidad mínima es 1.');
+        }
     }
+
+    return redirect()->to(base_url('carrito'))->with('mensaje', 'Carrito actualizado.');
+}
+
    public function finalizarCompra()
 {
     $session = session();
@@ -167,7 +184,7 @@ class Carrito extends BaseController
     $facturaData = [
         'id_usuario'  => $idUsuario,
         'costo_envio' => 3000,
-        'total'       => $total,
+        'total'       => $total + 3000,
         'activo'      => 1
     ];
     $facturaId = $facturaModel->insert($facturaData, true);

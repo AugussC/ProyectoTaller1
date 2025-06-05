@@ -8,15 +8,12 @@ body {
   margin: 0;
 }
 
-.container-fluid {
+.container-fluid-2 {
   padding: 0;
 }
 
 
-.hero-banner img{
-  margin: 0px;
-  
-}
+
 .card-img-container {
   height: 200px; /* o el alto que prefieras */
   overflow: hidden;

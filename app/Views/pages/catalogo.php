@@ -2,14 +2,12 @@
 <?php $session = session(); ?>
 
 <?php echo $this->section('estilos'); ?> 
-    <link href="public/assets/css/estilo_catalogo copy 2.css?v=1.6" rel="stylesheet">
+    <link href="public/assets/css/estilo_catalogo copy 2.css?v=1.9" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
-
-<div class="container-fluid">
-  <div class="hero-banner">
+<?php echo $this->section('contenido'); ?>
+<div class="container-fluid-2">
     <img src="<?= base_url('public/assets/img/banner_Catalogo.png') ?>" alt="Camisetas" class="img-fluid w-100">
-  </div>
 </div>
 
 <div class="container mt-4 pt-4">

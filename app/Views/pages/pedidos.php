@@ -27,7 +27,7 @@
                     <td><?= esc($factura['email']) ?></td>
                     <td><?= esc(date('d/m/Y ', strtotime($factura['fecha']))) ?></td>
                     <td>
-                        <a href="<?= base_url('pedidos' . $factura['id_factura']) ?>" class="btn btn-sm btn-primary">
+                        <a href="<?= base_url('pedidos/' . $factura['id_factura']) ?>" class="btn btn-sm btn-primary">
                             <i class="bi bi-eye"></i> <!-- Ícono de Bootstrap -->
                         </a>
                     </td>

@@ -42,8 +42,44 @@ class Admin extends BaseController
     return view('pages/pedidos', $data);
 }
 
-public function pedido($idFactura)
+public function pedidos($id)
+{   
+    $idFactura = $id;
+    $facturaModel = new FacturaModel();
+    $detalleModel = new DetalleFacturaModel();
+    $usuarioModel = new UsuarioModel();
+    $productoModel = new ProductosModel(); 
+
+    $factura = $facturaModel->find($idFactura);
+    if (!$factura) {
+        return redirect()->back()->with('error', 'Factura no encontrada.');
+    }
+
+    $usuario = $usuarioModel->find($factura['id_usuario']);
+    if (!$usuario) {
+        return redirect()->back()->with('error', 'Usuario no encontrado.');
+    }
+
+    $detalles = $detalleModel->where('id_factura', $idFactura)->findAll();
+
+    foreach ($detalles as &$detalle) {
+        $producto = $productoModel->find($detalle['id_producto']);
+        $detalle['producto_nombre'] = $producto ? $producto['nombre'] : 'Producto eliminado';
+    }
+
+    $data = [
+        'titulo' => 'Pedidos',
+        'factura' => $factura,
+        'usuario' => $usuario,
+        'detalles' => $detalles
+    ];
+    
+    return view('pages/factura_detalle', $data);
+}
+public function pedido2()
 {
+
+    $idFactura = 1;
     $facturaModel = new FacturaModel();
     $detalleModel = new DetalleFacturaModel();
     $usuarioModel = new UsuarioModel();

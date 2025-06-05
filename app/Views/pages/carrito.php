@@ -1,12 +1,12 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_catalogo copy 2.css?v=1.3" rel="stylesheet">
+<link href="public/assets/css/estilo_catalogo copy 2.css?v=1.4" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
 <div class="container my-5">
-  <h2 class="mb-4">🛒 Mi Carrito</h2>
+  <h2 class="mb-4">Mi Carrito</h2>
 
   <?php if (empty($carrito)): ?>
     <div class="alert alert-info">Tu carrito está vacío.</div>
