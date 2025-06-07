@@ -1,7 +1,7 @@
 <?= $this->extend('layout'); ?>
 
-<?= $this->section('contenido'); ?>
-<link href="public/assets/css/estilo_productos.css?v=1.8" rel="stylesheet">
+<?= $this->section('estilos'); ?>
+<link href="<?= base_url('public/assets/css/estilo_productos.css') ?>" rel="stylesheet">
 <?= $this->endSection(); ?>
 
 <?= $this->section('contenido'); ?>
@@ -110,8 +110,8 @@
                         <td><?= esc($producto['equipo']) ?></td>
                         <td><?= esc($producto['stock']) ?></td>
                         <td>
-                            <a href="<?= site_url('productos/editar/' . $producto['id_producto']) ?>" class="btn btn-warning btn-sm">Modificar</a>
-                            <a href="<?= site_url('productos/eliminar/' . $producto['id_producto']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
+                            <a href="<?= site_url('productos/editar/' . $producto['id_producto']) ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i></a>
+                            <a href="<?= site_url('productos/eliminar/' . $producto['id_producto']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')"><i class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

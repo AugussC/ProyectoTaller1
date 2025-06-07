@@ -146,7 +146,7 @@ class Carrito extends BaseController
     return redirect()->to(base_url('carrito'))->with('mensaje', 'Carrito actualizado.');
 }
 
-   public function finalizarCompra()
+public function finalizarCompra()
 {
     $session = session();
     $idUsuario = $session->get('userid');
@@ -189,7 +189,7 @@ class Carrito extends BaseController
     ];
     $facturaId = $facturaModel->insert($facturaData, true);
 
-    // Guardar detalles
+    // Guardar detalles y actualizar producto
     foreach ($carrito as $item) {
         $producto = $productoModel->find($item['id_producto']);
 
@@ -201,6 +201,7 @@ class Carrito extends BaseController
             ? $producto['precio_descuento']
             : $producto['precio'];
 
+        // Guardar detalle
         $detalleModel->insert([
             'id_factura'      => $facturaId,
             'id_producto'     => $item['id_producto'],
@@ -209,6 +210,15 @@ class Carrito extends BaseController
             'subtotal'        => $precioUnitario * $item['cantidad'],
             'activo'          => 1
         ]);
+
+        // Actualizar stock y cantidad vendida
+        $nuevoStock = $producto['stock'] - $item['cantidad'];
+        $nuevaCantidadVendida = ($producto['cantidad_vendida'] ?? 0) + $item['cantidad'];
+
+        $productoModel->update($item['id_producto'], [
+            'stock'            => $nuevoStock,
+            'cantidad_vendida' => $nuevaCantidadVendida
+        ]);
     }
 
     // Vaciar carrito desde base de datos
@@ -216,6 +226,7 @@ class Carrito extends BaseController
 
     return redirect()->to(base_url('catalogo'))->with('success', 'Compra realizada con éxito.');
 }
+
 
 
 

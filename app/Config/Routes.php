@@ -28,8 +28,13 @@ $routes->get('facturas', 'Home::facturas');
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
 $routes->get('productos', 'Admin::productos', ['filter' => 'auth:admin']);
 $routes->post('productos/crear', 'Admin::crear', ['filter' => 'auth:admin']);
-$routes->get('pedidos', 'Admin::listarFacturas');
-$routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
+$routes->get('pedidos', 'Admin::listarFacturas', ['filter' => 'auth:admin']);
+$routes->get('pedidos/(:num)', 'Admin::pedidos/$1', ['filter' => 'auth:admin']);
+$routes->get('productos/eliminados', 'Admin::verEliminados', ['filter' => 'auth:admin']);
+
+$routes->get('productos/activar/(:num)', 'Admin::activar/$1', ['filter' => 'auth:admin']);
+$routes->get('productos/eliminar/(:num)', 'Admin::eliminar/$1', ['filter' => 'auth:admin']);
+
 
 
 

@@ -26,11 +26,29 @@ class ProductosModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    public function obtenerProductosConEquipo()
-    {
+    public function obtenerProductosConEquipo() {
         return $this->select('productos.*, categoria.equipo')
                     ->join('categoria', 'categoria.id_categoria = productos.id_categoria')
                     ->where('productos.activo', 1)
+                    ->where('productos.stock >', 0)
+                    ->findAll();
+    }
+
+    public function desactivarProductosSinStock() {
+        // Encuentra productos activos con stock <= 0
+        $productosSinStock = $this->where('activo', 1)
+                                ->where('stock <=', 0)
+                                ->findAll();
+
+        foreach ($productosSinStock as $producto) {
+            $this->update($producto['id_producto'], ['activo' => 0]);
+        }
+    }
+
+    public function obtenerProductosInactivosConCategoria(){
+        return $this->select('productos.*, categoria.equipo')
+                    ->join('categoria', 'categoria.id_categoria = productos.id_categoria')
+                    ->where('productos.activo', 0)
                     ->findAll();
     }
 

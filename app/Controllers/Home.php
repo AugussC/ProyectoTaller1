@@ -46,10 +46,9 @@ class Home extends BaseController
     }
 
 
-    public function catalogo() 
-{
+    public function catalogo() {
     $productoModel = new ProductosModel();
-
+    $productoModel->desactivarProductosSinStock();
     $termino = $this->request->getGet('q');
     $equipo = $this->request->getGet('equipo');
     $jugador = $this->request->getGet('jugador');

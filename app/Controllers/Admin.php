@@ -20,6 +20,7 @@ class Admin extends BaseController
     {
         $categoriasModel = new CategoriaModel();
         $productoModel = new ProductosModel();
+        $productoModel->desactivarProductosSinStock();
         $resultado = $productoModel->obtenerProductosConEquipo();
         $data['titulo'] = 'Productos';
         $data['lista_productos'] = $resultado;
@@ -78,92 +79,143 @@ public function pedidos($id)
     return view('pages/factura_detalle', $data);
 }
 
-public function crear()
-{
-
+public function crear() {
     
-    $productoModel = new ProductosModel();
-    $categoriaModel = new CategoriaModel();
+        $productoModel = new ProductosModel();
+        $categoriaModel = new CategoriaModel();
 
-    // Validar cuotas permitidas
-    $cuotasValidas = [0, 3, 6];
-    $cuotas = (int) $this->request->getPost('cuotas');
+        // Validar cuotas permitidas
+        $cuotasValidas = [0, 3, 6];
+        $cuotas = (int) $this->request->getPost('cuotas');
 
-    // Validar nombre
-    $nombre = trim($this->request->getPost('nombre'));
-    if (!$nombre || strlen($nombre) > 100) {
-        return redirect()->back()->withInput()->with('error', 'El nombre es obligatorio y debe tener como máximo 100 caracteres.');
-    }
-
-    // Validar cuotas
-    if (!in_array($cuotas, $cuotasValidas)) {
-        return redirect()->back()->withInput()->with('error', 'Las cuotas deben ser 0, 3 o 6.');
-    }
-
-    // Validar precio
-    $precio = (float) $this->request->getPost('precio');
-    if ($precio <= 0) {
-        return redirect()->back()->withInput()->with('error', 'El precio debe ser mayor a 0.');
-    }
-
-    // Validar stock
-    $stock = (int) $this->request->getPost('stock');
-    if ($stock < 1) {
-        return redirect()->back()->withInput()->with('error', 'El stock debe ser al menos 1.');
-    }
-
-    // Procesar jugador relevante (puede ser null)
-    $jugador = $this->request->getPost('jugador_relevante') ?: null;
-
-    // Verificar si se agregó una nueva categoría
-    $idCategoria = $this->request->getPost('id_categoria');
-    if ($idCategoria === 'nueva') {
-        $nuevaCategoria = trim($this->request->getPost('nueva_categoria'));
-        if (!$nuevaCategoria) {
-            return redirect()->back()->withInput()->with('error', 'Debe ingresar un nombre para la nueva categoría.');
+        // Validar nombre
+        $nombre = trim($this->request->getPost('nombre'));
+        $existe = $productoModel->where('nombre', $nombre)->first();
+        if (!$nombre || strlen($nombre) > 100 || $existe) {
+            return redirect()->back()->withInput()->with('error', 'Nombre inválido o ya existe un producto con ese nombre.');
         }
 
-        // Revisar si ya existe la categoría
-        $categoriaExistente = $categoriaModel->where('equipo', $nuevaCategoria)->first();
-        if ($categoriaExistente) {
-            $idCategoria = $categoriaExistente['id_categoria'];
-        } else {
-            $idCategoria = $categoriaModel->insert([
-                'equipo' => $nuevaCategoria,
-            ], true); // true para obtener el ID insertado
+        // Validar cuotas
+        if (!in_array($cuotas, $cuotasValidas)) {
+            return redirect()->back()->withInput()->with('error', 'Las cuotas deben ser 0, 3 o 6.');
         }
+
+        // Validar precio
+        $precio = (float) $this->request->getPost('precio');
+        if ($precio <= 0) {
+            return redirect()->back()->withInput()->with('error', 'El precio debe ser mayor a 0.');
+        }
+
+        // Validar stock
+        $stock = (int) $this->request->getPost('stock');
+        if ($stock < 1) {
+            return redirect()->back()->withInput()->with('error', 'El stock debe ser al menos 1.');
+        }
+
+        // Procesar jugador relevante (puede ser null)
+        $jugador = $this->request->getPost('jugador_relevante') ?: null;
+
+        // Verificar si se agregó una nueva categoría
+        $idCategoria = $this->request->getPost('id_categoria');
+        if ($idCategoria === 'nueva') {
+            $nuevaCategoria = trim($this->request->getPost('nueva_categoria'));
+            if (!$nuevaCategoria) {
+                return redirect()->back()->withInput()->with('error', 'Debe ingresar un nombre para la nueva categoría.');
+            }
+
+            // Revisar si ya existe la categoría
+            $categoriaExistente = $categoriaModel->where('equipo', $nuevaCategoria)->first();
+            if ($categoriaExistente) {
+                $idCategoria = $categoriaExistente['id_categoria'];
+            } else {
+                $idCategoria = $categoriaModel->insert([
+                    'equipo' => $nuevaCategoria,
+                ], true); // true para obtener el ID insertado
+            }
+        }
+
+        // Procesar imagen
+        $imagen = $this->request->getFile('ruta_imagen');
+        $rutaImagen = null;
+
+        if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+            $nombreImagen = $imagen->getRandomName();
+            $imagen->move(FCPATH . 'public/assets/img/', $nombreImagen);  // guarda en public/assets/img/
+            $rutaImagen = 'public/assets/img/' . $nombreImagen;            // ruta relativa para usar en la web
+        }
+
+        // Preparar datos
+        $data = [
+            'nombre'            => $nombre,
+            'jugador_relevante' => $jugador,
+            'id_categoria'      => $idCategoria,
+            'cuotas'            => $cuotas,
+            'precio'            => $precio,
+            'stock'             => $stock,
+        ];
+
+        if ($rutaImagen) {
+            $data['ruta_imagen'] = $rutaImagen;
+        }
+
+        // Insertar
+        $productoModel->insert($data);
+
+        return redirect()->to('/productos')->with('mensaje', 'Producto añadido correctamente.');
+    }
+    public function verEliminados() {
+        $productoModel = new ProductosModel();
+        $categoriaModel = new CategoriaModel();
+
+        // Obtener productos inactivos (activo = 0) y su categoría (equipo)
+        $productosInactivos = $productoModel
+            ->select('productos.*, categoria.equipo')
+            ->join('categoria', 'categoria.id_categoria = productos.id_categoria')
+            ->where('productos.activo', 0)
+            ->findAll();
+
+        // Obtener todas las categorías (activas o no, según tu lógica)
+        $categorias = $categoriaModel->findAll();
+
+        $data = [
+            'titulo' => 'Productos Eliminados',
+            'lista_productos' => $productosInactivos,
+            'categorias' => $categorias
+        ];
+
+        return view('pages/admin_producto_eliminado', $data);
+    }
+    public function activar($id){
+        $productoModel = new ProductosModel();
+        $producto = $productoModel->find($id);
+
+        if (!$producto) {
+            return redirect()->back()->with('error', 'Producto no encontrado.');
+        }
+
+        if ($producto['stock'] <= 0) {
+            return redirect()->back()->with('error', 'No se puede activar un producto con stock 0.');
+        }
+
+        // Activar el producto
+        $productoModel->update($id, ['activo' => 1]);
+
+        return redirect()->back()->with('success', 'Producto activado correctamente.');
     }
 
-    // Procesar imagen
-    $imagen = $this->request->getFile('ruta_imagen');
-$rutaImagen = null;
+    public function eliminar($id){
+        $productoModel = new ProductosModel();
+        $producto = $productoModel->find($id);
 
-if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
-    $nombreImagen = $imagen->getRandomName();
-    $imagen->move(FCPATH . 'public/assets/img/', $nombreImagen);  // guarda en public/assets/img/
-    $rutaImagen = 'public/assets/img/' . $nombreImagen;            // ruta relativa para usar en la web
-}
+        if (!$producto) {
+            return redirect()->back()->with('error', 'Producto no encontrado.');
+        }
 
-    // Preparar datos
-    $data = [
-        'nombre'            => $nombre,
-        'jugador_relevante' => $jugador,
-        'id_categoria'      => $idCategoria,
-        'cuotas'            => $cuotas,
-        'precio'            => $precio,
-        'stock'             => $stock,
-    ];
+        // Activar el producto
+        $productoModel->update($id, ['activo' => 0]);
 
-    if ($rutaImagen) {
-        $data['ruta_imagen'] = $rutaImagen;
+        return redirect()->back()->with('success', 'Producto elimindado correctamente.');
     }
-
-    // Insertar
-    $productoModel->insert($data);
-
-    return redirect()->to('/productos')->with('mensaje', 'Producto añadido correctamente.');
-}
-
 
 }
 
