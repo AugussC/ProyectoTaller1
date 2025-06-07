@@ -27,6 +27,7 @@ $routes->get('facturas', 'Home::facturas');
 // Rutas solo para administrador
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
 $routes->get('productos', 'Admin::productos', ['filter' => 'auth:admin']);
+$routes->post('productos/crear', 'Admin::crear', ['filter' => 'auth:admin']);
 $routes->get('pedidos', 'Admin::listarFacturas');
 $routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
 

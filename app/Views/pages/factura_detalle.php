@@ -1,7 +1,7 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="<?= base_url('public/assets/css/estilo_detalle_factura') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/estilo_detalle_factura.css?v=1.7') ?>" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
