@@ -49,6 +49,7 @@ class Home extends BaseController
     public function catalogo() {
     $productoModel = new ProductosModel();
     $productoModel->desactivarProductosSinStock();
+
     $termino = $this->request->getGet('q');
     $equipo = $this->request->getGet('equipo');
     $jugador = $this->request->getGet('jugador');
@@ -75,12 +76,35 @@ class Home extends BaseController
 
     $resultado = $builder->findAll();
 
+    // ✅ Conexión a la base de datos
+    $db = \Config\Database::connect();
+
+    // Traer categorías desde la tabla 'categorias'
+    $categorias = $db->table('categoria')
+                     ->select('id_categoria, equipo')
+                     ->orderBy('equipo', 'ASC')
+                     ->get()
+                     ->getResultArray();
+
+    // Traer jugadores únicos desde productos
+    $jugadores = $db->table('productos')
+                    ->select('jugador_relevante')
+                    ->distinct()
+                    ->where('activo', 1)
+                    ->where('jugador_relevante IS NOT NULL')
+                    ->where('jugador_relevante !=', '')
+                    ->orderBy('jugador_relevante', 'ASC')
+                    ->get()
+                    ->getResultArray();
+
     $data = [
         'titulo' => 'Catálogo',
         'lista_productos' => $resultado,
         'palabra_buscada' => $termino,
         'equipo' => $equipo,
-        'jugador' => $jugador
+        'jugador' => $jugador,
+        'categoria' => $categorias,
+        'jugadores' => $jugadores
     ];
 
     return view('pages/catalogo', $data);
@@ -139,10 +163,32 @@ class Home extends BaseController
         return view('pages/quienes_somos', $data);
     }
 
-    public function facturas()
+    public function facturas($id_factura)
 {
-        $data['titulo'] = 'Tus Facturas';
-        return view('pages/facturas', $data);
+    $session = session();
+    $id_usuario = $session->get('id_usuario');
+
+    $facturaModel = new FacturaModel();
+    $detalleModel = new DetalleFacturaModel();
+    $usuarioModel = new UsuarioModel();
+
+    // Buscar la factura que le pertenece al usuario
+    $factura = $facturaModel->where('id_factura', $id_factura)
+                            ->where('id_usuario', $id_usuario)
+                            ->first();
+
+    if (!$factura) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada');
+    }
+
+    $detalles = $detalleModel->where('id_factura', $id_factura)->findAll();
+    $usuario = $usuarioModel->find($id_usuario);
+
+    return view('usuario/facturas', [
+        'factura' => $factura,
+        'detalles' => $detalles,
+        'usuario' => $usuario
+    ]);
 }
 
     public function perfil()

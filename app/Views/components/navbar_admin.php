@@ -46,7 +46,6 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
             <li><a class="dropdown-item" href="<?= base_url('perfil') ?>">Tu perfil</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('facturas') ?>">Facturas</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>">Cerrar sesión</a></li>
           </ul>

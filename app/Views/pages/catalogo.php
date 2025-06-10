@@ -21,18 +21,28 @@
           <label for="equipo" class="form-label">Equipo</label>
           <select id="equipo" name="equipo" class="form-select">
             <option value="">Todos</option>
-            <option value="1" <?= ($_GET['equipo'] ?? '') == '1' ? 'selected' : '' ?>>River Plate</option>
-            <option value="2" <?= ($_GET['equipo'] ?? '') == '2' ? 'selected' : '' ?>>Boca Juniors</option>
+            <?php foreach ($categoria as $cat): ?>
+              <option value="<?= $cat['id_categoria'] ?>" <?= ($equipo == $cat['id_categoria']) ? 'selected' : '' ?>>
+                <?= esc($cat['equipo']) ?>
+              </option>
+            <?php endforeach; ?>
+
           </select>
+
         </div>
 
         <div class="mb-3">
           <label for="jugador" class="form-label">Jugador</label>
           <select id="jugador" name="jugador" class="form-select">
             <option value="">Cualquiera</option>
-            <option value="Messi" <?= ($_GET['jugador'] ?? '') == 'Messi' ? 'selected' : '' ?>>Leo Messi</option>
-            <option value="Maradona" <?= ($_GET['jugador'] ?? '') == 'Maradona' ? 'selected' : '' ?>>Diego Maradona</option>
+            <?php foreach ($jugadores as $jug): ?>
+              <option value="<?= esc($jug['jugador_relevante']) ?>" <?= ($jugador == $jug['jugador_relevante']) ? 'selected' : '' ?>>
+                <?= esc($jug['jugador_relevante']) ?>
+              </option>
+            <?php endforeach; ?>
+
           </select>
+
         </div>
 
         <button type="submit" class="btn btn-primary">Aplicar</button>
