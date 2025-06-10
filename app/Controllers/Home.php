@@ -163,28 +163,50 @@ class Home extends BaseController
         return view('pages/quienes_somos', $data);
     }
 
-    public function facturas($id_factura)
+    public function facturas()
 {
     $session = session();
-    $id_usuario = $session->get('id_usuario');
+    $id_usuario = $session->get('userid');
 
-    $facturaModel = new FacturaModel();
-    $detalleModel = new DetalleFacturaModel();
-    $usuarioModel = new UsuarioModel();
+    $facturaModel = new \App\Models\FacturaModel();
 
-    // Buscar la factura que le pertenece al usuario
-    $factura = $facturaModel->where('id_factura', $id_factura)
-                            ->where('id_usuario', $id_usuario)
-                            ->first();
+    $facturas = $facturaModel
+                    ->where('id_usuario', $id_usuario)
+                    ->orderBy('fecha', 'DESC')
+                    ->findAll();
 
-    if (!$factura) {
-        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada');
+    $data = [
+        'titulo' => 'Mis Facturas',
+        'facturas' => $facturas
+    ];
+
+    return view('pages/facturas', $data);
+}
+
+    public function verFactura($id_factura)
+{
+    $session = session();
+    $id_usuario = $session->get('userid');
+
+    $facturaModel = new \App\Models\FacturaModel();
+    $detalleModel = new \App\Models\DetalleFacturaModel();
+    $usuarioModel = new \App\Models\UsuarioModel();
+
+    // Buscar la factura
+    $factura = $facturaModel->find($id_factura);
+
+    // Verificar que la factura exista y pertenezca al usuario logueado
+    if (!$factura || $factura['id_usuario'] != $id_usuario) {
+        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
     }
 
+    // Buscar detalles de la factura
     $detalles = $detalleModel->where('id_factura', $id_factura)->findAll();
+
+    // Traer datos del usuario (solo el logueado)
     $usuario = $usuarioModel->find($id_usuario);
 
-    return view('usuario/facturas', [
+    return view('pages/factura_detalle', [
         'factura' => $factura,
         'detalles' => $detalles,
         'usuario' => $usuario

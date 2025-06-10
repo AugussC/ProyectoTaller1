@@ -23,6 +23,7 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('preguntas_frecuentes', 'Home::preguntas_frecuentes');
 $routes->get('perfil', 'Home::perfil');
 $routes->get('facturas', 'Home::facturas');
+$routes->get('verFacturas/(:num)', 'Usuario::verFactura/$1');
 
 // Rutas solo para administrador
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
