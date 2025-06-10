@@ -12,7 +12,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Fecha de compra</th>
+                    <th>Fecha deeee compra</th>
                     <th>Acción</th>
                 </tr>
             </thead>
