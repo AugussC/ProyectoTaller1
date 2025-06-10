@@ -14,7 +14,7 @@ $carrito_con_items = $estadoCarrito['carrito_con_items'] ?? false;
 
     <!-- Logo y nombre de la marca -->
     <a class="navbar-brand" href="<?= base_url('inicio') ?>">
-      <img src="public/assets/img/LogoRetromaniacos.png" alt="Logo">
+      <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo">
       RetroManiacos
     </a>
 

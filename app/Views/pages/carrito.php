@@ -1,7 +1,7 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_catalogo copy 2.css?v=1.4" rel="stylesheet">
+<link href="public/assets/css/estilo_catalogo.css?v=1.4" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>

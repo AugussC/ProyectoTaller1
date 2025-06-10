@@ -183,36 +183,6 @@ class Home extends BaseController
     return view('pages/facturas', $data);
 }
 
-    public function verFactura($id_factura)
-{
-    $session = session();
-    $id_usuario = $session->get('userid');
-
-    $facturaModel = new \App\Models\FacturaModel();
-    $detalleModel = new \App\Models\DetalleFacturaModel();
-    $usuarioModel = new \App\Models\UsuarioModel();
-
-    // Buscar la factura
-    $factura = $facturaModel->find($id_factura);
-
-    // Verificar que la factura exista y pertenezca al usuario logueado
-    if (!$factura || $factura['id_usuario'] != $id_usuario) {
-        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-    }
-
-    // Buscar detalles de la factura
-    $detalles = $detalleModel->where('id_factura', $id_factura)->findAll();
-
-    // Traer datos del usuario (solo el logueado)
-    $usuario = $usuarioModel->find($id_usuario);
-
-    return view('pages/factura_detalle', [
-        'factura' => $factura,
-        'detalles' => $detalles,
-        'usuario' => $usuario
-    ]);
-}
-
     public function perfil()
     {
         $session = session();

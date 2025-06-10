@@ -12,7 +12,8 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Fecha deeee compra</th>
+                    <th>Fecha de compra</th>
+
                     <th>Acción</th>
                 </tr>
             </thead>
@@ -21,7 +22,7 @@
                     <tr>
                         <td><?= esc(date('d/m/Y', strtotime($factura['fecha']))) ?></td>
                         <td>
-                            <a href="<?= base_url('verfacturas/' . $factura['id_factura']) ?>" class="btn btn-sm btn-outline-primary">
+                            <a href="<?= base_url('pedidos/' . $factura['id_factura']) ?>" class="btn btn-sm btn-outline-primary">
                                 <i class="bi bi-eye"></i> <!-- Ícono de Bootstrap -->
                             </a>
                         </td>

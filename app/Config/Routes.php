@@ -23,14 +23,14 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('preguntas_frecuentes', 'Home::preguntas_frecuentes');
 $routes->get('perfil', 'Home::perfil');
 $routes->get('facturas', 'Home::facturas');
-$routes->get('verFacturas/(:num)', 'Usuario::verFactura/$1');
+$routes->get('verFacturas/(:num)', 'Admin::pedidos/$1');
 
 // Rutas solo para administrador
 $routes->get('admin', 'Admin::index', ['filter' => 'auth:admin']);
 $routes->get('productos', 'Admin::productos', ['filter' => 'auth:admin']);
 $routes->post('productos/crear', 'Admin::crear', ['filter' => 'auth:admin']);
 $routes->get('pedidos', 'Admin::listarFacturas', ['filter' => 'auth:admin']);
-$routes->get('pedidos/(:num)', 'Admin::pedidos/$1', ['filter' => 'auth:admin']);
+$routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
 $routes->get('productos/eliminados', 'Admin::verEliminados', ['filter' => 'auth:admin']);
 
 $routes->get('productos/activar/(:num)', 'Admin::activar/$1', ['filter' => 'auth:admin']);
