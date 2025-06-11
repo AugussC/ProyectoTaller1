@@ -281,6 +281,44 @@ public function crear() {
         return redirect()->to(site_url('usuarios'))->with('success', 'Administrador creado exitosamente.');
     }
 
+    public function editar($id_producto)
+    {
+        $producto = $this->productosModel->find($id_producto);
+        $categorias = $this->categoriaModel->findAll();
+
+        if (!$producto) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Producto no encontrado");
+        }
+
+        return view('productos/editar', [
+            'titulo' => 'Editar Producto',
+            'producto' => $producto,
+            'categorias' => $categorias
+        ]);
+    }
+
+    public function actualizar($id_producto)
+    {
+        $producto = $this->productosModel->find($id_producto);
+
+        if (!$producto) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Producto no encontrado");
+        }
+
+        $data = $this->request->getPost();
+
+        // Si subieron una nueva imagen
+        $imagen = $this->request->getFile('ruta_imagen');
+        if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+            $nombreImagen = $imagen->getRandomName();
+            $imagen->move('uploads/', $nombreImagen);
+            $data['ruta_imagen'] = 'uploads/' . $nombreImagen;
+        }
+
+        $this->productoModel->update($id_producto, $data);
+
+        return redirect()->to(site_url('productos'))->with('mensaje', 'Producto actualizado correctamente');
+    }
 
     public function consultas(){
         $db = Database::connect();

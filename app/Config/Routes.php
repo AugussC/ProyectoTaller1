@@ -34,6 +34,8 @@ $routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
 $routes->get('productos/eliminados', 'Admin::verEliminados', ['filter' => 'auth:admin']);
 $routes->get('productos/activar/(:num)', 'Admin::activar/$1', ['filter' => 'auth:admin']);
 $routes->get('productos/eliminar/(:num)', 'Admin::eliminar/$1', ['filter' => 'auth:admin']);
+$routes->get('productos/editar/(:num)', 'Admin::editar/$1', ['filter' => 'auth:admin']);
+$routes->post('productos/actualizar/(:num)', 'Admin::actualizar/$1', ['filter' => 'auth:admin']);
 $routes->get('usuarios', 'Admin::usuariosRegistrados', ['filter' => 'auth:admin']);
 $routes->post('createAdmin', 'Admin::createAdmin', ['filter' => 'auth:admin']);
 $routes->get('consultas', 'Admin::consultas', ['filter' => 'auth:admin']);
