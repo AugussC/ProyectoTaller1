@@ -45,6 +45,7 @@
             <label class="form-label">Stock</label>
             <input type="number" name="stock" class="form-control" min="1" value="<?= esc($producto['stock']) ?>" required>
         </div>
+        
 
         <div class="col-md-12">
             <label class="form-label">Imagen del Producto (dejar vacío para no cambiar)</label>

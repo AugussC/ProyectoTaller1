@@ -238,7 +238,7 @@ public function crear() {
 
     public function usuariosRegistrados(){
         $usuarioModel = new UsuarioModel();
-        $usuarios = $usuarioModel->findAll();
+       $usuarios = $usuarioModel->findAll();
 
         if (!$usuarios) {
             return redirect()->back()->with('error', 'Usuario no encontrado.');
@@ -283,23 +283,29 @@ public function crear() {
 
     public function editar($id_producto)
     {
-        $producto = $this->productosModel->find($id_producto);
-        $categorias = $this->categoriaModel->findAll();
+        $productoModel = new \App\Models\ProductosModel();
+        $categoriaModel = new \App\Models\CategoriaModel();
+
+        $producto = $productoModel->find($id_producto);
+        $categorias = $categoriaModel->findAll();
 
         if (!$producto) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Producto no encontrado");
         }
 
-        return view('productos/editar', [
+        return view('pages/editar', [
             'titulo' => 'Editar Producto',
             'producto' => $producto,
             'categorias' => $categorias
         ]);
     }
 
+
     public function actualizar($id_producto)
     {
-        $producto = $this->productosModel->find($id_producto);
+        $productoModel = new \App\Models\ProductosModel();
+
+        $producto = $productoModel->find($id_producto);
 
         if (!$producto) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Producto no encontrado");
@@ -307,7 +313,6 @@ public function crear() {
 
         $data = $this->request->getPost();
 
-        // Si subieron una nueva imagen
         $imagen = $this->request->getFile('ruta_imagen');
         if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
             $nombreImagen = $imagen->getRandomName();
@@ -315,7 +320,7 @@ public function crear() {
             $data['ruta_imagen'] = 'uploads/' . $nombreImagen;
         }
 
-        $this->productoModel->update($id_producto, $data);
+        $productoModel->update($id_producto, $data);
 
         return redirect()->to(site_url('productos'))->with('mensaje', 'Producto actualizado correctamente');
     }
