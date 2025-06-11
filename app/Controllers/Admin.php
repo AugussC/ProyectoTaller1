@@ -28,7 +28,7 @@ class Admin extends BaseController
         'productos' => $productoModel->countAll(),
         'stockBajo' => $productoModel->where('stock >', 0)->where('stock <', 10)->countAllResults(),
         'sinStock' => $productoModel->where('stock', 0)->countAllResults(),
-        'consultasSinResponder' => $consultaModel->countAll() + $contactoModel->countAll(),
+        'consultasSinResponder' => $consultaModel->where('activo', 1)->countAllResults() + $contactoModel->where('activo', 1)->countAllResults(),
         'carritosAbandonados' => $carritoModel->countAll()
     ];
         return view('pages/admin_principal', $data);
