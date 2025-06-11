@@ -1,95 +1,74 @@
-/* Base */
 body {
-  font-family: 'Rubik', sans-serif;
-  padding: 20px;
   margin-top: 50px;
-  background: rgb(244, 227, 193);
-  color: #1c1c1c;
+    padding-top: 40px;
+    background-color: rgb(244, 227, 193);
+    font-family: 'Rubik', sans-serif;
+    color: #1c1c1c;
 }
 
-h1, h2{
+h1, h2 {
   text-align: center;
   color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fondo-principal {
+  background: #f4e3c1; /* Color crema */
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.capa-beige {
+  background: #faefd8; /* Un beige un poco más fuerte */
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.capa-blanca {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
 }
 
 
-canvas#visitasPorMes {
-  width: 100%;
-  height: 300px; /* o más si querés */
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-  display: block;
-}
-/* Layout principal */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  
+.card-lateral, .card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  transition: transform 0.2s ease;
 }
 
-/* Columnas */
-.col-6 {
-  flex: 1 1 45%;
-  min-width: 300px;
+.card-lateral:hover, .card:hover {
+  transform: translateY(-3px);
 }
 
-.estadisticas-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-
-/* Paneles */
-.panel-estadisticas,
-.panel-derecha {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* === Cards Izquierda (Resumen) === */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.card {
-  background-color: transparent;
-  border: 1px solid #ccc;
-  padding: 1rem;
+canvas {
+  background-color: #fff;
   border-radius: 8px;
-  text-align: center;
-  backdrop-filter: blur(4px);
-  transition: transform 0.2s;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-  transform: scale(1.03);
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.card h3 {
+p {
+  font-size: 1rem;
+  color: #555;
   margin: 0;
-  font-size: 1.1em;
-  color: #1c1c1c;
 }
 
-.card p {
-  font-size: 1.6em;
-  color: #3498db;
-  margin-top: 10px;
-}
-
-/* === Cards Derecha (Resumen lateral) === */
-.panel-derecha {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
 .card-lateral {
   background-color: #f5f5f5;
@@ -99,11 +78,14 @@ canvas#visitasPorMes {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+
+
 .card-lateral h3 {
   margin: 0 0 10px;
   font-size: 16px;
   color: #2c3e50;
 }
+
 
 .card-lateral p {
   font-size: 18px;
@@ -111,15 +93,4 @@ canvas#visitasPorMes {
   color: #34495e;
 }
 
-/* === Responsive para las cards de la izquierda === */
-@media (max-width: 900px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 500px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-}

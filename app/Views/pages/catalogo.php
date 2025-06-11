@@ -95,7 +95,7 @@
                       <p class="beneficios">Pagando de contado</p>
                     <?php endif; ?>
 
-                    <?php if ($session->get('login_in')): ?>
+                    <?php if ($session->get('rol') === 'usuario'):?>
                       <div class="mt-auto">
                         <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
                           Añadir a Carrito <i class="bi bi-cart"></i>

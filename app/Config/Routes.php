@@ -32,11 +32,10 @@ $routes->post('productos/crear', 'Admin::crear', ['filter' => 'auth:admin']);
 $routes->get('pedidos', 'Admin::listarFacturas', ['filter' => 'auth:admin']);
 $routes->get('pedidos/(:num)', 'Admin::pedidos/$1');
 $routes->get('productos/eliminados', 'Admin::verEliminados', ['filter' => 'auth:admin']);
-
 $routes->get('productos/activar/(:num)', 'Admin::activar/$1', ['filter' => 'auth:admin']);
 $routes->get('productos/eliminar/(:num)', 'Admin::eliminar/$1', ['filter' => 'auth:admin']);
-
-
+$routes->get('usuarios', 'Admin::usuariosRegistrados', ['filter' => 'auth:admin']);
+$routes->post('createAdmin', 'Admin::createAdmin', ['filter' => 'auth:admin']);
 
 
 // Rutas de autenticación y registro
@@ -54,7 +53,7 @@ $routes->post('usuario/cambiar_password', 'Usuarios::cambiarPassword');
 
 $routes->get('carrito/agregarCarrito/(:num)', 'Carrito::agregarCarrito/$1', ['filter' => 'auth:usuario']);
 $routes->get('carrito', 'Carrito::ver', ['filter' => 'auth:usuario']);
-
+$routes->post('guardarDireccion', 'Carrito::guardarDireccion');
 $routes->get('carrito/eliminar/(:num)', 'Carrito::eliminar/$1', ['filter' => 'auth:usuario'] );
 $routes->get('carrito/actualizar/(:num)/(:alpha)', 'Carrito::actualizar/$1/$2', ['filter' => 'auth:usuario']);
 $routes->get('finalizarCompra', 'Carrito::finalizarCompra', ['filter' => 'auth:usuario']);

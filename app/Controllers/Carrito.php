@@ -45,8 +45,7 @@ class Carrito extends BaseController
         return redirect()->back()->with('mensaje', 'Producto agregado al carrito.');
     }
 
-    public function ver()
-    {
+    public function ver(){
         $session = session();
         $id_usuario = $session->get('userid');
 
@@ -56,6 +55,7 @@ class Carrito extends BaseController
 
         $itemCarritoModel = new ItemCarritoModel();
         $productoModel = new ProductosModel();
+        $usuarioModel = new \App\Models\UsuarioModel();
 
         $items = $itemCarritoModel->where('id_usuario', $id_usuario)->findAll();
 
@@ -63,7 +63,6 @@ class Carrito extends BaseController
         foreach ($items as $item) {
             $producto = $productoModel->find($item['id_producto']);
             if ($producto) {
-                // Usar el precio con descuento si está definido y es mayor a 0
                 $precioFinal = (isset($producto['precio_descuento']) && $producto['precio_descuento'] > 0)
                     ? $producto['precio_descuento']
                     : $producto['precio'];
@@ -78,8 +77,14 @@ class Carrito extends BaseController
             }
         }
 
-        $data['titulo'] = 'Carrito';
-        $data['carrito'] = $carrito;
+        $usuario = $usuarioModel->find($id_usuario);
+        $direccion = $usuario ? $usuario['direccion'] : null;
+
+        $data = [
+            'titulo' => 'Carrito',
+            'carrito' => $carrito,
+            'direccionUsuario' => $direccion
+        ];
 
         return view('pages/carrito', $data);
     }
@@ -146,88 +151,100 @@ class Carrito extends BaseController
     return redirect()->to(base_url('carrito'))->with('mensaje', 'Carrito actualizado.');
 }
 
-public function finalizarCompra()
-{
-    $session = session();
-    $idUsuario = $session->get('userid');
+    public function finalizarCompra(){
+        $session = session();
+        $idUsuario = $session->get('userid');
 
-    // Obtener carrito desde la base de datos
-    $carritoModel = new ItemCarritoModel();
-    $carrito = $carritoModel->where('id_usuario', $idUsuario)->findAll();
+        // Obtener carrito desde la base de datos
+        $carritoModel = new ItemCarritoModel();
+        $carrito = $carritoModel->where('id_usuario', $idUsuario)->findAll();
 
-    if (empty($carrito)) {
-        return redirect()->back()->with('error', 'El carrito está vacío.');
-    }
-
-    // Modelos necesarios
-    $productoModel = new ProductosModel();
-    $facturaModel = new FacturaModel();
-    $detalleModel = new DetalleFacturaModel();
-
-    // Calcular total
-    $total = 0;
-    foreach ($carrito as $item) {
-        $producto = $productoModel->find($item['id_producto']);
-
-        if (!$producto) {
-            continue;
+        if (empty($carrito)) {
+            return redirect()->back()->with('error', 'El carrito está vacío.');
         }
 
-        $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
-            ? $producto['precio_descuento']
-            : $producto['precio'];
+        // Modelos necesarios
+        $productoModel = new ProductosModel();
+        $facturaModel = new FacturaModel();
+        $detalleModel = new DetalleFacturaModel();
 
-        $total += $precioUnitario * $item['cantidad'];
-    }
+        // Calcular total
+        $total = 0;
+        foreach ($carrito as $item) {
+            $producto = $productoModel->find($item['id_producto']);
 
-    // Crear factura
-    $facturaData = [
-        'id_usuario'  => $idUsuario,
-        'costo_envio' => 3000,
-        'total'       => $total + 3000,
-        'activo'      => 1
-    ];
-    $facturaId = $facturaModel->insert($facturaData, true);
+            if (!$producto) {
+                continue;
+            }
 
-    // Guardar detalles y actualizar producto
-    foreach ($carrito as $item) {
-        $producto = $productoModel->find($item['id_producto']);
+            $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
+                ? $producto['precio_descuento']
+                : $producto['precio'];
 
-        if (!$producto) {
-            continue;
+            $total += $precioUnitario * $item['cantidad'];
         }
 
-        $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
-            ? $producto['precio_descuento']
-            : $producto['precio'];
+        // Crear factura
+        $facturaData = [
+            'id_usuario'  => $idUsuario,
+            'costo_envio' => 3000,
+            'total'       => $total + 3000,
+            'activo'      => 1
+        ];
+        $facturaId = $facturaModel->insert($facturaData, true);
 
-        // Guardar detalle
-        $detalleModel->insert([
-            'id_factura'      => $facturaId,
-            'id_producto'     => $item['id_producto'],
-            'cantidad'        => $item['cantidad'],
-            'precio_unitario' => $precioUnitario,
-            'subtotal'        => $precioUnitario * $item['cantidad'],
-            'activo'          => 1
-        ]);
+        // Guardar detalles y actualizar producto
+        foreach ($carrito as $item) {
+            $producto = $productoModel->find($item['id_producto']);
 
-        // Actualizar stock y cantidad vendida
-        $nuevoStock = $producto['stock'] - $item['cantidad'];
-        $nuevaCantidadVendida = ($producto['cantidad_vendida'] ?? 0) + $item['cantidad'];
+            if (!$producto) {
+                continue;
+            }
 
-        $productoModel->update($item['id_producto'], [
-            'stock'            => $nuevoStock,
-            'cantidad_vendida' => $nuevaCantidadVendida
-        ]);
+            $precioUnitario = ($producto['precio_descuento'] ?? 0) > 0
+                ? $producto['precio_descuento']
+                : $producto['precio'];
+
+            // Guardar detalle
+            $detalleModel->insert([
+                'id_factura'      => $facturaId,
+                'id_producto'     => $item['id_producto'],
+                'cantidad'        => $item['cantidad'],
+                'precio_unitario' => $precioUnitario,
+                'subtotal'        => $precioUnitario * $item['cantidad'],
+                'activo'          => 1
+            ]);
+
+            // Actualizar stock y cantidad vendida
+            $nuevoStock = $producto['stock'] - $item['cantidad'];
+            $nuevaCantidadVendida = ($producto['cantidad_vendida'] ?? 0) + $item['cantidad'];
+
+            $productoModel->update($item['id_producto'], [
+                'stock'            => $nuevoStock,
+                'cantidad_vendida' => $nuevaCantidadVendida
+            ]);
+        }
+
+        // Vaciar carrito desde base de datos
+        $carritoModel->where('id_usuario', $idUsuario)->delete();
+
+        return redirect()->to(base_url('catalogo'))->with('success', 'Compra realizada con éxito.');
     }
 
-    // Vaciar carrito desde base de datos
-    $carritoModel->where('id_usuario', $idUsuario)->delete();
+    public function guardarDireccion(){
+        $session = session();
+        $id_usuario = $session->get('userid');
+        $direccion = $this->request->getPost('direccion');
 
-    return redirect()->to(base_url('catalogo'))->with('success', 'Compra realizada con éxito.');
-}
+        if (!$direccion || !$id_usuario) {
+            return redirect()->to('carrito')->with('error', 'Dirección no válida.');
+        }
 
+        $usuarioModel = new \App\Models\UsuarioModel();
+        $usuarioModel->update($id_usuario, ['direccion' => $direccion]);
 
+        return redirect()->to('finalizarCompra');
+    }
 
 
 }

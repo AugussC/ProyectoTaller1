@@ -23,30 +23,30 @@
       </thead>
       <tbody>
         <?php 
-    $totalGeneral = 0;
-    foreach ($carrito as $item): 
-      $subtotal = $item['precio'] * $item['cantidad'];
-      $totalGeneral += $subtotal;
-  ?>
-    <tr>
-      <td><?= esc($item['nombre']) ?></td>
-      <td>$<?= number_format($item['precio'], 0, ',', '.') ?></td>
-      <td>
-        <a href="<?= base_url('carrito/actualizar/' . $item['id_producto'] . '/restar') ?>" class="btn btn-sm btn-outline-secondary">–</a>
-        <span class="mx-2"><?= $item['cantidad'] ?></span>
-        <a href="<?= base_url('carrito/actualizar/' . $item['id_producto'] . '/sumar') ?>" class="btn btn-sm btn-outline-secondary">+</a>
-      </td>
-      <td>$<?= number_format($subtotal, 0, ',', '.') ?></td>
-      <td>
-        <a href="<?= base_url('carrito/eliminar/' . $item['id_producto']) ?>" class="btn btn-sm btn-danger">🗑</a>
-      </td>
-    </tr>
-  <?php endforeach; ?>
-  <tr>
-    <td>Costo de envio</td>
-    <th colspan="3" class="text-end"></th>
-    <td>$3000</td>
-  </tr>
+          $totalGeneral = 0;
+          foreach ($carrito as $item): 
+            $subtotal = $item['precio'] * $item['cantidad'];
+            $totalGeneral += $subtotal;
+        ?>
+          <tr>
+            <td><?= esc($item['nombre']) ?></td>
+            <td>$<?= number_format($item['precio'], 0, ',', '.') ?></td>
+            <td>
+              <a href="<?= base_url('carrito/actualizar/' . $item['id_producto'] . '/restar') ?>" class="btn btn-sm btn-outline-secondary">–</a>
+              <span class="mx-2"><?= $item['cantidad'] ?></span>
+              <a href="<?= base_url('carrito/actualizar/' . $item['id_producto'] . '/sumar') ?>" class="btn btn-sm btn-outline-secondary">+</a>
+            </td>
+            <td>$<?= number_format($subtotal, 0, ',', '.') ?></td>
+            <td>
+              <a href="<?= base_url('carrito/eliminar/' . $item['id_producto']) ?>" class="btn btn-sm btn-danger">🗑</a>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+        <tr>
+          <td>Costo de envío</td>
+          <th colspan="3" class="text-end"></th>
+          <td>$3000</td>
+        </tr>
       </tbody>
       <tfoot>
         <tr>
@@ -57,8 +57,42 @@
     </table>
 
     <div class="text-end">
-      <a href="<?= base_url('finalizarCompra') ?>" class="btn btn-primary">Finalizar compra</a>
+      <?php if (empty($direccionUsuario)): ?>
+        <button class="btn btn-primary" id="btn-finalizar-sin-direccion">Finalizar compra</button>
+      <?php else: ?>
+        <a href="<?= base_url('finalizarCompra') ?>" class="btn btn-primary">Finalizar compra</a>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
 </div>
+
+<!-- Modal de Dirección -->
+<div class="modal fade" id="modalDireccion" tabindex="-1" aria-labelledby="modalDireccionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form method="post" action="<?= base_url('guardarDireccion') ?>">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar dirección</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Guardar y continuar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<?php echo $this->endSection(); ?>
+
+<?php echo $this->section('javascrip'); ?>
+  <script src="public/assets/js/carritoModal.js"></script>
 <?php echo $this->endSection(); ?>

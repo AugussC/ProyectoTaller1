@@ -1,4 +1,5 @@
 <?php echo $this->extend('layout'); ?> 
+<?php $session = session(); ?>
 
     <?php echo $this->section('estilos'); ?> 
     <link href="public/assets/css/estiloprincipal.css?v=1.23" rel="stylesheet">
@@ -126,7 +127,13 @@
               <?php endif; ?>
 
                 <?php endif; ?>
-
+                <?php if ($session->get('rol') === 'usuario'):?>
+                      <div class="mt-auto">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+                          Añadir a Carrito <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    <?php endif; ?>
               </div>
             </div>
           </div>
@@ -183,7 +190,13 @@
                 <?php else: ?>
                     <p class="beneficios">Pagando de contado</p>
                 <?php endif; ?>
-
+                  <?php if ($session->get('rol') === 'usuario'):?>
+                      <div class="mt-auto">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+                          Añadir a Carrito <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    <?php endif; ?>
 
 
                   </div>
@@ -266,7 +279,13 @@
                 <?php else: ?>
                     <p class="beneficios">Pagando de contado</p>
                 <?php endif; ?>
-
+                  <?php if ($session->get('rol') === 'usuario'):?>
+                      <div class="mt-auto">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+                          Añadir a Carrito <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>
@@ -351,7 +370,13 @@
                 <?php else: ?>
                     <p class="beneficios">Pagando de contado</p>
                 <?php endif; ?>
-
+                  <?php if ($session->get('rol') === 'usuario'):?>
+                      <div class="mt-auto">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+                          Añadir a Carrito <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>

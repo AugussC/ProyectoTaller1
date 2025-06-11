@@ -7,12 +7,30 @@ use App\Models\ProductosModel;
 use App\Models\FacturaModel;
 use App\Models\UsuarioModel;
 use App\Models\CategoriaModel;
+use App\Models\ConsultaModel;
+use App\Models\ContactoModel;
+use App\Models\ItemCarritoModel;
 
 class Admin extends BaseController
 {
     public function index(): string
     {
-        $data['titulo'] = 'Principal';
+        $productoModel = new ProductosModel();
+        $usuarioModel = new UsuarioModel();
+        $facturaModel = new FacturaModel();
+        $consultaModel = new ConsultaModel();
+        $contactoModel = new ContactoModel();
+        $carritoModel = new ItemCarritoModel();
+        
+        $data = [
+        'titulo' => 'Principal',
+        'usuarios' => $usuarioModel->countAll(),
+        'productos' => $productoModel->countAll(),
+        'stockBajo' => $productoModel->where('stock >', 0)->where('stock <', 10)->countAllResults(),
+        'sinStock' => $productoModel->where('stock', 0)->countAllResults(),
+        'consultasSinResponder' => $consultaModel->countAll() + $contactoModel->countAll(),
+        'carritosAbandonados' => $carritoModel->countAll()
+    ];
         return view('pages/admin_principal', $data);
     }
 
@@ -217,6 +235,50 @@ public function crear() {
         return redirect()->back()->with('success', 'Producto elimindado correctamente.');
     }
 
+    public function usuariosRegistrados(){
+        $usuarioModel = new UsuarioModel();
+        $usuarios = $usuarioModel->findAll();
+
+        if (!$usuarios) {
+            return redirect()->back()->with('error', 'Usuario no encontrado.');
+        }
+
+        $data['titulo'] = 'Lista de Usuarios';
+        $data['usuarios'] = $usuarios;
+
+        return view('pages/admin_usuarios', $data);
+    }
+
+    public function createAdmin()
+    {
+        $rules = [
+            
+            'nombre' => 'required|max_length[100]',
+            'apellido' => 'required|max_length[100]',
+            'email' => 'required|max_length[80]|is_unique[usuario.email]',
+            'password' => 'required|max_length[50]|min_length[8]',
+            'repassword' => 'matches[password]'
+        ];
+        
+        if(!$this->validate($rules)){
+            return redirect()->back()->withInput()->with('errors', $this->validator->listErrors());
+        }
+
+        $userModel = new UsuarioModel();
+        $post = $this->request->getPost(['nombre', 'apellido', 'email', 'password']);
+
+        $token = bin2hex(random_bytes(20));
+
+        $userModel->insert([
+            'nombre' => $post['nombre'],
+            'apellido' => $post['apellido'],
+            'email' => $post['email'],
+            'contraseña' => password_hash($post['password'], PASSWORD_DEFAULT),
+            'rol' => "admin",
+            
+        ]);
+        return redirect()->to(site_url('usuarios'))->with('success', 'Administrador creado exitosamente.');
+    }
 }
 
 
