@@ -12,7 +12,7 @@ class ContactoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nombre', 'apellido', 'email', 'telefono', 'mensaje'];
+    protected $allowedFields    = ['nombre', 'apellido', 'email', 'telefono', 'mensaje', 'activo'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

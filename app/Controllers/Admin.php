@@ -10,6 +10,7 @@ use App\Models\CategoriaModel;
 use App\Models\ConsultaModel;
 use App\Models\ContactoModel;
 use App\Models\ItemCarritoModel;
+use Config\Database;
 
 class Admin extends BaseController
 {
@@ -278,6 +279,36 @@ public function crear() {
             
         ]);
         return redirect()->to(site_url('usuarios'))->with('success', 'Administrador creado exitosamente.');
+    }
+
+
+    public function consultas(){
+        $db = Database::connect();
+        $consultaModel = new ConsultaModel();
+        $contactoModel = new ContactoModel();
+
+        $consultas = $consultaModel->consultaConUsuario();
+        $contactos = $contactoModel->where('activo', 1)->findAll();
+
+        $data = [
+        'titulo' => 'Consultas',
+        'consultas' => $consultas,
+        'contactos' => $contactos
+        ];
+        // Enviar datos a la vista
+        return view('pages/admin_consultas', $data);
+    }
+
+    public function marcarLeido($tipo, $id){
+    if ($tipo === 'consulta') {
+        $model = new ConsultaModel();
+        $success = $model->update($id, ['activo' => 0]);
+    } elseif ($tipo === 'contacto') {
+        $model = new ContactoModel();
+        $success = $model->update($id, ['activo' => 0]); // o update si tenés campo `activo`
+    } 
+
+    return redirect()->to(site_url('consultas'));
     }
 }
 

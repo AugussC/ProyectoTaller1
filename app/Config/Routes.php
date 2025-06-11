@@ -36,6 +36,8 @@ $routes->get('productos/activar/(:num)', 'Admin::activar/$1', ['filter' => 'auth
 $routes->get('productos/eliminar/(:num)', 'Admin::eliminar/$1', ['filter' => 'auth:admin']);
 $routes->get('usuarios', 'Admin::usuariosRegistrados', ['filter' => 'auth:admin']);
 $routes->post('createAdmin', 'Admin::createAdmin', ['filter' => 'auth:admin']);
+$routes->get('consultas', 'Admin::consultas', ['filter' => 'auth:admin']);
+$routes->get('marcarleido/(:segment)/(:num)', 'Admin::marcarLeido/$1/$2', ['filter' => 'auth:admin']);
 
 
 // Rutas de autenticación y registro

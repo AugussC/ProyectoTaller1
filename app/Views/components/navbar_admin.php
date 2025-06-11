@@ -33,7 +33,7 @@
           <a class="nav-link" href="<?= base_url('usuarios') ?>">Usuarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mensajes de Consulta</a>
+          <a class="nav-link" href="<?= base_url('consultas') ?>">Mensajes de Consulta</a>
         </li>
       </ul>
       <!-- Botón de inicio de sesión alineado a la derecha -->

@@ -1,0 +1,79 @@
+body {
+  margin-top: 50px;
+    padding-top: 40px;
+    background-color: rgb(244, 227, 193);
+    font-family: 'Rubik', sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.capa-beige {
+  background: #faefd8; /* Un beige un poco más fuerte */
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.notificacion {
+    background: #fff;
+    border-left: 5px solid #007BFF;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: relative;
+    border-radius: 6px;
+}
+
+.notificacion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.datos-usuario {
+    font-size: 14px;
+    color: #333;
+}
+
+.mensaje {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #444;
+    white-space: pre-wrap;
+}
+
+
+
+.btn-check-icon {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn-check-icon:hover {
+    background-color: #218838;
+}
+
+
+h1, h2 {
+    margin-top: 40px;
+}

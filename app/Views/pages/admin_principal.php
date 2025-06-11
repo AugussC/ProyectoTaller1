@@ -109,7 +109,6 @@
       responsive: true,
       plugins: {
         legend: { position: 'bottom' },
-        title: { display: true, text: 'Estado del Inventario de Camisetas' }
       }
     }
   });

@@ -26,4 +26,11 @@ class ConsultaModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+
+    public function consultaConUsuario(){
+     return $this->select('consulta.*, usuario.nombre, usuario.apellido, usuario.email')
+                ->join('usuario', 'consulta.id_usuario = usuario.id_usuario')
+                ->where('consulta.activo', 1)  
+                ->findAll();
+    }
 }
