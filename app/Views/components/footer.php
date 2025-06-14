@@ -1,7 +1,5 @@
-
-
 <!-- Estructura principal del pie de página -->
-<footer class="footer ">
+<footer class="footer">
 
   <!-- Sección de navegación interna -->
   <div class="footer-section">
@@ -24,13 +22,13 @@
   <div class="footer-section">
     <h4>Medios de Pago</h4>
     <div class="icon-grid">
-      <img src="public/assets/img/visa.png" alt="Visa">
-      <img src="public/assets/img/mastercard.png" alt="MasterCard">
-      <img src="public/assets/img/naranja.png" alt="Tarjeta Naranja">
-      <img src="public/assets/img/logoMercadoPago2.png" alt="MercadoPago">
-      <img src="public/assets/img/logoBanelco.png" alt="Banelco">
-      <img src="public/assets/img/logoLink.png" alt="Red Link">
-      <img src="public/assets/img/logoTransferenciaBancaria.png" alt="Transferencia Bancaria">
+      <img src="<?= base_url('public/assets/img/visa.png') ?>" alt="Visa">
+      <img src="<?= base_url('public/assets/img/mastercard.png') ?>" alt="MasterCard">
+      <img src="<?= base_url('public/assets/img/naranja.png') ?>" alt="Tarjeta Naranja">
+      <img src="<?= base_url('public/assets/img/logoMercadoPago2.png') ?>" alt="MercadoPago">
+      <img src="<?= base_url('public/assets/img/logoBanelco.png') ?>" alt="Banelco">
+      <img src="<?= base_url('public/assets/img/logoLink.png') ?>" alt="Red Link">
+      <img src="<?= base_url('public/assets/img/logoTransferenciaBancaria.png') ?>" alt="Transferencia Bancaria">
     </div>
   </div>
 
@@ -38,8 +36,8 @@
   <div class="footer-section">
     <h4>Formas de Envío</h4>
     <div class="icon-grid">
-      <img src="public/assets/img/correoargentino.png" alt="Correo Argentino">
-      <img src="public/assets/img/andreani.png" alt="Andreani">
+      <img src="<?= base_url('public/assets/img/correoargentino.png') ?>" alt="Correo Argentino">
+      <img src="<?= base_url('public/assets/img/andreani.png') ?>" alt="Andreani">
     </div>
   </div>
 

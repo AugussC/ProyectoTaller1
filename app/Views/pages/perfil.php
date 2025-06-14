@@ -8,23 +8,20 @@
 <div class="container ">
     <h1>Perfil de Usuario</h1>
 
-    <?php if (session()->getFlashdata('errores')): ?>
+    <?php if (session()->getFlashdata('errors')): ?>
         <div style="color: red;">
-            <ul>
-                <?php foreach (session()->getFlashdata('errores') as $error): ?>
-                    <li><?= esc($error) ?></li>
-                <?php endforeach; ?>
-            </ul>
+            <?= session()->getFlashdata('errors') ?>
         </div>
     <?php endif; ?>
 
     <?php if (session()->getFlashdata('mensaje')): ?>
         <div style="color: green;">
-            <?= esc(session()->getFlashdata('mensaje')) ?>
+            <?= session()->getFlashdata('mensaje') ?>
         </div>
     <?php endif; ?>
 
     <form method="post" action="usuario/guardar_cambios">
+        <?= csrf_field() ?>
         <label>Nombre:</label><br>
         <input type="text" name="nombre" value="<?= set_value('nombre', $usuario['nombre'] ?? '');  ?>" disabled><br><br>
 

@@ -41,3 +41,12 @@ body {
 .btn-volver:hover {
     background-color: #444;
 }
+
+.empresa-comprador > div {
+  min-height: 160px; /* o lo que necesites para equilibrar visualmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+

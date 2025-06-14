@@ -8,7 +8,8 @@
 <?php echo $this->section('contenido'); ?>
 
 <div class="container capa-beige">
-  <h1>Panel Principal</h1>
+  <h1 class="mb-4">Panel Principal</h1>
+
   <script>
     window.datosInventario = {
       total: <?= json_encode($productos) ?>,
@@ -19,49 +20,49 @@
 
   <!-- Fila principal -->
   <div class="row">
-    <!-- Columna izquierda: gráfico -->
-    <div class="col-md-7">
-      <div class="card mb-4 p-3">
+    <!-- Gráfico: ancho completo en móviles, 7/12 en pantallas md en adelante -->
+    <div class="col-12 col-md-7 mb-4">
+      <div class="card p-3 h-100">
         <h2 class="mb-3">Distribución de Stock</h2>
         <canvas id="graficoStock"></canvas>
       </div>
     </div>
 
-    <!-- Columna derecha: cards -->
-    <div class="col-md-5">
-      <div class="row">
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+    <!-- Cards: ancho completo en móviles, 5/12 en md+ -->
+    <div class="col-12 col-md-5">
+      <div class="row row-cols-1 gy-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Consultas sin responder</h5>
             <p><?= esc($consultasSinResponder) ?></p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Total de productos</h5>
             <p><?= esc($productos) ?> camisetas</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Carritos listos para la compra</h5>
             <p><?= esc($carritosAbandonados) ?></p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Usuarios registrados</h5>
             <p><?= esc($usuarios) ?></p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Stock bajo</h5>
             <p><?= esc($stockBajo) ?></p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-12 mb-2">
-          <div class="card-lateral p-3">
+        <div class="col">
+          <div class="card-lateral p-3 h-100">
             <h5>Sin Stock</h5>
             <p><?= esc($sinStock) ?></p>
           </div>
@@ -70,6 +71,7 @@
     </div>
   </div>
 </div>
+
 
 <?php echo $this->endSection(); ?>
 

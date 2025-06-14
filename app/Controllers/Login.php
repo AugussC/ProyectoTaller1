@@ -32,8 +32,12 @@ class Login extends BaseController
 
         if ($user !== null) {
             $this->setSession($user);
+            if ($user['rol'] === 'admin') {
+                return redirect()->to(base_url('/admin'));
+            }
             return redirect()->to(base_url('/'));
         }
+        
 
         return redirect()->back()->withInput()->with('errors', 'El email y/o contraseña son incorrectos');
     }

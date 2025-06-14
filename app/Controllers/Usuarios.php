@@ -57,8 +57,7 @@ class Usuarios extends BaseController
         return view('mensaje', $data);
     } 
 
-   public function guardarCambios()
-{
+   public function guardarCambios(){
     $session = session();
     $usuarioModel = new UsuarioModel();
     $id = $session->get('userid');
@@ -66,14 +65,14 @@ class Usuarios extends BaseController
     $rules = [
         'nombre' => 'required|max_length[100]',
         'apellido' => 'required|max_length[100]',
-        'email' => 'required|max_length[80]|is_unique[usuario.email,id_usuario,{id_usuario}]',
+        'email'     => 'required|max_length[80]|is_unique[usuario.email,id_usuario,'.$id.']',
         'telefono'  => 'permit_empty|numeric|min_length[10]',
         'direccion' => 'permit_empty|string|max_length[100]'
     ];
 
-    if(!$this->validate($rules)){
-            return redirect()->back()->withInput()->with('errors', $this->validator->listErrors());
-        }
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->listErrors());
+    }
 
     // Si el usuario deja teléfono vacío, se guarda como NULL
     $telefono  = $this->request->getPost('telefono');

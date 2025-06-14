@@ -10,29 +10,30 @@
     <h2 class="text-center">Factura #<?= esc($factura['id_factura']) ?></h2>
 
     <!-- Empresa y Comprador -->
-    <div class="empresa-comprador d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
-        <!-- Empresa -->
-        <div class="empresa-info mt-5 mb-md-0 text-md-start text-center">
-            <h5 class="mb-2">Comprador</h5>
-            <p><strong>Nombre:</strong> <?= esc($usuario['nombre'] . ' ' . $usuario['apellido']) ?></p>
-            <p><strong>Email:</strong> <?= esc($usuario['email']) ?></p>
-            <p><strong>Dirección:</strong>
-                <?= empty($usuario['direccion']) ? 'Retiro en el local' : esc($usuario['direccion']) ?>
-            </p>
-            
-        </div>
-
-        <div class="divider d-none d-md-block"></div>
-
-        <!-- Comprador -->
-        <div class="usuario-info text-md-start text-center">
-            <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo Empresa" class="img-fluid mb-1" style="max-height: 100px;">
-            <h5 class="mb-1">Retromaniacos</h5>
-            <p class="mb-0">📧 retromaniacos@gmail.com</p>
-            <p class="mb-0">📞 +54 3795049857</p>
-            <p class="mb-0">📍 Av. Chacabuco 941, Corrientes</p>
-        </div>
+<div class="empresa-comprador d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+    <!-- Empresa primero -->
+    <div class="empresa-info text-md-start text-center order-1 order-md-2 mt-4 mt-md-0 mb-4">
+        <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo Empresa" class="img-fluid mb-1" style="width: 200px; height: 100px; object-fit: contain;">
+        <h5 class="mb-1">Retromaniacos</h5>
+        <p class="mb-0">📧 retromaniacos@gmail.com</p>
+        <p class="mb-0">📞 +54 3795049857</p>
+        <p class="mb-0">📍 Av. Chacabuco 941, Corrientes</p>
     </div>
+
+    
+
+    <!-- Comprador segundo -->
+    <div class="usuario-info text-md-start text-center order-2 order-md-1">
+        <h5 class="mb-2">Comprador</h5>
+        <p><strong>Nombre:</strong> <?= esc($usuario['nombre'] . ' ' . $usuario['apellido']) ?></p>
+        <p><strong>Email:</strong> <?= esc($usuario['email']) ?></p>
+        <p><strong>Dirección:</strong>
+            <?= empty($usuario['direccion']) ? 'Retiro en el local' : esc($usuario['direccion']) ?>
+        </p>
+    </div>
+</div>
+
+
 
     <!-- Datos de la factura -->
     <div class="factura-info mb-4">

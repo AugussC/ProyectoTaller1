@@ -1,7 +1,7 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?>
-<link href="public/assets/css/estilo_consultas.css?v=2.3" rel="stylesheet">
+<link href="public/assets/css/estilo_consultas.css?v=2.4" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>

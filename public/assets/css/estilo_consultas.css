@@ -24,56 +24,79 @@ h1, h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.notificacion {
-    background: #fff;
-    border-left: 5px solid #007BFF;
-    padding: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    position: relative;
-    border-radius: 6px;
+.conteiner {
+  max-width: 1000px;
+  margin: 80px auto;
+  background: #fff9ed;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
 }
 
+h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #222;
+  padding-bottom: 5px;
+}
+.notificacion {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.notificacion:hover {
+  transform: translateY(-2px);
+}
 .notificacion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .datos-usuario {
-    font-size: 14px;
-    color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
 }
-
-.mensaje {
-    margin-top: 12px;
-    font-size: 15px;
-    color: #444;
-    white-space: pre-wrap;
-}
-
-
 
 .btn-check-icon {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    font-size: 20px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.2s;
 }
 
 .btn-check-icon:hover {
-    background-color: #218838;
+  background-color: #218838;
+}
+.mensaje {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #333;
 }
 
-
-h1, h2 {
-    margin-top: 40px;
+.no-data {
+  background: #ffe8e8;
+  color: #cc0000;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
 }
