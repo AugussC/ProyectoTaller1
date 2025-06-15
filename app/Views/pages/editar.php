@@ -4,6 +4,11 @@
 <div class="container mt-5 pt-5">
     <h1 class="mb-4 text-center"><?= esc($titulo) ?></h1>
 
+        <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif; ?>
     <form action="<?= site_url('productos/actualizar/' . $producto['id_producto']) ?>" method="post" enctype="multipart/form-data" class="row g-3">
 
         <div class="col-md-6">
@@ -44,6 +49,11 @@
         <div class="col-md-6">
             <label class="form-label">Stock</label>
             <input type="number" name="stock" class="form-control" min="1" value="<?= esc($producto['stock']) ?>" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Precio con Descuento</label>
+            <input type="number" name="precio_descuento" class="form-control" min="0" step="0.01" value="<?= esc($producto['precio_descuento']) ?>">
         </div>
         
 

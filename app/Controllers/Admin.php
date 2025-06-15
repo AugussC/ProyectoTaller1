@@ -303,7 +303,7 @@ public function crear() {
 
     public function actualizar($id_producto)
     {
-        $productoModel = new \App\Models\ProductosModel();
+        $productoModel = new ProductosModel();
 
         $producto = $productoModel->find($id_producto);
 
@@ -312,6 +312,10 @@ public function crear() {
         }
 
         $data = $this->request->getPost();
+
+        if (!empty($data['precio_descuento']) && $data['precio_descuento'] > $data['precio']) {
+        return redirect()->back()->withInput()->with('error', 'El precio de descuento no puede ser mayor al precio original.');
+    }
 
         $imagen = $this->request->getFile('ruta_imagen');
         if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
