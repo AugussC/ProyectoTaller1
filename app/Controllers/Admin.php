@@ -313,8 +313,8 @@ public function crear() {
 
         $data = $this->request->getPost();
 
-        if (!empty($data['precio_descuento']) && $data['precio_descuento'] > $data['precio']) {
-        return redirect()->back()->withInput()->with('error', 'El precio de descuento no puede ser mayor al precio original.');
+        if (!empty($data['precio_descuento']) && $data['precio_descuento'] >= $data['precio']) {
+        return redirect()->back()->withInput()->with('error', 'El precio de descuento no puede ser mayor o igual al precio original.');
     }
 
         $imagen = $this->request->getFile('ruta_imagen');
