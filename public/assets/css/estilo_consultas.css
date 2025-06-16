@@ -1,102 +1,135 @@
 body {
   margin-top: 50px;
-    padding-top: 40px;
-    background-color: rgb(244, 227, 193);
-    font-family: 'Rubik', sans-serif;
-    color: #1c1c1c;
+  padding-top: 40px;
+  background-color: rgb(244, 227, 193);
+  font-family: 'Rubik', sans-serif;
+  color: #1c1c1c;
 }
 
+/* ===== Títulos ===== */
 h1, h2 {
   text-align: center;
-  color: #1c1c1c;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #2c2c2c;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.capa-beige {
-  background: #faefd8; /* Un beige un poco más fuerte */
-  padding: 20px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.conteiner {
-  max-width: 1000px;
-  margin: 80px auto;
-  background: #fff9ed;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
 h1 {
-  text-align: center;
   font-size: 2.4rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #333;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-size: 1.6rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #222;
-  padding-bottom: 5px;
+  margin-top: 50px;
 }
+
+/* ===== Contenedor general ===== */
+.capa-beige {
+  background: #faefd8;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== Panel de notificaciones ===== */
 .notificacion {
   background: #ffffff;
-  border-radius: 8px;
-  border: 1px solid #333;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease-in-out;
 }
 
 .notificacion:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
+
+/* ===== Cabecera de la notificación ===== */
 .notificacion-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
+/* ===== Datos del usuario ===== */
 .datos-usuario {
   font-size: 0.95rem;
-  line-height: 1.4;
-  color: #444;
-}
-
-.btn-check-icon {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.2s;
-}
-
-.btn-check-icon:hover {
-  background-color: #218838;
-}
-.mensaje {
-  margin-top: 12px;
-  font-size: 1rem;
+  line-height: 1.5;
   color: #333;
 }
 
-.no-data {
-  background: #ffe8e8;
-  color: #cc0000;
-  padding: 15px;
+.datos-usuario strong {
+  font-size: 1.05rem;
+  color: #111;
+}
+
+/* ===== Botón check (marcar leído) ===== */
+.btn-check-icon {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 8px 12px;
   border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-check-icon:hover {
+  background-color: #157347;
+}
+
+.btn-check-icon i {
+  pointer-events: none;
+}
+
+/* ===== Mensaje de la consulta ===== */
+.mensaje {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  color: #444;
+  background: #fff9ef;
+  padding: 12px 16px;
+  border-radius: 8px;
+ 
+  line-height: 1.5;
+}
+
+/* ===== No hay datos ===== */
+.no-data {
+  background: #fff1f1;
+  color: #c40000;
+  padding: 16px;
+  border-radius: 10px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .notificacion {
+    padding: 16px;
+  }
+
+  .notificacion-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+  }
 }

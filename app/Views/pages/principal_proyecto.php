@@ -2,7 +2,7 @@
 <?php $session = session(); ?>
 
     <?php echo $this->section('estilos'); ?> 
-    <link href="public/assets/css/estiloprincipal.css?v=1.23" rel="stylesheet">
+    <link href="public/assets/css/estiloprincipal.css?v=1.27" rel="stylesheet">
     <?php echo $this->endSection(); ?> 
 
 
@@ -73,74 +73,59 @@
 
       <!-- Sección de productos más vendidos -->
     <div class="container-fluid mas-vendidos bgcustom">
-      <h1>Más vendidos</h1>
-      <div class="row">
-        
-        <?php foreach ($masVendidas as $index => $producto): ?>
-          <div class="<?= $index === 0 ? 'producto-1 col-md-12 col-lg-3 ms-lg-5 me-lg-3' : 'producto col-sm-6 col-md-3 col-lg-2' ?>">
-            <div class="card">
-              <img src="<?= base_url($producto['ruta_imagen']) ?>" class="<?= $index === 0 ? 'img-producto-1' : 'img-producto' ?>" alt="<?= esc($producto['nombre']) ?>">
-              <div class="card-body">
-                <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
+    <h1>Más vendidos</h1>
+    <div class="row">
+      <?php foreach ($masVendidas as $index => $producto): ?>
+        <?php
+          $precioOriginal = $producto['precio'];
+          $precioDescuento = !empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0 ? $producto['precio_descuento'] : null;
+          $cuotas = (int)$producto['cuotas'];
+        ?>
+        <div class="<?= $index === 0 ? 'producto-1 col-md-12 col-lg-3 ms-lg-5 me-lg-3' : 'producto col-sm-6 col-md-3 col-lg-2' ?>">
+          <div class="card h-100 d-flex flex-column">
+            <img src="<?= base_url($producto['ruta_imagen']) ?>" class="<?= $index === 0 ? 'img-producto-1' : 'img-producto' ?>" alt="<?= esc($producto['nombre']) ?>">
 
-                <?php if (!empty($producto['precio_descuento'])): ?>
-                  <!-- Con descuento -->
-                  <p class="card-previous-price">$<?= number_format($producto['precio'], 0, ',', '.') ?></p>
-                  <h5 class="card-price-now text-success">
-                    $<?= number_format($producto['precio_descuento'], 0, ',', '.') ?>
-                    <span class="beneficios">
-                      <?= round((1 - $producto['precio_descuento'] / $producto['precio']) * 100) ?>%OFF
-                    </span>
-                  </h5>
-                  <?php if ((int)$producto['cuotas'] > 0): ?>
-                  <?php if (!empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0): ?>
-                      <p class="beneficios">
-                          <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio_descuento'] / $producto['cuotas'], 2, ',', '.') ?>
-                      </p>
-                  <?php else: ?>
-                      <p class="beneficios">
-                          <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio'] / $producto['cuotas'], 2, ',', '.') ?>
-                      </p>
-                  <?php endif; ?>
+            <div class="card-body d-flex flex-column">
+              <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
+
+              <?php if ($precioDescuento): ?>
+                <!-- Con descuento -->
+                <p class="card-previous-price">$<?= number_format($precioOriginal, 0, ',', '.') ?></p>
+                <h5 class="card-price-now text-success">
+                  $<?= number_format($precioDescuento, 0, ',', '.') ?>
+                  <span class="beneficios"><?= round((1 - $precioDescuento / $precioOriginal) * 100) ?>%OFF</span>
+                </h5>
               <?php else: ?>
-                  <p class="beneficios">Pagando de contado</p>
+                <!-- Sin descuento -->
+                <p class="card-previous-price"></p>
+                <h5 class="card-price-now text-success">
+                  $<?= number_format($precioOriginal, 0, ',', '.') ?>
+                </h5>
               <?php endif; ?>
 
-                <?php else: ?>
-                  <!-- Sin descuento -->
-                  <p class="card-previous-price"></p>
-                  <h5 class="card-price-now text-success">
-                    $<?= number_format($producto['precio'], 0, ',', '.') ?>
-                  </h5>
-                  <?php if ((int)$producto['cuotas'] > 0): ?>
-                  <?php if (!empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0): ?>
-                      <p class="beneficios">
-                          <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio_descuento'] / $producto['cuotas'], 2, ',', '.') ?>
-                      </p>
-                  <?php else: ?>
-                      <p class="beneficios">
-                          <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio'] / $producto['cuotas'], 2, ',', '.') ?>
-                      </p>
-                  <?php endif; ?>
+              <?php if ($cuotas > 0): ?>
+                <p class="beneficios">
+                  <?= $cuotas ?> Cuotas sin interés de $
+                  <?= number_format(($precioDescuento ?? $precioOriginal) / $cuotas, 2, ',', '.') ?>
+                </p>
               <?php else: ?>
-                  <p class="beneficios">Pagando de contado</p>
+                <p class="beneficios">Pagando de contado</p>
               <?php endif; ?>
 
-                <?php endif; ?>
-                <?php if ($session->get('rol') === 'usuario'):?>
-                      <div class="mt-auto">
-                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
-                          Añadir a Carrito <i class="bi bi-cart"></i>
-                        </a>
-                      </div>
-                    <?php endif; ?>
-              </div>
+              <?php if ($session->get('rol') === 'usuario'): ?>
+                <div class="container-boton-carrito">
+                  <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 ">
+                    Añadir a Carrito <i class="bi bi-cart"></i>
+                  </a>
+                </div>
+              <?php endif; ?>
             </div>
           </div>
-        <?php endforeach; ?>
-
-      </div>
+        </div>
+      <?php endforeach; ?>
     </div>
+  </div>
+
 
 
 
@@ -159,46 +144,48 @@
         <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>">
           <div class="row producto-ofertas">
             <?php foreach ($slide as $producto): ?>
-              <div class="col-6 col-md-3 col-lg-2">
-                <div class="card">
+              <?php
+                $precioOriginal = $producto['precio'];
+                $precioDescuento = !empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0 ? $producto['precio_descuento'] : null;
+                $cuotas = (int)$producto['cuotas'];
+              ?>
+              <div class="col-6 col-md-3 col-lg-2 d-flex">
+                <div class="card flex-fill d-flex flex-column">
                   <div class="card-img-container">
                     <img src="<?= base_url($producto['ruta_imagen']) ?>" class="img-producto" alt="<?= esc($producto['nombre']) ?>">
                   </div>
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column">
                     <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
 
-                    <?php if (!empty($producto['precio_descuento'])): ?>
-                      <!-- Producto con oferta -->
-                      <p class="card-previous-price">$<?= number_format($producto['precio'], 0, ',', '.') ?></p>
+                    <?php if ($precioDescuento): ?>
+                      <p class="card-previous-price">$<?= number_format($precioOriginal, 0, ',', '.') ?></p>
                       <h5 class="card-price-now text-success">
-                        $<?= number_format($producto['precio_descuento'], 0, ',', '.') ?>
-                        <span class="beneficios">
-                          <?= round((1 - $producto['precio_descuento'] / $producto['precio']) * 100) ?>%OFF
-                        </span>
+                        $<?= number_format($precioDescuento, 0, ',', '.') ?>
+                        <span class="beneficios"><?= round((1 - $precioDescuento / $precioOriginal) * 100) ?>%OFF</span>
+                      </h5>
+                    <?php else: ?>
+                      <p class="card-previous-price"></p>
+                      <h5 class="card-price-now text-success">
+                        $<?= number_format($precioOriginal, 0, ',', '.') ?>
                       </h5>
                     <?php endif; ?>
-                    <?php if ((int)$producto['cuotas'] > 0): ?>
-                    <?php if (!empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0): ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio_descuento'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
+
+                    <?php if ($cuotas > 0): ?>
+                      <p class="beneficios">
+                        <?= $cuotas ?> Cuotas sin interés de $
+                        <?= number_format(($precioDescuento ?? $precioOriginal) / $cuotas, 2, ',', '.') ?>
+                      </p>
                     <?php else: ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
+                      <p class="beneficios">Pagando de contado</p>
                     <?php endif; ?>
-                <?php else: ?>
-                    <p class="beneficios">Pagando de contado</p>
-                <?php endif; ?>
-                  <?php if ($session->get('rol') === 'usuario'):?>
-                      <div class="mt-auto">
-                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+
+                    <?php if ($session->get('rol') === 'usuario'): ?>
+                      <div class="container-boton-carrito">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 ">
                           Añadir a Carrito <i class="bi bi-cart"></i>
                         </a>
                       </div>
                     <?php endif; ?>
-
-
                   </div>
                 </div>
               </div>
@@ -206,7 +193,6 @@
           </div>
         </div>
       <?php endforeach; ?>
-
     </div>
 
     <!-- Controles del carrusel -->
@@ -214,7 +200,6 @@
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Anterior</span>
     </button>
-
     <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Siguiente</span>
@@ -222,12 +207,13 @@
   </div>
 </div>
 
+
 <!-- Sección: Card Messi + Carrusel en la misma fila -->
 <?php if (!empty($messi)): ?>
 <div class="container-fluid container-jugador bgcustom">
   <div class="row productos-jugador">
 
-    <!-- Card de Messi  -->
+    <!-- Card de Messi -->
     <div class="card-jugador col-md-3">
       <div class="card no-border bgcustom">
         <img src="public/assets/img/lionelmessi.jpg" class="imagen-jugador" alt="Lionel Messi">
@@ -243,56 +229,56 @@
         <div class="carousel-inner">
 
           <?php foreach (array_chunk($messi, 4) as $index => $grupo): ?>
-          <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-            <div class="row producto-jugador">
-
-              <?php foreach ($grupo as $producto): ?>
-              <div class="col-6 col-md-3 col-xl-2">
-                <div class="card">
-                  <div class="card-img-container">
-                    <img src="<?= base_url($producto['ruta_imagen']) ?>" class="img-producto" alt="<?= esc($producto['nombre']) ?>">
-                  </div>
-                  <div class="card-body">
-                    <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
-
-                    <?php if (!empty($producto['precio_descuento'])): ?>
-                      <p class="card-previous-price">$<?= number_format($producto['precio'], 0, ',', '.') ?></p>
-                      <h5 class="card-price-now">$<?= number_format($producto['precio_descuento'], 0, ',', '.') ?>
-                        <span class="beneficios">
-                          <?= round(100 - ($producto['precio_descuento'] / $producto['precio']) * 100) ?>%OFF
-                        </span>
-                      </h5>
-                    <?php else: ?>
-                      <h5 class="card-price-now">$<?= number_format($producto['precio'], 0, ',', '.') ?></h5>
-                    <?php endif; ?>
-
-                    <?php if ((int)$producto['cuotas'] > 0): ?>
-                    <?php if (!empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0): ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio_descuento'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
-                    <?php else: ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
-                    <?php endif; ?>
-                <?php else: ?>
-                    <p class="beneficios">Pagando de contado</p>
-                <?php endif; ?>
-                  <?php if ($session->get('rol') === 'usuario'):?>
-                      <div class="mt-auto">
-                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
-                          Añadir a Carrito <i class="bi bi-cart"></i>
-                        </a>
+            <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+              <div class="row producto-jugador">
+                <?php foreach ($grupo as $producto): ?>
+                  <?php
+                    $precioOriginal = $producto['precio'];
+                    $precioDescuento = !empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0 ? $producto['precio_descuento'] : null;
+                    $cuotas = (int)$producto['cuotas'];
+                  ?>
+                  <div class="col-6 col-sm-6 col-md-3 col-xl-3 d-flex">
+                    <div class="card d-flex flex-column flex-fill h-100 w-100">
+                      <div class="card-img-container">
+                        <img src="<?= base_url($producto['ruta_imagen']) ?>" class="img-producto" alt="<?= esc($producto['nombre']) ?>">
                       </div>
-                    <?php endif; ?>
-                  </div>
-                </div>
-              </div>
-              <?php endforeach; ?>
+                      <div class="card-body no-padding d-flex flex-column">
+                        <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
 
+                        <?php if ($precioDescuento): ?>
+                          <p class="card-previous-price">$<?= number_format($precioOriginal, 0, ',', '.') ?></p>
+                          <h5 class="card-price-now text-success">
+                            $<?= number_format($precioDescuento, 0, ',', '.') ?>
+                            <span class="beneficios"><?= round((1 - $precioDescuento / $precioOriginal) * 100) ?>%OFF</span>
+                          </h5>
+                        <?php else: ?>
+                          <h5 class="card-price-now text-success">
+                            $<?= number_format($precioOriginal, 0, ',', '.') ?>
+                          </h5>
+                        <?php endif; ?>
+
+                        <?php if ($cuotas > 0): ?>
+                          <p class="beneficios">
+                            <?= $cuotas ?> Cuotas sin interés de $
+                            <?= number_format(($precioDescuento ?? $precioOriginal) / $cuotas, 2, ',', '.') ?>
+                          </p>
+                        <?php else: ?>
+                          <p class="beneficios">Pagando de contado</p>
+                        <?php endif; ?>
+
+                        <?php if ($session->get('rol') === 'usuario'): ?>
+                          <div class="container-boton-carrito">
+                            <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 ">
+                              Añadir a Carrito <i class="bi bi-cart"></i>
+                            </a>
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                  </div>
+                <?php endforeach; ?>
+              </div>
             </div>
-          </div>
           <?php endforeach; ?>
 
         </div>
@@ -312,6 +298,7 @@
   </div>
 </div>
 <?php endif; ?>
+
 
 <!-- Sección: Card Maradona + Carrusel en la misma fila -->
 <?php if (!empty($maradona)): ?>
@@ -334,57 +321,60 @@
         <div class="carousel-inner">
 
           <?php foreach (array_chunk($maradona, 4) as $index => $grupo): ?>
-          <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-            <div class="row producto-jugador">
+            <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+              <div class="row producto-jugador ">
 
-              <?php foreach ($grupo as $producto): ?>
-              <div class="col-6 col-md-3 col-xl-2">
-                <div class="card">
-                  <div class="card-img-container">
-                    <img src="<?= base_url($producto['ruta_imagen']) ?>" class="img-producto" alt="<?= esc($producto['nombre']) ?>">
-                  </div>
-                  <div class="card-body">
-                    <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
-
-                    <?php if (!empty($producto['precio_descuento'])): ?>
-                      <p class="card-previous-price">$<?= number_format($producto['precio'], 0, ',', '.') ?></p>
-                      <h5 class="card-price-now">$<?= number_format($producto['precio_descuento'], 0, ',', '.') ?>
-                        <span class="beneficios">
-                          <?= round(100 - ($producto['precio_descuento'] / $producto['precio']) * 100) ?>%OFF
-                        </span>
-                      </h5>
-                    <?php else: ?>
-                      <h5 class="card-price-now">$<?= number_format($producto['precio'], 0, ',', '.') ?></h5>
-                    <?php endif; ?>
-
-                    <?php if ((int)$producto['cuotas'] > 0): ?>
-                    <?php if (!empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0): ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio_descuento'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
-                    <?php else: ?>
-                        <p class="beneficios">
-                            <?= $producto['cuotas'] ?> Cuotas sin interés de $<?= number_format($producto['precio'] / $producto['cuotas'], 2, ',', '.') ?>
-                        </p>
-                    <?php endif; ?>
-                <?php else: ?>
-                    <p class="beneficios">Pagando de contado</p>
-                <?php endif; ?>
-                  <?php if ($session->get('rol') === 'usuario'):?>
-                      <div class="mt-auto">
-                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
-                          Añadir a Carrito <i class="bi bi-cart"></i>
-                        </a>
+                <?php foreach ($grupo as $producto): ?>
+                  <?php
+                    $precioOriginal = $producto['precio'];
+                    $precioDescuento = !empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0 ? $producto['precio_descuento'] : null;
+                    $cuotas = (int)$producto['cuotas'];
+                  ?>
+                  <div class="col-6 col-sm-6 col-md-3 col-xl-3 d-flex">
+                    <div class="card d-flex flex-column flex-fill h-100 w-100">
+                      <div class="card-img-container">
+                        <img src="<?= base_url($producto['ruta_imagen']) ?>" class="img-producto" alt="<?= esc($producto['nombre']) ?>">
                       </div>
-                    <?php endif; ?>
-                  </div>
-                </div>
-              </div>
-              <?php endforeach; ?>
+                      <div class="card-body no-padding d-flex flex-column">
+                        <h6 class="card-title"><?= esc($producto['nombre']) ?></h6>
 
+                        <?php if ($precioDescuento): ?>
+                          <p class="card-previous-price">$<?= number_format($precioOriginal, 0, ',', '.') ?></p>
+                          <h5 class="card-price-now text-success">
+                            $<?= number_format($precioDescuento, 0, ',', '.') ?>
+                            <span class="beneficios"><?= round((1 - $precioDescuento / $precioOriginal) * 100) ?>%OFF</span>
+                          </h5>
+                        <?php else: ?>
+                          <h5 class="card-price-now text-success">
+                            $<?= number_format($precioOriginal, 0, ',', '.') ?>
+                          </h5>
+                        <?php endif; ?>
+
+                        <?php if ($cuotas > 0): ?>
+                          <p class="beneficios">
+                            <?= $cuotas ?> Cuotas sin interés de $
+                            <?= number_format(($precioDescuento ?? $precioOriginal) / $cuotas, 2, ',', '.') ?>
+                          </p>
+                        <?php else: ?>
+                          <p class="beneficios">Pagando de contado</p>
+                        <?php endif; ?>
+
+                        <?php if ($session->get('rol') === 'usuario'): ?>
+                          <div class="container-boton-carrito">
+                            <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 ">
+                              Añadir a Carrito <i class="bi bi-cart"></i>
+                            </a>
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                  </div>
+                <?php endforeach; ?>
+
+              </div>
             </div>
-          </div>
           <?php endforeach; ?>
+
 
         </div>
 

@@ -116,7 +116,9 @@ body {
  }
  
  .beneficios{
-   font-size: 0.875rem
+  margin-bottom: 6px; 
+  font-size: 0.875rem
+   
  }
  
  .seccion-ofertas{
@@ -182,10 +184,12 @@ body {
   align-items: center;
 }
 
-.card-jugador{
+.card-jugador {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
+
 
 /* Card sin bordes  */
 .no-border {
@@ -250,6 +254,11 @@ body {
 }
 
 
+.no-padding {
+  padding: 8px !important;
+}
 
 
- 
+.container-boton-carrito{
+  margin-top: auto;
+}
