@@ -1,15 +1,15 @@
 <?= $this->extend('layout'); ?>
 
 <?= $this->section('estilos'); ?>
-<link href="<?= base_url('public/assets/css/estilo_productos.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/estilo_productos.css?v=1.4') ?>" rel="stylesheet">
 <?= $this->endSection(); ?>
 
 <?= $this->section('contenido'); ?>
-<div class="container mt-5 pt-5">
-    <h1 class="mb-4 text-center"><?= esc($titulo) ?></h1>
+<div class="container">
+    <h1><?= esc($titulo) ?></h1>
 
     <!-- Botones superiores -->
-    <div class="mb-4 d-flex justify-content-between">
+    <div class="boton-superior">
         <a href="<?= site_url('productos/eliminados') ?>" class="btn btn-secondary">Ver eliminados</a>
         
         <!-- Modal -->
@@ -117,7 +117,7 @@
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="5" class="text-center">No hay productos disponibles.</td>
+                    <td colspan="5" class="mensaje-vacio">No hay productos disponibles.</td>
                 </tr>
             <?php endif; ?>
         </tbody>

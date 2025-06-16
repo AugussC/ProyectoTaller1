@@ -1,8 +1,12 @@
 <?= $this->extend('layout'); ?>
 
+<?= $this->section('estilos'); ?>
+<link href="<?= base_url('public/assets/css/estilo_editar.css?v=1') ?>" rel="stylesheet">
+<?= $this->endSection(); ?>
+
 <?= $this->section('contenido'); ?>
-<div class="container mt-5 pt-5">
-    <h1 class="mb-4 text-center"><?= esc($titulo) ?></h1>
+<div class="container">
+    <h1><?= esc($titulo) ?></h1>
 
         <?php if (session()->getFlashdata('error')): ?>
     <div class="alert alert-danger">

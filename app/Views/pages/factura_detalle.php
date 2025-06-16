@@ -1,30 +1,31 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="<?= base_url('public/assets/css/estilo_detalle_factura.css?v=1.7') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/estilo_detalle_factura.css?v=1.9') ?>" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
 
 <div class="container factura-container">
-    <h2 class="text-center">Factura #<?= esc($factura['id_factura']) ?></h2>
+    <h2>Factura #<?= esc($factura['id_factura']) ?></h2>
 
     <!-- Empresa y Comprador -->
-<div class="empresa-comprador d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+<div class="empresa-comprador">
     <!-- Empresa primero -->
-    <div class="empresa-info text-md-start text-center order-1 order-md-2 mt-4 mt-md-0 mb-4">
-        <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo Empresa" class="img-fluid mb-1" style="width: 200px; height: 100px; object-fit: contain;">
-        <h5 class="mb-1">Retromaniacos</h5>
-        <p class="mb-0">📧 retromaniacos@gmail.com</p>
-        <p class="mb-0">📞 +54 3795049857</p>
-        <p class="mb-0">📍 Av. Chacabuco 941, Corrientes</p>
-    </div>
+    <div class="empresa-info">
+    <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo Empresa" class="logo-empresa">
+    <h5 class="nombre-empresa">Retromaniacos</h5>
+    <p class="dato-empresa">📧 retromaniacos@gmail.com</p>
+    <p class="dato-empresa">📞 +54 3795049857</p>
+    <p class="dato-empresa">📍 Av. Chacabuco 941, Corrientes</p>
+</div>
+
 
     
 
     <!-- Comprador segundo -->
-    <div class="usuario-info text-md-start text-center order-2 order-md-1">
-        <h5 class="mb-2">Comprador</h5>
+    <div class="usuario-info ">
+        <h5>Comprador</h5>
         <p><strong>Nombre:</strong> <?= esc($usuario['nombre'] . ' ' . $usuario['apellido']) ?></p>
         <p><strong>Email:</strong> <?= esc($usuario['email']) ?></p>
         <p><strong>Dirección:</strong>
@@ -36,7 +37,7 @@
 
 
     <!-- Datos de la factura -->
-    <div class="factura-info mb-4">
+    <div class="factura-info">
         <h5>Datos de la Factura</h5>
         <p><strong>Fecha:</strong> <?= date('d/m/Y', strtotime($factura['fecha'])) ?></p>
         <p><strong>Costo de envío:</strong> $<?= number_format($factura['costo_envio'], 0, ',', '.') ?></p>
@@ -68,12 +69,12 @@
     </div>
 
     <!-- Total final -->
-    <div class="text-end mt-3">
+    <div class="text-end">
         <h5>Total Final: <strong>$<?= number_format($factura['total'], 0, ',', '.') ?></strong></h5>
     </div>
 
     <!-- Botón volver -->
-    <div class="mt-4 text-center">
+    <div class="contenier-btn-volver">
         <a href="<?= base_url('pedidos') ?>" class="btn btn-volver">← Volver</a>
     </div>
 </div>

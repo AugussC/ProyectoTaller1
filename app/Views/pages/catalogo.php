@@ -2,22 +2,24 @@
 <?php $session = session(); ?>
 
 <?php echo $this->section('estilos'); ?> 
-    <link href="public/assets/css/estilo_catalogo.css?v=1.9" rel="stylesheet">
+    <link href="public/assets/css/estilo_catalogo.css?v=2.3" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
-<div class="container-fluid-2">
-    <img src="<?= base_url('public/assets/img/banner_Catalogo.png') ?>" alt="Camisetas" class="img-fluid w-100">
+
+
+<div class="container-fluid-2 ">
+    <img src="<?= base_url('public/assets/img/banner_Catalogo.png') ?>" alt="Camisetas" class="img-fluid imagen-catalogo">
 </div>
 
-<div class="container mt-4 pt-4">
+<div class="container-catalogo">
   <div class="row">
       
     <!-- Columna izquierda: filtros -->
-    <div class="col-12 col-md-3 mb-4 filtro-con-borde">
+    <div class="col-12 col-md-3 filtro-con-borde">
       <h5>Filtrar</h5>
       <form method="get" action="<?= base_url('catalogo') ?>">
-        <div class="mb-3">
+        <div class="filtro">
           <label for="equipo" class="form-label">Equipo</label>
           <select id="equipo" name="equipo" class="form-select">
             <option value="">Todos</option>
@@ -31,7 +33,7 @@
 
         </div>
 
-        <div class="mb-3">
+        <div class="filtro">
           <label for="jugador" class="form-label">Jugador</label>
           <select id="jugador" name="jugador" class="form-select">
             <option value="">Cualquiera</option>
@@ -54,22 +56,22 @@
       <div class="row">
 
         <?php if (empty($lista_productos)): ?>
-          <div class="alert alert-warning mt-4" role="alert">
-            No encontramos resultados para '<?= esc($palabra_buscada) ?>'. Revisa si está bien escrita o intentá con otra palabra.
+          <div class="alert alert-warning alerta-catalogo" role="alert">
+            No encontramos resultados. Revisa si está bien escrita o intentá con otra palabra.
           </div>
         <?php else: ?>
           <h2>Catalogo</h2>
-          <div class="row mb-5">
+          <div class="row fila-productos">
             <?php foreach ($lista_productos as $producto): ?>
               <?php
                 $precioOriginal = $producto['precio'];
                 $precioDescuento = !empty($producto['precio_descuento']) && $producto['precio_descuento'] > 0 ? $producto['precio_descuento'] : null;
                 $cuotas = (int)$producto['cuotas'];
               ?>
-              <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                <div class="card h-100 d-flex flex-column">
+              <div class="col-12 col-sm-6 col-lg-4 producto">
+                <div class="card card-flex">
                   <img src="<?= base_url($producto['ruta_imagen']) ?>" class="card-img-top img-producto" alt="<?= esc($producto['nombre']) ?>">
-                  <div class="card-body d-flex flex-column">
+                  <div class="card-body card-body-flex">
                     <h6 class="card-title"><?= $producto['nombre'] ?></h6>
 
                     <?php if ($precioDescuento): ?>
@@ -96,8 +98,8 @@
                     <?php endif; ?>
 
                     <?php if ($session->get('rol') === 'usuario'):?>
-                      <div class="mt-auto">
-                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-primary w-100 mt-3">
+                      <div class="boton-carrito">
+                        <a href="<?= base_url('carrito/agregarCarrito/' . $producto['id_producto']) ?>" class="btn btn-carrito btn-primary ">
                           Añadir a Carrito <i class="bi bi-cart"></i>
                         </a>
                       </div>

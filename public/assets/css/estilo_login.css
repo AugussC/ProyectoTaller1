@@ -12,6 +12,21 @@ body {
   margin: auto;
 }
 
+.card-login{
+  padding: 48px;
+}
+
+h1{
+  font-size: 1.5rem;     
+  font-weight: 700;       
+  margin-bottom: 1.5rem;  
+  color: #333;
+}
+
+.label-pasword{
+  width: 100%;
+}
+
 /* Tarjeta del login */
 .form-signin {
   background-color: #fff7e9;
@@ -30,6 +45,7 @@ body {
 label {
   font-weight: 500;
   color: #5a3726;
+  margin-bottom: 12px;
 }
 
 /* Inputs */
@@ -85,6 +101,13 @@ label {
   background-color: transparent;
   text-align: center;
   font-size: 0.95rem;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border: 0;
+}
+
+.mensaje-registro{
+  text-align: center;
 }
 
 .card-footer a {
@@ -97,3 +120,12 @@ label {
   text-decoration: underline;
   color: #a5693b;
 }
+
+.formulario{
+  margin-bottom: 24px;
+}
+.alert-login{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+

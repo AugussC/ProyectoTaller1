@@ -1,14 +1,14 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_admin.css?v=2.1" rel="stylesheet">
+<link href="public/assets/css/estilo_admin.css?v=2.2" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
 
 <div class="container capa-beige">
-  <h1 class="mb-4">Panel Principal</h1>
+  <h1>Panel Principal</h1>
 
   <script>
     window.datosInventario = {
@@ -22,47 +22,47 @@
   <div class="row">
     <!-- Gráfico: ancho completo en móviles, 7/12 en pantallas md en adelante -->
     <div class="col-12 col-md-7 mb-4">
-      <div class="card p-3 h-100">
-        <h2 class="mb-3">Distribución de Stock</h2>
+      <div class="card">
+        <h2>Distribución de Stock</h2>
         <canvas id="graficoStock"></canvas>
       </div>
     </div>
 
     <!-- Cards: ancho completo en móviles, 5/12 en md+ -->
     <div class="col-12 col-md-5">
-      <div class="row row-cols-1 gy-3">
+      <div class="row fila-lateral">
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral ">
             <h5>Consultas sin responder</h5>
             <p><?= esc($consultasSinResponder) ?></p>
           </div>
         </div>
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral">
             <h5>Total de productos</h5>
             <p><?= esc($productos) ?> camisetas</p>
           </div>
         </div>
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral">
             <h5>Carritos listos para la compra</h5>
             <p><?= esc($carritosAbandonados) ?></p>
           </div>
         </div>
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral">
             <h5>Usuarios registrados</h5>
             <p><?= esc($usuarios) ?></p>
           </div>
         </div>
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral">
             <h5>Stock bajo</h5>
             <p><?= esc($stockBajo) ?></p>
           </div>
         </div>
         <div class="col">
-          <div class="card-lateral p-3 h-100">
+          <div class="card-lateral">
             <h5>Sin Stock</h5>
             <p><?= esc($sinStock) ?></p>
           </div>

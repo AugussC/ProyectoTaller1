@@ -5,4 +5,74 @@ body {
   font-family: 'Rubik', sans-serif; 
   padding-top: 80px; 
 }
-  
+
+.container-factura{
+  margin-top: 48px;
+}
+
+h2{
+  margin-bottom: 24px;
+}
+
+/* Contenedor principal */
+.container-factura {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-top: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título principal */
+.container-factura h2 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Tabla */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fefefe;
+}
+
+.table thead {
+  background-color: #f0f0f0;
+}
+
+.table th {
+  font-weight: 600;
+  color: #555;
+  padding: 12px;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 12px;
+}
+
+/* Botón ver */
+.btn-outline-primary {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Mensaje sin facturas */
+p {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}

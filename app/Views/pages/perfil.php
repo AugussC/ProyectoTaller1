@@ -1,21 +1,21 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_perfil.css?v=1.1" rel="stylesheet" >
+<link href="public/assets/css/estilo_perfil.css?v=1.5" rel="stylesheet" >
 <?php echo $this->endSection(); ?>
 
 <?php echo $this->section('contenido'); ?>
-<div class="container ">
+<div class="container">
     <h1>Perfil de Usuario</h1>
 
     <?php if (session()->getFlashdata('errors')): ?>
-        <div style="color: red;">
+        <div class="error">
             <?= session()->getFlashdata('errors') ?>
         </div>
     <?php endif; ?>
 
     <?php if (session()->getFlashdata('mensaje')): ?>
-        <div style="color: green;">
+        <div class="mensaje">
             <?= session()->getFlashdata('mensaje') ?>
         </div>
     <?php endif; ?>
@@ -43,7 +43,7 @@
     <button class="button-perfil" onclick="habilitarCampos()">Actualizar</button>
     <button class="button-perfil" onclick="mostrarCambioContrasena()">Cambiar Contraseña</button>
 
-    <div id="formContrasena" style="display: none; margin-top: 20px;">
+    <div id="formContrasena" class="formulario-contraseña">
         <form method="post" action="usuario/cambiar_password">
             <label>Nueva Contraseña:</label><br>
             <input type="password" name="nueva_password" required><br><br>

@@ -5,8 +5,8 @@
     <?php echo $this->endSection(); ?> 
 
     <?php echo $this->section('contenido'); ?>
-<div class="container mt-5">
-    <h2 class="mb-4">Mis Compras</h2>
+<div class="container container-factura">
+    <h2>Mis Compras</h2>
 
     <?php if (!empty($facturas)): ?>
         <table class="table table-hover">

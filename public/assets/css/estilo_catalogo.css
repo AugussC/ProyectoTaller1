@@ -6,12 +6,37 @@ body {
   font-family: 'Rubik', sans-serif; 
   padding-top: 70px; 
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container-fluid-2 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+
+}
+.banner-container{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.imagen-catalogo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0;
 }
 
+.container-catalogo{
+  margin-top: 24px;
+  padding-top: 24px;
+}
 
 
 .card-img-container {
@@ -49,5 +74,41 @@ body {
 
  .filtro-con-borde {
   border-right: 3px solid #e2c799;
-  padding-right: 15px;
+  padding-right: 14px;
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.filtro{
+  margin-bottom: 16px;
+}
+
+.alerta-catalogo{
+  margin-top: 24px;
+}
+
+.fila-productos{
+  margin-bottom: 48px;
+}
+
+.producto{
+  margin-bottom: 24px;
+}
+.card-flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-body-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-carrito{
+  margin-top: auto;
+}
+
+.btn-carrito{
+ width: 100%;
+ margin-top: 16px;
 }

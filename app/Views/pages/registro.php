@@ -8,34 +8,34 @@
  
 <div class="container ">
         <div class="card shadow-lg form-signin ">
-            <div class="card-body p-5">
-                <h1 class="fs-4 card-title fw-bold mb-4">Registro</h1>
+            <div class="card-body">
+                <h1>Registro</h1>
                 <form method="POST" action="<?= base_url('register'); ?>" autocomplete="off">
 
                     <?= csrf_field(); ?>
 
 
-                    <div class="mb-3">
-                        <label class="mb-2" for="nombre">Nombre</label>
+                    <div class="formulario">
+                        <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" name="nombre" id="nombre" value="<?= set_value('nombre'); ?>" required autofocus>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="mb-2" for="apellido">Apellido</label>
+                    <div class="formulario">
+                        <label for="apellido">Apellido</label>
                         <input type="text" class="form-control" name="apellido" id="apellido" value="<?= set_value('apellido'); ?>" required autofocus>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="mb-2" for="email">Correo electrónico</label>
+                    <div class="formulario">
+                        <label  for="email">Correo electrónico</label>
                         <input type="email" class="form-control" name="email" id="email" value="<?= set_value('email'); ?>" required>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="formulario">
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" name="password" id="password" required>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="formulario">
                         <label for="repassword">Confirmar contraseña</label>
                         <input type="password" class="form-control" name="repassword" id="repassword" required>
                     </div>

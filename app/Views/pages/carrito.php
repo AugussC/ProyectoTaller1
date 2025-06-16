@@ -1,12 +1,12 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_carrito.css?v=1.4" rel="stylesheet">
+<link href="public/assets/css/estilo_carrito.css?v=2" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?php echo $this->section('contenido'); ?>
-<div class="container my-5">
-  <h2 class="mb-4">Mi Carrito</h2>
+<div class="container">
+  <h2>Mi Carrito</h2>
 
   <?php if (empty($carrito)): ?>
     <div class="alert alert-info">Tu carrito está vacío.</div>
@@ -76,7 +76,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <div class="mb-3">
+          <div class="modal-direccion">
             <label for="direccion" class="form-label">Dirección</label>
             <input type="text" class="form-control" id="direccion" name="direccion" required>
           </div>

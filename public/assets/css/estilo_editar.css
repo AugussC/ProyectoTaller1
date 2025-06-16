@@ -1,0 +1,116 @@
+/* Fondo general y fuente (ya está en tu base) */
+body {
+  background-color: rgb(244, 227, 193);
+  color: rgb(28, 28, 28);
+  font-family: 'Rubik', sans-serif;
+  padding-top: 80px;  
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff7e9;
+  border-radius: 16px;
+  border: 1px solid #e2c799;
+  padding: 48px 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Título */
+.container h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #6d4c41;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Etiquetas */
+label {
+  font-weight: 500;
+  color: #5a3726;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Campos de entrada */
+.form-control,
+.form-select {
+  border-radius: 12px;
+  border: 1px solid #d4a373;
+  background-color: #fff;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #b98049;
+  box-shadow: 0 0 0 0.2rem rgba(185, 128, 73, 0.25);
+  outline: none;
+}
+
+/* Botones */
+.btn {
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+  background-color: rgb(42, 76, 106);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgb(49, 90, 126);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Alerta de error */
+.alert-danger {
+  border-radius: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+}
+
+/* Espaciado entre inputs */
+form .col-md-6,
+form .col-md-12 {
+  margin-bottom: 20px;
+}
+
+/* Footer botones */
+.text-end {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 20px;
+  }
+
+  .text-end {
+    text-align: center;
+  }
+}

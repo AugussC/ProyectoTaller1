@@ -15,6 +15,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+
 /* Título */
 .container h1 {
     text-align: center;
@@ -52,23 +53,28 @@ button:hover {
 }
 
 /* Sección de cambio de contraseña */
-#formContrasena {
-    background-color: #fdf1d3;
-    padding: 20px;
-    border-radius: 8px;
-}
 
-/* Mensajes */
-div[style*="color: red"] {
+.error{
     background-color: #ffe5e5;
     border-left: 4px solid red;
     padding: 10px;
     margin-bottom: 15px;
+    color:red
 }
 
-div[style*="color: green"] {
+
+.mensaje{
     background-color: #e5ffe5;
     border-left: 4px solid green;
     padding: 10px;
     margin-bottom: 15px;
+    color:green
+}
+
+.formulario-contraseña {
+    background-color: #fdf1d3;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    margin-top: 20px;
 }

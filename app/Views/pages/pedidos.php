@@ -1,13 +1,13 @@
 <?= $this->extend('layout') ?>
 
 <?php echo $this->section('estilos'); ?> 
-    <link href="public/assets/css/estilo_pedido.css?v=1.7" rel="stylesheet">
+    <link href="public/assets/css/estilo_pedido.css?v=1.3" rel="stylesheet">
 <?php echo $this->endSection(); ?> 
 
 <?= $this->section('contenido') ?>
 
-<div class="container mt-5">
-    <h2 class="mb-4">Facturas realizadas</h2>
+<div class="container">
+    <h2>Facturas realizadas</h2>
 
     <table class="table table-striped">
         <thead>

@@ -114,13 +114,13 @@
         </form>
         <!-- Mensajes de éxito o error -->
             <?php if(session()->getFlashdata('success')!== null) : ?>
-                <div class="alert alert-success my-3" role="alert">
+                <div class="alert alert-success alertas-contacto" role="alert">
                     <?= session()->getFlashdata('success'); ?>
                 </div>
             <?php endif; ?>
 
             <?php if(session()->getFlashdata('errors')!== null) : ?>
-                <div class="alert alert-danger my-3" role="alert">
+                <div class="alert alert-danger alertas-contacto" role="alert">
                     <?= session()->getFlashdata('errors'); ?>
                 </div>
             <?php endif; ?>

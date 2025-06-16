@@ -73,9 +73,11 @@ p {
 .card-lateral {
   background-color: #f5f5f5;
   border-left: 5px solid #3498db;
-  padding: 7px 20px;
+  padding: 14px 14px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 100%;
+  
 }
 
 
@@ -103,5 +105,22 @@ p {
 @media (max-width: 768px) {
   .capa-beige {
     padding: 10px;
+  }
+}
+
+.fila-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .fila-lateral {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .fila-lateral > * {
+    flex: 0 0 100%;
   }
 }

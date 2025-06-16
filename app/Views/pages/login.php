@@ -7,20 +7,20 @@
 <?php echo $this->section('contenido'); ?>
 
 
-    <div class="container ">
+    <div class="container">
         <div class="card shadow-lg form-signin">
-            <div class="card-body p-5">
-                <h1 class="fs-4 card-title fw-bold mb-4">Iniciar sesión</h1>
+            <div class="card-body card-login">
+                <h1>Iniciar sesión</h1>
                 <form method="POST" action="<?= base_url('auth'); ?>" autocomplete="off">
 
                     <?= csrf_field(); ?>
-                    <div class="mb-3">
-                        <label class="mb-2" for="email">Email</label>
+                    <div class="formulario">
+                        <label  for="email">Email</label>
                         <input type="email" class="form-control" name="email" id="email" required autofocus>
                     </div>
 
-                    <div class="mb-3">
-                        <div class="mb-2 w-100">
+                    <div class="formulario">
+                        <div class="label-pasword">
                             <label for="password">Contraseña</label>
                             <a href="link_request.html" class="float-end">
                                 Olvide mi contraseña
@@ -37,14 +37,14 @@
                 </form>
 
                 <?php if(session()->getFlashdata('errors')!== null) : ?>
-                    <div class="alert alert-danger my-3" role="alert">
+                    <div class="alert alert-danger alert-login" role="alert">
                         <?= session()->getFlashdata('errors'); ?>
                     </div>
 
                 <?php endif; ?>
             </div>
-            <div class="card-footer py-3 border-0">
-                <div class="text-center">
+            <div class="card-footer">
+                <div class="mensaje-registro">
                     ¿No tienes una cuenta? <a href="<?= base_url('register') ?>" class="text-dark">Registrate aquí</a>
                 </div>
             </div>

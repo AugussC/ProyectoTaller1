@@ -4,52 +4,87 @@ body {
   background-color: rgb(244, 227, 193); 
   color: rgb(28, 28, 28); 
   font-family: 'Rubik', sans-serif; 
-  padding-top: 70px; 
-  margin: 0;
+  padding-top: 80px; 
+  margin-top: 50px;
+  padding-top: 50px;
 }
 
-.container-fluid-2 {
-  padding: 0;
+.container{
+  background-color: #fff7e6;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.card-img-container {
-  height: 200px; /* o el alto que prefieras */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* recorta sin deformar */
-}
-
-.img-producto {
-  width: 100%;
-  height: 300px; /* o el alto que prefieras */
-  object-fit: contain; /* recorta y rellena sin deformar */
-  border-radius: 8px;
-}
- .card-previous-price{
-   color: #6c757d;
-   text-decoration: line-through;
- }
- 
- .card-price-now, .beneficios{
-   color: #198754;
- }
- 
- .beneficios{
-   font-size: 0.875rem
- }
-
- .filtro-con-borde {
-  border-right: 3px solid #e2c799;
-  padding-right: 15px;
+h2{
+ text-align: center;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: 30px;
 }
 
 
+table.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffaf0;
+    font-size: 0.95rem;
+}
+
+table.table th,
+table.table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e6d3aa;
+    color: #1c1c1c;
+}
+
+table.table thead {
+    background-color: #f0e0ba;
+    font-weight: bold;
+}
+
+table.table tbody tr:hover {
+    background-color: #fdf3d8;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table.table thead {
+        display: none;
+    }
+
+    table.table, table.table tbody, table.table tr, table.table td {
+        display: block;
+        width: 100%;
+    }
+
+    table.table tr {
+        margin-bottom: 15px;
+        background-color: #fffaf0;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    table.table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: none;
+    }
+
+    table.table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+.mensaje-vacio{
+    text-align: center;
+}

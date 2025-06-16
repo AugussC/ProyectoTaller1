@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+    margin-top: 50px;
+    padding-top: 50px;
+    background-color: rgb(244, 227, 193);
+    font-family: 'Rubik', sans-serif;
+    color: #1c1c1c;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff7e6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Título */
+.container h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin-bottom: 30px;
+}
+
+/* Botón superior */
+.boton-superior {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+/* Tabla de usuarios */
+table.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffaf0;
+    font-size: 0.95rem;
+}
+
+table.table th,
+table.table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e6d3aa;
+    color: #1c1c1c;
+}
+
+table.table thead {
+    background-color: #f0e0ba;
+    font-weight: bold;
+}
+
+table.table tbody tr:hover {
+    background-color: #fdf3d8;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilos para mensajes flash */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+    background-color: #fffaf0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e6d3aa;
+}
+
+.modal-footer {
+    border-top: 1px solid #e6d3aa;
+}
+
+/* Inputs y formularios */
+.form-control {
+    border: 1px solid #d6c098;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #1c1c1c;
+}
+
+/* Botones */
+.btn {
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-sm {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table.table thead {
+        display: none;
+    }
+
+    table.table, table.table tbody, table.table tr, table.table td {
+        display: block;
+        width: 100%;
+    }
+
+    table.table tr {
+        margin-bottom: 15px;
+        background-color: #fffaf0;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    table.table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: none;
+    }
+
+    table.table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

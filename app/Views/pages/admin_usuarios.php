@@ -1,14 +1,14 @@
 <?= $this->extend('layout'); ?>
 
 <?= $this->section('estilos'); ?>
-<link href="<?= base_url('public/assets/css/estilo_productos.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/estilo_usuarios.css?v=1.23') ?>" rel="stylesheet">
 <?= $this->endSection(); ?>
 
 <?= $this->section('contenido'); ?>
-<div class="container mt-5 pt-5">
-    <h1 class="mb-4 text-center"><?= esc($titulo) ?></h1>
+<div class="container">
+    <h1><?= esc($titulo) ?></h1>
      <?php if(session()->getFlashdata('errors')!== null) : ?>
-                                    <div class="alert alert-danger my-3" role="alert">
+                                    <div class="alert alert-danger" role="alert">
                                         <?= session()->getFlashdata('errors'); ?>
                                     </div>
 
@@ -21,9 +21,11 @@
 <?php endif; ?>
 <!-- Modal -->
             <!-- Botón que abre el modal -->
-            <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#modalAgregarAdmin">
-                Añadir Administrador
-            </button>
+            <div class="boton-superior">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalAgregarAdmin">
+                    Añadir Administrador
+                </button>
+            </div>
 
             <!-- Modal -->
             <div class="modal fade" id="modalAgregarAdmin" tabindex="-1" aria-labelledby="modalAgregarAdminLabel" aria-hidden="true">
@@ -37,33 +39,33 @@
 
                             <?= csrf_field(); ?>    
                             
-                            <div class="modal-body g-3">
-                                <div class="mb-3">
-                                    <label class="mb-2" for="nombre">Nombre</label>
+                            <div class="modal-body">
+                                <div>
+                                    <label for="nombre">Nombre</label>
                                     <input type="text" class="form-control" name="nombre" id="nombre" value="" required autofocus>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="mb-2" for="apellido">Apellido</label>
+                                <div>
+                                    <label for="apellido">Apellido</label>
                                     <input type="text" class="form-control" name="apellido" id="apellido" value="" required autofocus>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="mb-2" for="email">Correo electrónico</label>
+                                <div>
+                                    <label for="email">Correo electrónico</label>
                                     <input type="email" class="form-control" name="email" id="email" value="" required>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">Telefono</label>
-                                    <input type="text" name="telefono" class="form-control">
+                                <div>
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="text" name="telefono" class="form-control" id="telefono">
                                 </div>
 
-                                <div class="mb-3">
+                                <div >
                                     <label for="password">Contraseña</label>
                                     <input type="password" class="form-control" name="password" id="password" required>
                                 </div>
 
-                                <div class="mb-3">
+                                <div>
                                     <label for="repassword">Confirmar contraseña</label>
                                     <input type="password" class="form-control" name="repassword" id="repassword" required>
                                 </div>
@@ -102,7 +104,7 @@
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="4" class="text-center">No hay usuarios disponibles.</td>
+                    <td colspan="4" class="mensaje-vacio">No hay usuarios disponibles.</td>
                 </tr>
             <?php endif; ?>
         </tbody>

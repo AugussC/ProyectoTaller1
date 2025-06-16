@@ -1,9 +1,0 @@
-__ci_last_regenerate|i:1749917280;_ci_previous_url|s:64:"http://localhost/Proyecto_CanteroAugusto_EscalanteJoaquin/perfil";login_in|b:1;userid|s:1:"1";username|s:7:"Augusto";rol|s:7:"usuario";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:6:{s:14:"csrf_test_name";s:32:"35360da1344b05752c72c8bdfd249d9a";s:6:"nombre";s:7:"Augusto";s:8:"apellido";s:7:"Cantero";s:5:"email";s:23:"augus_cante@hotmail.com";s:8:"telefono";s:0:"";s:9:"direccion";s:31:"B°pirayui 335viv. Mz A, Casa 5";}}__ci_vars|a:3:{s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";s:6:"errors";s:3:"old";}_ci_validation_errors|a:1:{s:5:"email";s:45:"El campo email debe contener un valor único.";}errors|s:259:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
-	<div class="errors" role="alert">
-		<ul>
-					<li>El campo email debe contener un valor único.</li>
-				</ul>
-	</div>
-
-<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
-";
