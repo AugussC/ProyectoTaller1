@@ -76,17 +76,13 @@ class Home extends BaseController
 
     $resultado = $builder->findAll();
 
-    // ✅ Conexión a la base de datos
     $db = \Config\Database::connect();
-
-    // Traer categorías desde la tabla 'categorias'
     $categorias = $db->table('categoria')
                      ->select('id_categoria, equipo')
                      ->orderBy('equipo', 'ASC')
                      ->get()
                      ->getResultArray();
 
-    // Traer jugadores únicos desde productos
     $jugadores = $db->table('productos')
                     ->select('jugador_relevante')
                     ->distinct()
