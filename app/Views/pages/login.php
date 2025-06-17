@@ -22,10 +22,6 @@
                     <div class="formulario">
                         <div class="label-pasword">
                             <label for="password">Contraseña</label>
-                            <a href="link_request.html" class="float-end">
-                                Olvide mi contraseña
-                            </a>
-                            
                         </div>
                         <input type="password" class="form-control" name="password" id="password" required >
                         
