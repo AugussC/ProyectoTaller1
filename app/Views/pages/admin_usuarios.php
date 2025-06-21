@@ -1,7 +1,7 @@
 <?= $this->extend('layout'); ?>
 
 <?= $this->section('estilos'); ?>
-<link href="<?= base_url('public/assets/css/estilo_usuarios.css?v=1.23') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/estilo_usuarios.css?v=1.25') ?>" rel="stylesheet">
 <?= $this->endSection(); ?>
 
 <?= $this->section('contenido'); ?>
@@ -102,6 +102,7 @@
                         <td><?= esc($usuario['rol']) ?></td>
                         <td><?= esc($usuario['activo']) ?></td>
                         <td>
+                            <div class="boton-desactivar">
                             <a href="<?= site_url('desactivarUsuario/' . $usuario['id_usuario']) ?>" class="btn btn-primary btn-sm">
                                 <?php if ($usuario['activo'] == 1): ?>
                                     <i class="bi bi-eye-fill"></i>
@@ -109,6 +110,7 @@
                                     <i class="bi bi-eye-slash-fill"></i>
                                 <?php endif; ?>
                             </a>
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>

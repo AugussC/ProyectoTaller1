@@ -23,7 +23,7 @@ class Home extends BaseController
         $ofertas = $productoModel->where('activo', true)
                                 ->where('precio_descuento IS NOT NULL')
                                 ->where('precio_descuento !=', 0)
-                                ->findAll(15);
+                                ->findAll(16);
 
         // 8 camisetas de Messi
         $messi = $productoModel->where(['activo' => true, 'jugador_relevante' => 'Messi'])
