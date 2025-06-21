@@ -357,6 +357,24 @@ public function crear() {
 
     return redirect()->to(site_url('consultas'));
     }
+
+    public function desactivarUsuario($id){
+        $usuarioModel = new UsuarioModel();
+        $usuario = $usuarioModel->find($id);
+
+        if(!$usuario){
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Usuario no encontrado");
+        }
+
+        if($usuario['activo'] == 1){
+            $usuarioModel->update($id, ['activo' => 0]);
+            return redirect()->to(site_url('usuarios'))->with('success', 'Usuario desactivado.');
+        } else if($usuario['activo'] == 0){
+            $usuarioModel->update($id, ['activo' => 1]);
+            return redirect()->to(site_url('usuarios'))->with('success', 'Usuario activado.');
+        }
+    }
+
 }
 
 

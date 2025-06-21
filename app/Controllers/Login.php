@@ -12,9 +12,7 @@ class Login extends BaseController
         return view('pages/login', $data);
     }
 
-    public function auth()
-    {
-        // Cambiamos la regla de validación para que pida 'email' en lugar de 'user'
+   public function auth(){
         $rules = [
             'email' => 'required|valid_email',
             'password' => 'required',
@@ -27,20 +25,23 @@ class Login extends BaseController
         $userModel = new UsuarioModel();
         $post = $this->request->getPost(['email', 'password']);
 
-        // Asumimos que tu método validarUsuario también acepta email en lugar de username
         $user = $userModel->validarUsuario($post['email'], $post['password']);
 
         if ($user !== null) {
+            if ($user['activo'] == 0) {
+                return redirect()->back()->withInput()->with('errors', 'El usuario está desactivado. Debe comunicarse con el soporte.');
+            }
+
             $this->setSession($user);
             if ($user['rol'] === 'admin') {
                 return redirect()->to(base_url('/admin'));
             }
             return redirect()->to(base_url('/'));
         }
-        
 
         return redirect()->back()->withInput()->with('errors', 'El email y/o contraseña son incorrectos');
     }
+
     
     private function setSession($userData) {
     $data = [

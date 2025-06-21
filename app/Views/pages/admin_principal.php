@@ -1,7 +1,7 @@
 <?php echo $this->extend('layout'); ?>
 
 <?php echo $this->section('estilos'); ?> 
-<link href="public/assets/css/estilo_admin.css?v=2.2" rel="stylesheet">
+<link href="public/assets/css/estilo_admin.css?v=2.3" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <?php echo $this->endSection(); ?> 
 

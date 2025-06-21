@@ -1,6 +1,7 @@
 const esloganes = [
   "“La camiseta siempre al que la siente”",
   "“Todo pasa, pero el fútbol queda”",
+  "“Lo viejo funciona Juan”",
   "“No es solo una remera, es la final que ganaste con el alma”",
   "“Jugamos como siempre, revivilo como nunca”",
   "“Retro es retro. Y el fútbol, es fútbol.”",
@@ -20,7 +21,7 @@ const esloganes = [
   "“Jugamos como siempre, revivilo como nunca”",
   "“El fútbol es pasión, locura y camisetas”",
   "“Cuando salís a la cancha, salís con toda tu historia encima”",
-    
+  
 ];
 
 let i = 0;

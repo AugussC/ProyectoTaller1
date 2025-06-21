@@ -88,6 +88,7 @@
                 <th>Email</th>
                 <th>Rol</th>
                 <th>Activo</th>
+                <th>Desactivar Usuario</th>
             </tr>
         </thead>
         <tbody>
@@ -100,6 +101,15 @@
                         <td><?= esc($usuario['email']) ?></td>
                         <td><?= esc($usuario['rol']) ?></td>
                         <td><?= esc($usuario['activo']) ?></td>
+                        <td>
+                            <a href="<?= site_url('desactivarUsuario/' . $usuario['id_usuario']) ?>" class="btn btn-primary btn-sm">
+                                <?php if ($usuario['activo'] == 1): ?>
+                                    <i class="bi bi-eye-fill"></i>
+                                <?php else: ?>
+                                    <i class="bi bi-eye-slash-fill"></i>
+                                <?php endif; ?>
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
