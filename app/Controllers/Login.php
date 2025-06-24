@@ -6,11 +6,19 @@ use App\Models\UsuarioModel;
 
 class Login extends BaseController
 {
-    public function index()
-    {
-        $data['titulo'] = 'Inicio de Sesion';
-        return view('pages/login', $data);
+    public function index(){
+    $session = session();
+
+    if ($session->get('usuario_id') == null) {
+        return redirect()->to('/');
+    }else{
+
+    
+    $data['titulo'] = 'Inicio de Sesion';
+    return view('pages/login', $data);
     }
+}
+
 
    public function auth(){
         $rules = [
