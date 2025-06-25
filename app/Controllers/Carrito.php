@@ -228,7 +228,7 @@ class Carrito extends BaseController
         // Vaciar carrito desde base de datos
         $carritoModel->where('id_usuario', $idUsuario)->delete();
 
-        return redirect()->to(base_url('catalogo'))->with('success', 'Compra realizada con éxito.');
+        return redirect()->to(base_url('carrito'))->with('success', 'Gracias por tu compra. Podras ver tu factura en "Facturas".');
     }
 
     public function guardarDireccion(){

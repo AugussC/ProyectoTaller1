@@ -8,6 +8,25 @@
 <div class="container">
   <h2>Mi Carrito</h2>
 
+  <?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success">
+      <?= session()->getFlashdata('success') ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+      <?= session()->getFlashdata('error') ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (session()->getFlashdata('mensaje')): ?>
+    <div class="alert alert-info">
+      <?= session()->getFlashdata('mensaje') ?>
+    </div>
+  <?php endif; ?>
+
+
   <?php if (empty($carrito)): ?>
     <div class="alert alert-info">Tu carrito está vacío.</div>
   <?php else: ?>
