@@ -9,9 +9,9 @@
 <div class="container factura-container">
     <h2>Factura #<?= esc($factura['id_factura']) ?></h2>
 
-    <!-- Empresa y Comprador -->
+    
 <div class="empresa-comprador">
-    <!-- Empresa primero -->
+  
     <div class="empresa-info">
     <img src="<?= base_url('public/assets/img/LogoRetromaniacos.png') ?>" alt="Logo Empresa" class="logo-empresa">
     <h5 class="nombre-empresa">Retromaniacos</h5>
@@ -23,7 +23,7 @@
 
     
 
-    <!-- Comprador segundo -->
+   
     <div class="usuario-info ">
         <h5>Comprador</h5>
         <p><strong>Nombre:</strong> <?= esc($usuario['nombre'] . ' ' . $usuario['apellido']) ?></p>
@@ -68,12 +68,11 @@
         </table>
     </div>
 
-    <!-- Total final -->
+   
     <div class="text-end">
         <h5>Total Final: <strong>$<?= number_format($factura['total'], 0, ',', '.') ?></strong></h5>
     </div>
 
-    <!-- Botón volver -->
     <div class="contenier-btn-volver">
         <a href="<?= base_url('pedidos') ?>" class="btn btn-volver">← Volver</a>
     </div>

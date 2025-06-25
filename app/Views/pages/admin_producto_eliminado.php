@@ -27,7 +27,7 @@
                 <th>Nombre</th>
                 <th>Equipo</th>
                 <th>Stock</th>
-                <th>Acciones</th> <!-- Nueva columna -->
+                <th>Acciones</th> 
             </tr>
         </thead>
         <tbody>

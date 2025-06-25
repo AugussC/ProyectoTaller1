@@ -18,9 +18,8 @@
     };
   </script>
 
-  <!-- Fila principal -->
+
   <div class="row">
-    <!-- Gráfico: ancho completo en móviles, 7/12 en pantallas md en adelante -->
     <div class="col-12 col-md-7 mb-4">
       <div class="card">
         <h2>Distribución de Stock</h2>
@@ -28,7 +27,6 @@
       </div>
     </div>
 
-    <!-- Cards: ancho completo en móviles, 5/12 en md+ -->
     <div class="col-12 col-md-5">
       <div class="row fila-lateral">
         <div class="col">

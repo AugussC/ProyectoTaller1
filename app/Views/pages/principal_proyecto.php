@@ -15,11 +15,8 @@
 
         <!-- Indicadores del carrusel (los botones de abajo que marcan la posición) -->
         <div class="carousel-indicators">
-          <!-- Primer indicador -->
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <!-- Segundo indicador -->
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <!-- Tercer indicador -->
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 

@@ -283,8 +283,8 @@ public function crear() {
 
     public function editar($id_producto)
     {
-        $productoModel = new \App\Models\ProductosModel();
-        $categoriaModel = new \App\Models\CategoriaModel();
+        $productoModel = new ProductosModel();
+        $categoriaModel = new CategoriaModel();
 
         $producto = $productoModel->find($id_producto);
         $categorias = $categoriaModel->findAll();

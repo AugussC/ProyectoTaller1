@@ -6,6 +6,7 @@ use App\Models\ProductosModel;
 use App\Models\ItemCarritoModel;
 use App\Models\FacturaModel;
 use App\Models\DetalleFacturaModel;
+use App\Models\UsuarioModel;
 class Carrito extends BaseController
 {
     public function agregarCarrito($id_producto)
@@ -22,19 +23,15 @@ class Carrito extends BaseController
         }
 
         $itemCarritoModel = new ItemCarritoModel();
-
-        // Verificamos si ya existe ese producto en el carrito del usuario
         $itemExistente = $itemCarritoModel
             ->where('id_usuario', $id_usuario)
             ->where('id_producto', $id_producto)
             ->first();
 
         if ($itemExistente) {
-            // Si existe, solo actualizamos la cantidad
             $itemExistente['cantidad'] += 1;
             $itemCarritoModel->update($itemExistente['id_detalle_carrito'], $itemExistente);
         } else {
-            // Si no existe, lo insertamos
             $itemCarritoModel->insert([
                 'id_usuario' => $id_usuario,
                 'id_producto' => $id_producto,
@@ -55,7 +52,7 @@ class Carrito extends BaseController
 
         $itemCarritoModel = new ItemCarritoModel();
         $productoModel = new ProductosModel();
-        $usuarioModel = new \App\Models\UsuarioModel();
+        $usuarioModel = new UsuarioModel();
 
         $items = $itemCarritoModel->where('id_usuario', $id_usuario)->findAll();
 
@@ -112,7 +109,6 @@ class Carrito extends BaseController
     $itemCarritoModel = new ItemCarritoModel();
     $productoModel = new ProductosModel();
 
-    // Buscar el ítem del carrito
     $item = $itemCarritoModel
         ->where('id_usuario', $id_usuario)
         ->where('id_producto', $id_producto)
@@ -122,7 +118,6 @@ class Carrito extends BaseController
         return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado en el carrito.');
     }
 
-    // Obtener stock actual del producto
     $producto = $productoModel->find($id_producto);
     if (!$producto) {
         return redirect()->to(base_url('carrito'))->with('error', 'Producto no encontrado en la base de datos.');
@@ -130,7 +125,6 @@ class Carrito extends BaseController
 
     $stockDisponible = $producto['stock'];
 
-    // Acción: sumar o restar
     if ($accion === 'sumar') {
         if ($item['cantidad'] < $stockDisponible) {
             $item['cantidad'] += 1;
@@ -155,7 +149,6 @@ class Carrito extends BaseController
         $session = session();
         $idUsuario = $session->get('userid');
 
-        // Obtener carrito desde la base de datos
         $carritoModel = new ItemCarritoModel();
         $carrito = $carritoModel->where('id_usuario', $idUsuario)->findAll();
 
@@ -163,12 +156,10 @@ class Carrito extends BaseController
             return redirect()->back()->with('error', 'El carrito está vacío.');
         }
 
-        // Modelos necesarios
         $productoModel = new ProductosModel();
         $facturaModel = new FacturaModel();
         $detalleModel = new DetalleFacturaModel();
 
-        // Calcular total
         $total = 0;
         foreach ($carrito as $item) {
             $producto = $productoModel->find($item['id_producto']);
@@ -184,7 +175,6 @@ class Carrito extends BaseController
             $total += $precioUnitario * $item['cantidad'];
         }
 
-        // Crear factura
         $facturaData = [
             'id_usuario'  => $idUsuario,
             'costo_envio' => 3000,
@@ -193,7 +183,6 @@ class Carrito extends BaseController
         ];
         $facturaId = $facturaModel->insert($facturaData, true);
 
-        // Guardar detalles y actualizar producto
         foreach ($carrito as $item) {
             $producto = $productoModel->find($item['id_producto']);
 
@@ -205,7 +194,6 @@ class Carrito extends BaseController
                 ? $producto['precio_descuento']
                 : $producto['precio'];
 
-            // Guardar detalle
             $detalleModel->insert([
                 'id_factura'      => $facturaId,
                 'id_producto'     => $item['id_producto'],
@@ -215,7 +203,6 @@ class Carrito extends BaseController
                 'activo'          => 1
             ]);
 
-            // Actualizar stock y cantidad vendida
             $nuevoStock = $producto['stock'] - $item['cantidad'];
             $nuevaCantidadVendida = ($producto['cantidad_vendida'] ?? 0) + $item['cantidad'];
 
@@ -225,7 +212,6 @@ class Carrito extends BaseController
             ]);
         }
 
-        // Vaciar carrito desde base de datos
         $carritoModel->where('id_usuario', $idUsuario)->delete();
 
         return redirect()->to(base_url('carrito'))->with('success', 'Gracias por tu compra. Podras ver tu factura en "Facturas".');
@@ -240,7 +226,7 @@ class Carrito extends BaseController
             return redirect()->to('carrito')->with('error', 'Dirección no válida.');
         }
 
-        $usuarioModel = new \App\Models\UsuarioModel();
+        $usuarioModel = new UsuarioModel();
         $usuarioModel->update($id_usuario, ['direccion' => $direccion]);
 
         return redirect()->to('finalizarCompra');

@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel;
 use App\Models\ProductosModel;
+use App\Models\FacturaModel;
 
 class Home extends BaseController
 {   
@@ -14,26 +15,25 @@ class Home extends BaseController
     public function index(){
         $productoModel = new ProductosModel();
 
-        // 5 más vendidas
         $masVendidas = $productoModel->where('activo', 1)
                                     ->orderBy('cantidad_vendida', 'DESC')
                                     ->findAll(5);
 
-        // 15 de ofertas del día
+    
         $ofertas = $productoModel->where('activo', true)
                                 ->where('precio_descuento IS NOT NULL')
                                 ->where('precio_descuento !=', 0)
                                 ->findAll(16);
 
-        // 8 camisetas de Messi
+      
         $messi = $productoModel->where(['activo' => true, 'jugador_relevante' => 'Messi'])
                             ->findAll(8);
 
-        // 8 camisetas de Maradona
+       
         $maradona = $productoModel->where(['activo' => true, 'jugador_relevante' => 'Maradona'])
                                 ->findAll(8);
 
-        // Título y datos a pasar a la vista
+       
         $data = [
             'titulo' => 'Inicio',
             'masVendidas' => $masVendidas,
@@ -56,7 +56,7 @@ class Home extends BaseController
 
     $builder = $productoModel->where('activo', 1);
 
-    // Filtro por búsqueda general
+
     if (!empty($termino)) {
         $builder->groupStart()
             ->like('nombre', $termino)
@@ -64,12 +64,10 @@ class Home extends BaseController
             ->groupEnd();
     }
 
-    // Filtro por equipo (categoría)
     if (!empty($equipo)) {
         $builder->where('id_categoria', $equipo);
     }
 
-    // Filtro por jugador
     if (!empty($jugador)) {
         $builder->like('jugador_relevante', $jugador);
     }
@@ -164,7 +162,7 @@ class Home extends BaseController
     $session = session();
     $id_usuario = $session->get('userid');
 
-    $facturaModel = new \App\Models\FacturaModel();
+    $facturaModel = new FacturaModel();
 
     $facturas = $facturaModel
                     ->where('id_usuario', $id_usuario)
